@@ -1,7 +1,6 @@
 # Cached from https://bitbucket.org/comcon1/oplsaa-erg_ff
-This repo might be useful to simulate a forcefield obtained with TPPMKTOP. Use with care
-The above link is currently down. This is a cached version retrieved from my old backups. This is not my work. Please cite the original authors listed below.
-The following details are obtained from http://erg.biophys.msu.ru/tiki/tiki-index.php?page=OPLS-AA+extension.
+This repo might be useful to simulate a forcefield obtained with TPPMKTOP tool. Since the above link is currently dead, I upload a cached version retrieved from my old backups. This is not my work. Please cite the original authors listed below.
+The details (below) were obtained from http://erg.biophys.msu.ru/tiki/tiki-index.php?page=OPLS-AA+extension.
 
 # If useful cite the original authors:
 
