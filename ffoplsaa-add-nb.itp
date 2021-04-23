@@ -1,0 +1,47 @@
+[ atomtypes ]
+amin_905   CT    6  12.01100      0.070   A    3.50000e-01  2.76144e-01  ; Carbon in (CH3)4N+ according to JPC 90(10):2174-2182. 1986. For hydrogen use 911!!!
+amin_908   CT    6  12.01100      0.130   A    3.50000e-01  2.76144e-01  ; Carbon in R-CH2-N(CH3)3+ acording to JPC 90(10):2174-2182. 1986. For hydrogen use 911!!!
+
+Bepp       Be2+  4    24.3050     2.000   A    1.53000e-01  6.00000e+00
+dum_a      X          0.10000     0.000   A    1.5      0.2
+dum_b      X          0.10000     0.000   A    0.0      0.0
+pyr3Met    CT	 6   12.01100    -0.062   A    3.50000e-01  2.76144e-01
+pyr3Ety    CT	 6   12.01100    -0.002   A    3.50000e-01  2.76144e-01
+
+; ionic liquids (see ilq.atp)
+bmim_ca    CT    6   12.011      -0.17    A    0.355        0.276144   
+bmim_ha    HC    1    1.008       0.18    A    0.25         0.12552   
+bmim_cm    CT    6   12.011      -0.35    A    0.35         0.276144
+bmim_hm    HC    1    1.008       0.18    A    0.25         0.12552   
+bmim_cr    CR    6   12.011      -0.09    A    0.355        0.29288
+bmim_hr    HA    1    1.008       0.21    A    0.242        0.12552  
+bmim_na    NA    7   14.0067      0.22    A    0.325        0.71128 
+bmim_cw    CW    6   12.011      -0.24    A    0.355        0.29288
+bmim_hw    HA    1    1.008       0.27    A    0.242        0.12552   
+bf4_b      B     5   10.811       0.8276  A    0.35814      0.3978     
+bf4_f      F     9   18.99840    -0.4569  A    0.31181      0.25122
+
+; asphalten related atomtypes (see asphalt.atp)
+
+; thiophene atoms - 631G**/B3LYP5 CHELPG charges
+opls_t566    S     16	32.06000     0.000       A    3.50000e-01  1.20000e+00 ; vdw titrated by thiophene vaporization
+opls_t567   CW     6	12.01100    -0.160       A    3.55000e-01  2.92880e-01 ; vdw from furan
+opls_t568   CS     6	12.01100    -0.120       A    3.55000e-01  3.17984e-01 ; vdw from furan
+opls_t569   HA     1	 1.00800     0.160       A    2.42000e-01  1.25520e-01 ; vdw from furan
+opls_t570   HA     1	 1.00800     0.120       A    2.42000e-01  1.25520e-01 ; vdw from furan
+                       
+[nonbond_params]
+dum_a   dum_a      1   0.00  0.00
+dum_a   lpls_135   1   1.50  0.20
+dum_a   lpls_136   1   1.50  0.20
+dum_a   opls_113   1   1.50  0.20
+dum_a   opls_142   1   1.50  0.20
+dum_b   lpls_135   1   0.00  0.00 
+dum_b   lpls_136   1   0.00  0.00
+dum_b   opls_113   1   0.00  0.00
+dum_a   opls_111   1   0.00  0.00
+dum_a   opls_112   1   0.00  0.00
+dum_b   opls_111   1   0.00  0.00
+dum_b   opls_112   1   0.00  0.00
+dum_a   opls_407   1   0.00  0.00
+dum_b   opls_407   1   0.00  0.00

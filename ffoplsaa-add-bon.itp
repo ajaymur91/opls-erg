@@ -1,0 +1,244 @@
+[ bondtypes ]
+CM    CW    1  0.1365   459403.2  ; CW-C=
+C_3   CO    1  0.1522   265265.6  ; C_3-CT
+P     F     1  0.1606   310000    ; JPCB, 117(48), pp.15176–15183
+B     F     1  0.1393   121336    ; JPCB: 2002, 106, 13344
+
+[ angletypes ]
+CO   OS   P     1   120.0   836.80   ; for phosphorylayed sugars. copy of CT-OS-p from dimethyl phosphate
+CO   CT   N     1   109.7   669.44   ; for N-acetyl GLU! CT-CT-N
+OH   CO   C_3   1   109.5   418.40   ; for carboxylated sugars OS-CO-CT
+OS   CO   C_3   1   109.5   418.40   ; for carboxylated sugars OS-CO-CT
+CT   CO   C_3   1   111.1   527.184  ; for carboxylated sugars CT-CT-C_3
+CO   C_3  O2    1   117.0   585.760  ; for carboxylated sugars CT-C_3-O2
+CO   CT   OS    1   109.5   418.400  ; for polymer sugars CT-CT-OS
+;CW   CS   CT   1   130.0   585.80    ; copy from CA CA CT
+;CS   CW   CA   1   124.0   527.20   
+F    P    F     1    90.0   1165.0   ; JPCB, 117(48), pp.15176–15183
+CW   CW   HA    1   130.7   292.88   ; for Imidazole+ (RMIM), copied from CV-CW-HA
+F    B    F     1   109.5   209.2    ; JPCB: 2002, 106, 13344
+
+
+[ dihedraltypes ]
+X   CS   CL0  X    3    31    0    -31     0     0     0
+X   CW   CL0  X    3    31    0     0     -31    0     0
+CT  OS   C_2  CL1  3    31.2 -9.76 -21.43  0     0     0
+CW  CS   C_2  O_2  3    8.78  0    -8.78   0     0     0
+CS  CS   C_2  O_2  3    8.78  0    -8.78   0     0     0
+CS  CS   C_2  CT   3    0.84  0    -0.84   0     0     0
+CW  CS   C_2  CT   3    0.84  0    -0.84   0     0     0
+HC  CT   C_2  CS   3    0     0     0      0     0     0
+CL0 C_2  CL1  CA   3    31    0    -31     0     0     0
+OS  C_2  CL1  X    3    8.78  0    -8.78   0     0     0
+O_2 C_2  CL1  CA   3    31    0    -31     0     0     0
+C_2 CL1  CA   X    3    31    0    -31     0     0     0
+CS  CT   CT   C_2  3   -5     6.3   1.3   -2.6   0     0
+CT  CT   CM   HC   3   +0.6  +1.9  +0.0   -2.5  +0.0  +0.0 ; copy from CT CT CT HC
+; for sugar topology by zodberg
+OH  CT  CO  OH  3   18.9661  -18.9661   0.00000   0.00000   0.00000   0.00000 ; copy of OH-CT-CT-OH, hexopyranoses
+OH  CT  CO  OS  3   18.9661  -18.9661   0.00000   0.00000   0.00000   0.00000 ; copy of OH-CT-CT-OH, hexopyranoses
+OH  CO  CT  OS  3   18.9661  -18.9661   0.00000   0.00000   0.00000   0.00000 ; copy of OH-CT-CT-OH, hexopyranoses
+OH  CT  CO  HC  3   0.97905   2.93716   0.00000  -3.91622   0.00000   0.00000 ; copy of OH-CT-CT-HC, alcohols, ethers
+OH  CO  CT  HC  3   0.97905   2.93716   0.00000  -3.91622   0.00000   0.00000 ; copy of OH-CT-CT-HC, alcohols, ethers
+OH  CO  CT  HC  3   0.97905   2.93716   0.00000  -3.91622   0.00000   0.00000 ; copy of OH-CT-CT-HC, alcohols, ethers
+HC  CO  CT  HC  3   0.62760   1.88280   0.00000  -2.51040   0.00000   0.00000 ; copy of HC-CT-CT-HC
+HO  OH  CO  CT  3  -0.44350   3.83255   0.72801  -4.11705   0.00000   0.00000 ; copy of HO-OH-CT-CT, alcohols
+HO  OH  CO  C_3 3  -0.44350   3.83255   0.72801  -4.11705   0.00000   0.00000 ; copy of HO-OH-CT-CT, alcohols
+HO  OH  CO  HC  3   0.94140   2.82420   0.00000  -3.76560   0.00000   0.00000 ; copy of HO-OH-CT-HC, alcohols
+; dienes!!!
+; for aryl-alkanes, aryl-alkenes, aryl-ketones and aryl-alcohols
+CA  CT  CT  CA  3   3.42461  -3.85974   2.59408  -2.15895   0.00000   0.00000 ; copy of CT-CT-CT-CA
+HC  CT  C_2 CA  3   0.57530   1.72590   0.00000  -2.30120   0.00000   0.00000 ; copy of HC-CT-C_2-CT, ketone
+CT  CT  C_2 CA  3   0.81797  -7.90567   0.60250   6.48520   0.00000   0.00000 ; copy of CT-CT-C_2-CT, ketone
+CA  CT  C_2 CA  3   0.81797  -7.90567   0.60250   6.48520   0.00000   0.00000 ; copy of CT-CT-C_2-CT, ketone
+CA  CT  C_2 O_2 3   3.10662  -3.77606  -5.13795   5.80739   0.00000   0.00000 ; copy of CT-CT-C_2-O_2, aldehyde & ketone
+CA  CA  C_2 O_2 3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of CM-C=-C_2-O_2 from akrolein
+CT  CT  CM  CA  3   6.32202  -2.48530   0.70710  -4.54382   0.00000   0.00000 ; copy of CT-CT-CM-CT, alkenes
+CA  CT  CM  CA  3   6.32202  -2.48530   0.70710  -4.54382   0.00000   0.00000 ; copy of CT-CT-CM-CT, alkenes
+CA  CT  CM  CM  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; copy of CT-CT-CM-CM, alkenes
+HC  CT  CM  CA  3   0.62760   1.88280   0.00000  -2.51040   0.00000   0.00000 ; copy of HC-CT-CM-CT, hydrocarbon all-atom
+; beta vinyl aldehydes and ketones
+CM  C_2 CT  CT  3   0.81797  -7.90567   0.60250   6.48520   0.00000   0.00000 ; copy of CT-C_2-CT-CT, ketone
+CM  C_2 CT  HC  3   0.57530   1.72590   0.00000  -2.30120   0.00000   0.00000 ; copy of CT-C_2-CT-HC, ketone
+CT  C_2 CM  CM  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein    
+CT  C_2 CM  C=  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein    
+CT  C_2 CM  CT  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein    
+CT  C_2 CM  HC  3   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-HC from akrolein
+O_2 C_2 CM  CM  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+O_2 C_2 CM  C=  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+O_2 C_2 CM  CT  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+O_2 C_2 CM  HC  3   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-HC from akrolein
+O_2 C_2 C=  C=  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+C=  C=  CM  C_2 3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C
+CT  C=  C=  C_2 3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C
+CT  C=  CM  C_2 3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-CT
+C_2 CM  CT  HC  3  -0.77822  -2.33467   0.00000   3.11290   0.00000   0.00000 ; copy of CM-CM-CT-HC from alkenes all-atom
+CT  CM  C_2 O_2 3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+; carotenoides, additional from MySQL
+C=  CT  CT  CT  3   2.9288   -1.46440   0.20920  -1.67360   0.00000   0.00000 ; same as CM-CT-CT-CT
+CM  CT  CT  CM  3   2.92880  -1.46440   0.20920  -1.67360   0.00000   0.00000 ; same as CM-CT-CT-CT
+C=  CT  CT  HC  3   0.76567   2.29701   0.00000  -3.06269   0.00000   0.00000 ; same as CM-CT-CT-HC
+CM  C=  CT  CT  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; same as CM-CM-CT-CT
+CM  CM  CT  CM  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; same as CM-CM-CT-CT
+CM  CT  CM  CT  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; same as CM-CM-CT-CT
+C=  C=  CT  CT  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; same as CM-CM-CT-CT
+C=  C=  CT  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-CM-CT-HC 
+C=  CM  CT  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-CM-CT-HC 
+CM  CT  CM  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-CM-CT-HC 
+C=  C=  CM  CM  3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM, from diene C=C-C=C
+C=  C=  CM  CT  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-CT
+C=  C=  CM  HC  3  -0.77822  -2.33467   0.00000   3.11290   0.00000   0.00000 ; copy of CM-C=-C=-HC, alkenes all-atom
+CM  CM  C=  CM  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-CT
+CM  CM  C=  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+C=  C=  C=  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+C=  C=  C=  C=  3  21.73800   2.40789 -16.96610  -7.17975   0.00000   0.00000 ; same as CM-C=-C=-CM
+C=  C=  C=  CM  3  21.73800   2.40789 -16.96610  -7.17975   0.00000   0.00000 ; same as CM-C=-C=-CM
+C=  C=  C=  CT  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-CT
+; for alpha-keto (ene) subsituted and partially hydrogenated pyrroles, conjugated pyrroles!!!!
+HC  CM  C=  CM  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-CT
+CM  CM  NA  C   3   5.18398  35.93219 -14.35530 -26.76086   0.00000   0.00000 ; same as CA-CA-NT-CT, substituted-aniline
+CT  CM  NA  C   3   5.18398  35.93219 -14.35530 -26.76086   0.00000   0.00000 ; same as CA-CA-NT-CT, substituted-aniline
+C   CM  CT  CT  3   0.52719  -6.39734  -1.69452   7.56467   0.00000   0.00000 ; same as CM-CM-CT-CT, from alkenes
+C   CM  CT  HC  3  -0.77822  -2.33467   0.00000   3.11290   0.00000   0.00000 ; same as CM-CM-CT-HC, from alkenes 
+C=  CM  NA  C   3   5.18398  35.93219 -14.35530 -26.76086   0.00000   0.00000 ; same as CA-CA-NT-CT, substituted-aniline
+C=  CM  NA  H   3   8.49352   0.00000  -8.49352   0.00000   0.00000   0.00000 ; same as CA-CA-NT-H, aniline
+CM  CM  NA  H   3   8.49352   0.00000  -8.49352   0.00000   0.00000   0.00000 ; same as CA-CA-NT-H, aniline
+CT  CM  NA  H   3   8.49352   0.00000  -8.49352   0.00000   0.00000   0.00000 ; same as CA-CA-NT-H, aniline
+NA  CM  C=  CM  3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C  
+NA  CM  C=  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+NA  C   CM  CM  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+NA  C   CM  C=  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+NA  C   CM  CT  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+NA  C   CM  HC  3   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-HC from akrolein
+NA  CM  CT  CT  3   6.32202  -2.48530   0.70710  -4.54382   0.00000   0.00000 ; copy of CT-CT-CM-CT, alkenes
+NA  CM  CT  HC  3   0.62760   1.88280   0.00000  -2.51040   0.00000   0.00000 ; copy of HC-CT-CM-CT, hydrocarbon all-atom
+CT  C   NA  CM  3  30.28798  -4.81160 -25.47638   0.00000   0.00000   0.00000 ; copy of CT-C-N-CT, amides - V1 changed to 2.3
+CT  C   NA  H   3  20.50160   0.00000 -20.50160   0.00000   0.00000   0.00000 ; copy of CT-C-N-H, amides C-C(O)-N-H
+NA  C   CT  CT  3   4.83252  -7.65254   1.68196   1.13805   0.00000   0.00000 ; copy of N-C-CT-CT, propanamide
+NA  C   CT  HC  3   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of N-C-CT-HC, acetamide
+O   C   CM  C=  3  30.33400  -5.23000 -25.10400   0.00000   0.00000   0.00000 ; copy of O_2-C_2-C=-CM from akrolein
+CM  C   NA  CM	3  25.47638   0.00000 -25.47638   0.00000   0.00000   0.00000 ; copy of CA-N-C-O, amides  O-C(O)-N-C
+CM  C   NA  H   3   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of CA-N-CT-HC, tertiary amide
+O   C   NA  CM  3  25.47638   0.00000 -25.47638   0.00000   0.00000   0.00000 ; copy of CA-N-C-O, amides  O-C(O)-N-C
+O   C   NA  H   3  20.50160   0.00000 -20.50160   0.00000   0.00000   0.00000 ; copy of O-C-N-H, amides
+C   CM  C=  CM  3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C  
+C   CM  C=  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+CS  CW  CM  CM  3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C
+CS  CW  CM  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+NA  CW  CM  CM  3  21.73797   2.40789 -16.96612  -7.17975   0.00000   0.00000 ; copy of CM-C=-C=-CM from diene C=C-C=C
+NA  CW  CM  HC  3  -0.77822  -2.33467   0.00000   3.1129    0.00000   0.00000 ; same as CM-C=-C=-HC
+CS  CW  CM  CW  3  16.02681  -4.39111 -14.02895   2.39325   0.00000   0.00000 ; copy of CA-CA-CM-C= from styrene
+NA  CW  CM  CW  3  16.02681  -4.39111 -14.02895   2.39325   0.00000   0.00000 ; copy of CA-CA-CM-C= from styrene
+; PlP-Lys connection!!!
+NC  CA  CT  HC   3   0.00000  0.00000   0.00000   0.00000   0.00000   0.00000 ; copy of CA-CA-CT-HC from ethyl benzene
+CA  CT  NT  H    3  -1.26775  3.02085   1.74473  -3.49782   0.00000   0.00000 ; copy of CT-CT-NT-H
+CA  CT  OS  P    3  12.51016  0.00000 -12.51016   0.00000   0.00000   0.00000 ; copy of CT-CT-OS-P phosphate in lipids
+CT  S   CT  CT_2 3   0.94140  2.31375   2.40999  -5.66514   0.00000   0.00000 ; copy of CT-S-CT-CT sulfide all-atom 
+; lipopolysacharide
+C_2 CT  OH  HO   3  -0.44350   3.83255   0.72801  -4.11705   0.00000   0.00000 ; copy of CO-CT-OH-HO
+OH  CT  C_2 O_2  3   3.10662  -3.77606  -5.13795   5.80739   0.00000   0.00000 ; copy of CT-CT-C_2-O_2, aldehyde & ketone
+OH  CT  C_2 OS   3   3.10662  -3.77606  -5.13795   5.80739   0.00000   0.00000 ; copy of CT-CT-C_2-O_2, aldehyde & ketone
+OS  CT  CT  N    3  -1.15060   1.15060   0.00000   0.00000   0.00000   0.00000 ; copy of OS-CT-CT-OS, polyethers, crown ethers 
+OS  CO  CT  N    3  -1.15060   1.15060   0.00000   0.00000   0.00000   0.00000 ; copy of OS-CT-CT-OS, polyethers, crown ethers
+O_2 C_2 CT  OS   3  -1.15060   1.15060   0.00000   0.00000   0.00000   0.00000 ; copy of OS-CT-CT-OS, polyethers, crown ethers
+OS  C_2 CT  OS   3  -1.15060   1.15060   0.00000   0.00000   0.00000   0.00000 ; copy of OS-CT-CT-OS, polyethers, crown ethers
+OS  CO  CT  OS   3  -1.15060   1.15060   0.00000   0.00000   0.00000   0.00000 ; copy of OS-CT-CT-OS, polyethers, crown ethers
+HC  CO  CT  N    3   0.97905   2.93716   0.00000  -3.91622   0.00000   0.00000 ; copy of HC-CT-CT-OS, alcohols, ethers AA 
+HC  CO  CT  OS   3   0.97905   2.93716   0.00000  -3.91622   0.00000   0.00000 ; copy of HC-CT-CT-OS, alcohols, ethers AA 
+CO  CT  N   C    3 -10.35749 -29.58716  -1.16734  41.11199   0.00000   0.00000 ; copy of C-CT-N-C, Phi peptides AA C(O)-N-Ca-C(O)
+N   C   CT  OH   3  16.73600 -16.73600   0.00000   0.00000   0.00000   0.00000 ; copy of NT-CT-CT-OH, 2-aminoethanol 6-31G* fit - wj
+CT  CO  OS  P    3  12.51016   0.00000 -12.51016   0.00000   0.00000   0.00000 ; copy of CT-CT-OS-P, Guess for phosphate in lipids
+;OS  CO  OS  P    3  12.51016   0.00000 -12.51016   0.00000   0.00000   0.00000 ; copy of CT-CT-OS-P, Guess for phosphate in lipids
+OS  CO  OS  P    3  34.33500  -68.05300  10.36500 -33.14600   0.02400   0.05900 ; PhosphoAcetal 04.12.2013 by leela P(~O)(~O)(~O)-O-[CH](C)-O 
+HC  CO  OS  P    3   0.74684   2.24053   0.00000  -2.98738   0.00000   0.00000 ; copy of HC-CT-OS-P, Me2PO4 (-)
+O2  P   OS  P    3  12.51016   0.00000 -12.51016   0.00000   0.00000   0.00000 ; copy of CT-CT-OS-P, Guess for phosphate in lipids  
+;OS  P   OS  P    3  12.51016   0.00000 -12.51016   0.00000   0.00000   0.00000 ; copy of CT-CT-OS-P, Guess for phosphate in lipids   BAD ONE!!! 
+;OS  P   OS  P    3   1.04600   3.13800  10.04160  -4.18400   0.00000   0.00000 ; copy of CT-OS-P-OS, Me2PO4 (-), from Amber. BAD ONE TOO!!!
+OS  P   OS  P    3  -1.34500   0.73800 -11.98100   3.52800   0.00100   0.00900 ; DiMetylPyroPhosphate 04.12.2013 by leela O-P(=O)(-[Oh1])-O-P(=O)(-[Oh1])-O
+CO  OS  P   O2   3   1.17570   3.52711   0.00000  -4.70281   0.00000   0.00000 ; copy of CT-OS-P-OH, Me2PO4 (-)
+CO  OS  P   OS   3   1.04600   3.13800  10.04160  -4.18400   0.00000   0.00000 ; copy of CT-OS-P-OS, Me2PO4 (-), from Amber.
+CT  OS  CO  C_3  3  -6.45801   0.80961   5.68187  -0.03347   0.00000   0.00000 ; copy of CT-OS-CO-OS, from hexopyranoses
+OH  CO  C_3 O2   3   3.43088   0.00000  -3.43088   0.00000   0.00000   0.00000 ; copy of CT-CT-C_3-O2, carboxylate ion
+;OS  CO  C_3 O2   3   3.43088   0.00000  -3.43088   0.00000   0.00000   0.00000 ; copy of CT-CT-C_3-O2, carboxylate ion
+OS  CO  C_3 O2   3   4.96100   0.00100   0.13700   0.00100   0.00000   0.00100 ; AlphaDiMetoxypropionate 04.12.2013 by leela C-O-C(-O)(C)-C(=O)(-[Oh1])
+CT  CO  C_3 O2   3   3.43088   0.00000  -3.43088   0.00000   0.00000   0.00000 ; copy of CT-CT-C_3-O2, carboxylate ion
+C_3 CO  CT  CT   3  -9.08346   9.75709   3.45180  -4.12542   0.00000   0.00000 ; copy of C_3-CT-CT-CT, carboxylate ion
+C_3 CO  CT  HC   3  -0.47070  -1.41210   0.00000   1.88280   0.00000   0.00000 ; copy of C_3-CT-CT-HC, carboxylate ion
+CO  CT  OS  CO   3   1.71544   2.84512   1.04600  -5.60656   0.00000   0.00000 ; copy of CO-CT-OS-CT, ethers AA
+N   CT  CT  OH   3  16.73600 -16.73600   0.00000   0.00000   0.00000   0.00000 ; copy of NT-CT-CT-OH, 2-aminoethanol 6-31G* fit - wj
+CT  N   C   N    3  30.28798  -4.81160 -25.47638   0.00000   0.00000   0.00000 ; ocpy of C-N-C-N from imides
+CT  OS  P   OH   3   1.17570   3.52711   0.00000  -4.70281   0.00000   0.00000 ; copy of CT-OS-P-OH, Me2PO4 (-)
+; THIS IS A STUB FROM SERINE!!!! REDO HYDROPHOSPHATE!!
+OS     P     OH     HO      3      0.41840   1.25520   0.00000  -1.67360   0.00000   0.00000 ; Alcohols   with scl14 = 2,2
+O2     P     OH     HO      3      0.41840   1.25520   0.00000  -1.67360   0.00000   0.00000 ; Alcohols   with scl14 = 2,2
+; THIS IS A STUB FROM SERINE!!!! REDO HYDROPHOSPHATE!!
+
+; useful zero define
+#define  opls_rb_zero          0          0          0          0          0          0     
+
+#define LIPID_BERGER_OLD  4.23497678  -2.74457873 -12.7523316  +15.95905845  25.77567469  -30.44685448
+; lipid berger defined 23 oct 2014
+#define LIPID_BERGER  1.99032613  -5.52761637 -13.45505282  22.18239416  22.97208056 -28.96169444
+; defines for betoine molecule
+#define  dhTPP_CT_N3_CT_C_3    3.04176   -1.35144    0.51881   -2.20915    0.00000    0.00000 ; CT-CT-N3-CT, 2ary ammonium
+#define  dhTPP_O2_C_3_CT_N3    3.43088    0.00000   -3.43088    0.00000    0.00000    0.00000 ; CT-CT-C_3-O2, carboxylate ion
+
+; defines for ionic liquids
+#define   rmim_cwnacact      -16.600      0.480     19.150     11.510      0          0       ; cw-na-ca-ct for RMIM; JTCT 5(4):1038
+#define   rmim_crnacact       -8.789     -6.173      1.151     13.811      0          0       ; cr-na-ca-ct for RMIM; JTCT 5(4):1038
+#define   rmim_cwnacaha      -28.552      7.878     23.645     -2.971      0          0       ; cw-na-ca-ha from JTCT 5(4): 1038
+#define   rmim_cwnacacs      -24.618      6.581     20.925     -2.888      0          0       ; cw-na-ca-cs for RMIM; JTCT 5(4):1038
+#define   rmim_crnacacs        0.044      0.270     -0.398      0.084      0          0       ; cr-na-ca-cs for RMIM; JTCT 5(4):1038
+#define   rmim_nacacscs        2.536      4.160     -3.348     -3.348      0          0       ; na-ca-cs-cs for RMIM; JTCT 5(4):1038
+
+[ dihedraltypes ]
+#define improper_OAN_1   2     55.0      10000
+#define improper_OAN_2   2    -55.0      10000
+#define improper_OAN_3   2    -25.0      10000
+#define improper_OAN_4   2    -20.0      10000
+#define improper_OAN_5   2     30.0      10000
+#define improper_OAN_6   2     45.0      10000
+#define improper_OAN_7   2     50.0      10000
+
+[ constrainttypes ]
+  P       HO 2    0.21 
+
+[ bondtypes ]
+; this section is implemented manually from bond & angle values
+; account for larger inertia with heavy hydrogens
+#ifdef HEAVY_H
+#else
+; no heavy hydrogens.
+; constraints for the rigid NH3 groups
+ MNH3     CT 1    0.158255   300000
+ MNH3   CT_2 1    0.158255   300000
+ MNH3   MNH3 1    0.080236   300000
+; constraints for rigid umbrella-shaped NH2 group
+ MNH2     CT 1    0.152820   300000
+ MNH2   CT_2 1    0.152820   300000
+ MNH2   MNH2 1    0.067542   300000
+; constraints for 1st type rigid CH3 (angle *-CT-HC is 109.5)
+ MCH3A     C 1    0.166040   300000
+ MCH3A   C_2 1    0.166040   300000
+ MCH3A    CW 1    0.164312   300000
+ MCH3A    CV 1    0.164312   300000
+ MCH3A    CS 1    0.163448   300000
+ MCH3A    CA 1    0.164888   300000
+ MCH3A    CB 1    0.164888   300000
+ MCH3A     N 1    0.159040   300000
+ MCH3A     S 1    0.193874   300000
+ MCH3A MCH3A 1    0.092160   300000
+; constraints for 2nd type rigid CH3 (angle *-CT-HC is 110.7)
+ MCH3B    CT 1    0.167031   300000
+ MCH3B  CT_2 1    0.167031   300000
+ MCH3B  CT_3 1    0.167031   300000
+ MCH3B    CO 1    0.167031   300000
+ MCH3B MCH3B 1    0.091456   300000
+#endif 
+  N       HO 1    0.18682    300000 
+  C       HO 1    0.19393   300000
+  CA      HO 1    0.19393   300000
+  CT      HO 1    0.19305   300000
+  CO      HO 1    0.19039   300000
+  CT      HS 1    0.23593   300000
+  CA      HS 1    0.23018   300000

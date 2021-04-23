@@ -1,0 +1,28 @@
+[ atomtypes ]
+Oxr0       OXR    8    15.9994    -0.4     A    0.31    0.710     ;Oxy radical for lipid
+OxrC        CT    6    12.0110     0.54    A    0.35    0.276     ;С near O-O (peroxy)
+OxrH        HC    1     1.0080     0.13    A    0.25    0.1255    ;H on C in C-O-O (peroxy)
+tpp_Ssulf   ST   16    32.0600     1.7     A    0.355   1.046     ;S in Sulphate anion
+tpp_Osulf  OY1    8    15.9994    -0.7     A    0.295   1.000     ;O in sulphate anion
+tpp_Osulfe  OS    8    15.9994    -0.7     A    0.295   0.710     ;O ester in sulfate anion
+HcC1        HC    1    1.00800     0.27    A    0.25    0.0628    ;H on C central in CREATINE
+uqCM        CA    6    12.0110     0.13    A    0.355   0.317     ;C near methyl in UQ
+uqCO        CA    6    12.0110     0.27    A    0.355   0.318     ;C in C=O of uQ
+uqCE        CA    6    12.0110     0.28    A    0.355   0.317     ;C near ester in uQ
+uqOG         O    8    15.9994    -0.36    A    0.296   0.878     ;O= in uQ
+uqOE        OS    8    15.9994    -0.52    A    0.3     0.711
+pyrRC2      CW    6    12.0110     0.22    A    0.355   0.293     ;C2 in fully replaced pyrrol
+pyrRC3      CS    6    12.0110    -0.2     A    0.355   0.293     ;C3 in fully replaced pyrrol
+pyrRC2H     CW    6    12.0110     0.3     A    0.355   0.293     ;C2 on fully replaced H-pyrrole
+pyrRC3H     CS    6    12.0110     0.05    A    0.355   0.293     ;C3 in fully replaced H-pyrrol
+hpyrRN      NA    7    14.0067    -0.7     A    0.325   0.7113    ;N in fully substituted h-pyrrole
+pyrRN       NA    7    14.0067    -0.5     A    0.325   0.7113    ;N in fully substituted pyrrole
+hpyrRH       H    1     1.0080     0.4     A    0.000   0.000     ;H in fully substituted h-pyrrole
+oplsCHL0   CL0    6    12.0110     0.05    A    0.355   0.293     ;special Clorophyl, pheophytin atoms
+oplsCHL1   CL1    6    12.0110    -0.085   A    0.35    0.276     ;special Clorophyl, pheophytin atoms
+nCHLR       NA    7    14.0067    -0.8     A    0.325   0.711     ;N in chlorophyll
+MGCLR       MG   12    24.3050     0.84    A    0.164   3.660
+lpls_135    CT    6    12.0110    -0.180   A    0.350   0.213
+lpls_136    CT    6    12.0110    -0.120   A    0.350   0.213
+lpls_140    HC    1     1.0080     0.060   A    0.250   0.0968
+

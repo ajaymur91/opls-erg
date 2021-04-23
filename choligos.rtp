@@ -1,0 +1,316 @@
+; 
+; Carbohydrate short oligomers
+;
+
+[bondedtypes]
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          1	    1         3      1     0
+
+;
+; SOGM (*S*almonella *O*-antigen *G*alactose-*M*annose dissaccharide
+; IUPAC: alpha-D-Galactose(1->2)-alpha-D-Mannose
+; made from: tppmktop rtp
+; requires: dhTPP_OH_CO_CT_OS may be zero-defined
+;
+
+[  SOGM ]
+
+[ atoms ]
+  O1     opls_187   -0.700     1 
+  H11    opls_188    0.435     2 
+  C2     opls_195    0.365     3 
+  H21    opls_196    0.100     3 
+  O3     opls_186   -0.400     4 
+  C4     opls_183    0.170     5 
+  H41    opls_185    0.030     5 
+  C5     opls_157    0.145     6 
+  H51    opls_140    0.060     6 
+  H52    opls_140    0.060     6 
+  O6     opls_154   -0.683     7 
+  H61    opls_155    0.418     8 
+  C7     opls_158    0.205     9 
+  H71    opls_140    0.060     9 
+  O8     opls_169   -0.700    10 
+  H81    opls_170    0.435    11 
+  C9     opls_158    0.205    12 
+  H91    opls_140    0.060    12 
+  O10    opls_169   -0.700    13 
+  H101   opls_170    0.435    14 
+  C11    opls_183    0.170    15 
+  H111   opls_185    0.030    15 
+  O12    opls_186   -0.400    16 
+  C13    opls_193    0.300    17 
+  H131   opls_194    0.100    17 
+  O14    opls_186   -0.400    18 
+  C15    opls_174    0.205    19 
+  H151   opls_176    0.060    19 
+  O16    opls_171   -0.730    20 
+  H161   opls_172    0.465    21 
+  C17    opls_174    0.205    22 
+  H171   opls_176    0.060    22 
+  O18    opls_171   -0.730    23 
+  H181   opls_172    0.465    24 
+  C19    opls_174    0.205    25 
+  H191   opls_176    0.060    25 
+  O20    opls_171   -0.730    26 
+  H201   opls_172    0.465    27 
+  C21    opls_183    0.170    28 
+  H211   opls_185    0.030    28 
+  C22    opls_157    0.145    29 
+  H221   opls_140    0.060    29 
+  H222   opls_140    0.060    29 
+  O23    opls_154   -0.683    30 
+  H231   opls_155    0.418    31 
+
+[ bonds ]
+ H61    O6   
+ H81    O8   
+ O1     H11  
+ H231   O23  
+ O10    H101 
+ O16    H161 
+ O20    H201 
+ O18    H181 
+ O6     C5   
+ C4     O3   
+ O8     C7   
+ C9     O10  
+ C11    O12  
+ O14    C21  
+ O23    C22  
+ C15    O16  
+ C19    O20  
+ C17    O18  
+ H52    C5   
+ C5     H51  
+ H41    C4   
+ C7     H71  
+ C2     H21  
+ H222   C22  
+ H131   C13  
+ H91    C9   
+ C11    H111 
+ C22    H221 
+ C21    H211 
+ H151   C15  
+ C19    H191 
+ C17    H171 
+ C19    C17  
+ C5     C4   
+ C4     C7   
+ C7     C9   
+ C2     C11  
+ C9     C11  
+ C13    C15  
+ C22    C21  
+ C21    C19  
+ C15    C17  
+ O3     C2   
+ O1     C2   
+ O14    C13  
+ O12    C13  
+
+[ dihedrals ]
+  O1   C2  C11  O12 dhTPP_OH_CO_CT_OS 
+
+;
+; SORG (*S*almonella *O*-antigen *R*hamnose-*G*alactose dissaccharide
+; IUPAC: alpha-L-Rhamnose(1->3)-alpha-D-Galactose
+; made from: tppmktop rtp
+;
+
+[  SORG ]
+
+[ atoms ]
+  O1     opls_169   -0.700     1 
+  H11    opls_170    0.435     2 
+  C2     opls_158    0.205     3 
+  H21    opls_140    0.060     3 
+  C3     opls_195    0.365     4 
+  H31    opls_196    0.100     4 
+  O4     opls_187   -0.700     5 
+  H41    opls_188    0.435     6 
+  O5     opls_186   -0.400     7 
+  C6     opls_183    0.170     8 
+  H61    opls_185    0.030     8 
+  C7     opls_157    0.145     9 
+  H71    opls_140    0.060     9 
+  H72    opls_140    0.060     9 
+  O8     opls_154   -0.683    10 
+  H81    opls_155    0.418    11 
+  C9     opls_158    0.205    12 
+  H91    opls_140    0.060    12 
+  O10    opls_154   -0.683    13 
+  H101   opls_155    0.418    14 
+  C11    opls_183    0.170    15 
+  H111   opls_185    0.030    15 
+  O12    opls_186   -0.400    16 
+  C13    opls_193    0.300    17 
+  H131   opls_194    0.100    17 
+  O14    opls_186   -0.400    18 
+  C15    opls_183    0.170    19 
+  H151   opls_185    0.030    19 
+  C16    opls_135   -0.180    20 
+  H161   opls_140    0.060    20 
+  H162   opls_140    0.060    20 
+  H163   opls_140    0.060    20 
+  C17    opls_174    0.205    21 
+  H171   opls_176    0.060    21 
+  O18    opls_171   -0.730    22 
+  H181   opls_172    0.465    23 
+  C19    opls_174    0.205    24 
+  H191   opls_176    0.060    24 
+  O20    opls_171   -0.730    25 
+  H201   opls_172    0.465    26 
+  C21    opls_174    0.205    27 
+  H211   opls_176    0.060    27 
+  O22    opls_171   -0.730    28 
+  H221   opls_172    0.465    29 
+
+[ bonds ]
+ H31    C3   
+ H72    C7   
+ H21    C2   
+ C7     H71  
+ C6     H61  
+ C9     H91  
+ C11    H111 
+ H131   C13  
+ H211   C21  
+ H151   C15  
+ H191   C19  
+ H161   C16  
+ C16    H163 
+ C16    H162 
+ C17    H171 
+ H81    O8   
+ H11    O1   
+ H41    O4   
+ O10    H101 
+ H221   O22  
+ H201   O20  
+ O18    H181 
+ O5     C3   
+ C3     O4   
+ O12    C13  
+ C13    O14  
+ C19    O20  
+ O5     C6   
+ O8     C7   
+ O1     C2   
+ O10    C9   
+ C11    O12  
+ O14    C15  
+ C21    O22  
+ C17    O18  
+ C3     C2   
+ C2     C11  
+ C7     C6   
+ C6     C9   
+ C9     C11  
+ C13    C21  
+ C21    C19  
+ C15    C16  
+ C15    C17  
+ C19    C17  
+
+;
+; SOMR (*S*almonella *O*-antigen *M*annose-*R*hamnose dissaccharide
+; IUPAC: alpha-D-Mannose(1->4)-alpha-L-Rhamnose
+; made from: tppmktop rtp
+;
+
+[  SOMR ]
+
+[ atoms ]
+  O1     opls_171   -0.730     1 
+  H11    opls_172    0.465     2 
+  C2     opls_174    0.205     3 
+  H21    opls_176    0.060     3 
+  C3     opls_174    0.205     4 
+  H31    opls_176    0.060     4 
+  O4     opls_171   -0.730     5 
+  H41    opls_172    0.465     6 
+  C5     opls_174    0.205     7 
+  H51    opls_176    0.060     7 
+  O6     opls_171   -0.730     8 
+  H61    opls_172    0.465     9 
+  C7     opls_183    0.170    10 
+  H71    opls_185    0.030    10 
+  C8     opls_157    0.145    11 
+  H81    opls_140    0.060    11 
+  H82    opls_140    0.060    11 
+  O9     opls_154   -0.683    12 
+  H91    opls_155    0.418    13 
+  O10    opls_186   -0.400    14 
+  C11    opls_193    0.300    15 
+  H111   opls_194    0.100    15 
+  O12    opls_186   -0.400    16 
+  C13    opls_183    0.170    17 
+  H131   opls_185    0.030    17 
+  C14    opls_174    0.205    18 
+  H141   opls_176    0.060    18 
+  O15    opls_171   -0.730    19 
+  H151   opls_172    0.465    20 
+  C16    opls_174    0.205    21 
+  H161   opls_176    0.060    21 
+  O17    opls_171   -0.730    22 
+  H171   opls_172    0.465    23 
+  C18    opls_195    0.365    24 
+  H181   opls_196    0.100    24 
+  O19    opls_187   -0.700    25 
+  H191   opls_188    0.435    26 
+  O20    opls_186   -0.400    27 
+  C21    opls_183    0.170    28 
+  H211   opls_185    0.030    28 
+  C22    opls_135   -0.180    29 
+  H221   opls_140    0.060    29 
+  H222   opls_140    0.060    29 
+  H223   opls_140    0.060    29 
+
+[ bonds ]
+ H41    O4   
+ O6     H61  
+ H11    O1   
+ O9     H91  
+ H151   O15  
+ O17    H171 
+ H191   O19  
+ C7     O10  
+ O4     C3   
+ O6     C5   
+ O1     C2   
+ O9     C8   
+ O15    C14  
+ O12    C13  
+ C16    O17  
+ C21    O20  
+ C18    H181 
+ H51    C5   
+ C3     H31  
+ H21    C2   
+ H82    C8   
+ C7     H71  
+ C8     H81  
+ C11    H111 
+ H141   C14  
+ C13    H131 
+ H161   C16  
+ H222   C22  
+ H211   C21  
+ C22    H223 
+ C22    H221 
+ C3     C5   
+ C3     C2   
+ C5     C7   
+ C2     C11  
+ C7     C8   
+ C14    C13  
+ C14    C16  
+ C13    C21  
+ C16    C18  
+ C21    C22  
+ O10    C11  
+ C11    O12  
+ O19    C18  
+ C18    O20  

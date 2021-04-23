@@ -1,0 +1,1780 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms of 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove propers over the same bond as an improper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          1        1         3      1     0
+
+; ethylene glycole!
+[  ETG ]
+
+[ atoms ]
+O1   opls_169 -0.700  1 
+H11  opls_170  0.435  1
+C2   opls_157  0.145  1
+H21  opls_140  0.060  1
+H22  opls_140  0.060  1
+C3   opls_157  0.145  2
+H31  opls_140  0.060  2
+H32  opls_140  0.060  2
+O4   opls_169 -0.700  2
+H41  opls_170  0.435  2
+
+[ bonds ]
+  C3  H31
+  C3  H32
+  C2  H21
+  C2  H22
+  C3   C2
+  C3   O4
+  O1   C2
+  O1  H11
+  O4  H41
+
+
+; HEXANE!!!
+
+[ HEX ]
+
+[ atoms ]
+C1   lpls_135 -0.180 1
+H11  lpls_140  0.060 1
+H12  lpls_140  0.060 1
+H13  lpls_140  0.060 1
+C2   lpls_136 -0.120 2
+H21  lpls_140  0.060 2
+H22  lpls_140  0.060 2
+C3   lpls_136 -0.120 3
+H31  lpls_140  0.060 3
+H32  lpls_140  0.060 3
+C4   lpls_136 -0.120 4
+H41  lpls_140  0.060 4
+H42  lpls_140  0.060 4
+C5   lpls_136 -0.120 5
+H51  lpls_140  0.060 5
+H52  lpls_140  0.060 5
+C6   lpls_135 -0.180 6
+H61  lpls_140  0.060 6
+H62  lpls_140  0.060 6
+H63  lpls_140  0.060 6
+
+[ bonds ]
+ H62   C6
+ H63   C6
+  C6  H61
+ H52   C5
+  C5  H51
+ H41   C4
+  C4  H42
+ H32   C3
+  C3  H31
+ H21   C2
+  C2  H22
+ H11   C1
+ H13   C1
+  C1  H12
+  C2   C1
+  C6   C5
+  C5   C4
+  C4   C3
+  C3   C2
+
+[ dihedrals ]
+  C1  C2  C3  C4  LIPID_BERGER 
+  C2  C3  C4  C5  LIPID_BERGER 
+  C3  C4  C5  C6  LIPID_BERGER 
+
+[ MEN ] ; N-metyl asparagine!!!
+ [ atoms ]
+     N    opls_238   -0.500     0
+     H    opls_241    0.300     0
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_136   -0.120     2
+   HB1    opls_140    0.060     2
+   HB2    opls_140    0.060     2
+    CG    opls_235    0.500     3
+   OD1    opls_236   -0.500     3
+   ND2    opls_238   -0.500     4
+   HD2    opls_241    0.300     4
+   CE2    opls_242    0.020     4
+  HE21    opls_140    0.060     4
+  HE22    opls_140    0.060     4
+  HE23    opls_140    0.060     4
+     C    opls_235    0.500     5
+     O    opls_236   -0.500     5
+[ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    CG
+    CG   OD1
+    CG   ND2
+   ND2   HD2
+   ND2   CE2
+   CE2  HE21
+   CE2  HE22
+   CE2  HE23
+     C     O
+    -C     N
+ [ dihedrals ] ; override some with residue-specific ones
+     N    CA    CB    CG     dih_ASN_chi1_N_C_C_C
+    CG    CB    CA     C     dih_ASN_chi1_C_C_C_CO
+    CA    CB    CG   ND2     dih_ASN_chi2_C_C_CO_N
+ [ impropers ]
+    -C    CA     N     H     improper_Z_N_X_Y
+    CA    +N     C     O     improper_O_C_X_Y
+    CB   ND2    CG   OD1     improper_O_C_X_Y
+    CG   HD2   ND2   CE2     improper_Z_N_X_Y
+
+
+
+; dimeristoyl phosphatidyl ethanolamine
+[ DME ]
+
+[ atoms ]
+   C1    lpls_135   -0.180    1  ;   1    alkane CH3 
+   H11   lpls_140    0.060    1  ;   2    alkane H.
+   H12   lpls_140    0.060    1  ;   3    alkane H.
+   H13   lpls_140    0.060    1  ;   4    alkane H.
+   C2    lpls_136   -0.120    2  ;   5    alkane CH2 
+   H21   lpls_140    0.060    2  ;   6    alkane H.
+   H22   lpls_140    0.060    2  ;   7    alkane H.
+   C3    lpls_136   -0.120    3  ;   8    alkane CH2 
+   H31   lpls_140    0.060    3  ;   9    alkane H.
+   H32   lpls_140    0.060    3  ;  10    alkane H.
+   C4    lpls_136   -0.120    4  ;  11    alkane CH2 
+   H41   lpls_140    0.060    4  ;  12    alkane H.
+   H42   lpls_140    0.060    4  ;  13    alkane H.
+   C5    lpls_136   -0.120    5  ;  14    alkane CH2 
+   H51   lpls_140    0.060    5  ;  15    alkane H.
+   H52   lpls_140    0.060    5  ;  16    alkane H.
+   C6    lpls_136   -0.120    6  ;  17    alkane CH2 
+   H61   lpls_140    0.060    6  ;  18    alkane H.
+   H62   lpls_140    0.060    6  ;  19    alkane H.
+   C7    lpls_136   -0.120    7  ;  20    alkane CH2 
+   H71   lpls_140    0.060    7  ;  21    alkane H.
+   H72   lpls_140    0.060    7  ;  22    alkane H.
+   C8    lpls_136   -0.120    8  ;  23    alkane CH2 
+   H81   lpls_140    0.060    8  ;  24    alkane H.
+   H82   lpls_140    0.060    8  ;  25    alkane H.
+   C9    lpls_136   -0.120    9  ;  26    alkane CH2 
+   H91   lpls_140    0.060    9  ;  27    alkane H.
+   H92   lpls_140    0.060    9  ;  28    alkane H.
+   C10   lpls_136   -0.120   10  ;  29    alkane CH2 
+  H101   lpls_140    0.060   10  ;  30    alkane H.
+  H102   lpls_140    0.060   10  ;  31    alkane H.
+  C11    lpls_136   -0.120   11  ;  32    alkane CH2 
+  H111   lpls_140    0.060   11  ;  33    alkane H.
+  H112   lpls_140    0.060   11  ;  34    alkane H.
+  C12    lpls_136   -0.120   12  ;  35    alkane CH2 
+  H121   lpls_140    0.060   12  ;  36    alkane H.
+  H122   lpls_140    0.060   12  ;  37    alkane H.
+  C13    opls_136   -0.070   13  ;  38    alkane CH2 
+  H131   opls_282    0.060   13  ;  39    AA H on C-alpha in ketone & aldehyde
+  H132   opls_282    0.060   13  ;  40    AA H on C-alpha in ketone & aldehyde
+  C14    opls_465    0.520   14  ;  41    AA C:   esters - for R on C=O, use #280-#282
+  O15    opls_466   -0.430   14  ;  42    AA =O:  esters   
+  O16    opls_467   -0.330   14  ;  43    AA -OR: ester 
+  C17    opls_183    0.170   15  ;  44    C(HOR):  i-Pr   ether, allose
+  H171   opls_185    0.030   15  ;  45    H(COR): alpha H ether
+  C18    opls_443    0.300   16  ;  46    C  in Me2PO4-, Me2PO4H   dimetylphosphate
+  H181   opls_444   -0.030   16  ;  47    H  in Me2PO4-, Me2PO4H    6-31+G* CHELPG
+  H182   opls_444   -0.030   16  ;  48    H  in Me2PO4-, Me2PO4H    6-31+G* CHELPG
+  O19    opls_442   -0.620   17  ;  49    OMe in Me2PO4-, Me2PO4H   dimethylphosphate
+  P20    opls_440    1.590   17  ;  50    P in  Me2PO4-, Me2PO4H
+  O21    opls_441   -0.920   17  ;  51    O= in Me2PO4-, Me2PO4H
+  O22    opls_441   -0.920   17  ;  52    O= in Me2PO4-, Me2PO4H
+  O23    opls_442   -0.620   17  ;  53    OMe in Me2PO4-, Me2PO4H   dimethylphosphate
+  C24    opls_443    0.300   18  ;  54    C  in Me2PO4-, Me2PO4H   dimetylphosphate
+  H241   opls_444   -0.030   18  ;  55    H  in Me2PO4-, Me2PO4H    6-31+G* CHELPG
+  H242   opls_444   -0.030   18  ;  56    H  in Me2PO4-, Me2PO4H    6-31+G* CHELPG
+  C25    opls_292    0.190   19  ;  57    C in  RCH2NH3+
+  H251   opls_911    0.060   19  ;  58    H(C) for C bonded to N in amines, diamines (aziridine H2,H3)
+  H252   opls_911    0.060   19  ;  59    H(C) for C bonded to N in amines, diamines (aziridine H2,H3)
+  N26    opls_287   -0.300   20  ;  60    N (RNH3+) JPC,90,2174 (1986)
+  H261   opls_290    0.330   20  ;  61    H (RNH3+) JPC,90,2174 (1986)
+  H262   opls_290    0.330   20  ;  62    H (RNH3+) JPC,90,2174 (1986)
+  H263   opls_290    0.330   20  ;  63    H (RNH3+) JPC,90,2174 (1986)
+  C30    opls_182    0.140   21  ;  64    C(H2OR): ethyl  ether
+  H301   opls_185    0.030   21  ;  65    H(COR): alpha H ether
+  H302   opls_185    0.030   21  ;  66    H(COR): alpha H ether
+  O31    opls_467   -0.330   22  ;  67    AA -OR: ester 
+  C32    opls_465    0.510   22  ;  68    AA C:   esters - for R on C=O, use #280-#282
+  O33    opls_466   -0.430   22  ;  69    AA =O:  esters   
+  C34    opls_136   -0.070   23  ;  70    alkane CH2 
+  H341   opls_282    0.060   23  ;  71    AA H on C-alpha in ketone & aldehyde
+  H342   opls_282    0.060   23  ;  72    AA H on C-alpha in ketone & aldehyde
+  C35    lpls_136   -0.120   24  ;  73    alkane CH2 
+  H351   lpls_140    0.060   24  ;  74    alkane H.
+  H352   lpls_140    0.060   24  ;  75    alkane H.
+  C36    lpls_136   -0.120   25  ;  76    alkane CH2 
+  H361   lpls_140    0.060   25  ;  77    alkane H.
+  H362   lpls_140    0.060   25  ;  78    alkane H.
+  C37    lpls_136   -0.120   26  ;  79    alkane CH2 
+  H371   lpls_140    0.060   26  ;  80    alkane H.
+  H372   lpls_140    0.060   26  ;  81    alkane H.
+  C38    lpls_136   -0.120   27  ;  82    alkane CH2 
+  H381   lpls_140    0.060   27  ;  83    alkane H.
+  H382   lpls_140    0.060   27  ;  84    alkane H.
+  C39    lpls_136   -0.120   28  ;  85    alkane CH2 
+  H391   lpls_140    0.060   28  ;  86    alkane H.
+  H392   lpls_140    0.060   28  ;  87    alkane H.
+  C40    lpls_136   -0.120   29  ;  88    alkane CH2 
+  H401   lpls_140    0.060   29  ;  89    alkane H.
+  H402   lpls_140    0.060   29  ;  90    alkane H.
+  C41    lpls_136   -0.120   30  ;  91    alkane CH2 
+  H411   lpls_140    0.060   30  ;  92    alkane H.
+  H412   lpls_140    0.060   30  ;  93    alkane H.
+  C42    lpls_136   -0.120   31  ;  94    alkane CH2 
+  H421   lpls_140    0.060   31  ;  95    alkane H.
+  H422   lpls_140    0.060   31  ;  96    alkane H.
+  C43    lpls_136   -0.120   32  ;  97    alkane CH2 
+  H431   lpls_140    0.060   32  ;  98    alkane H.
+  H432   lpls_140    0.060   32  ;  99    alkane H.
+  C44    lpls_136   -0.120   33  ; 100    alkane CH2 
+  H441   lpls_140    0.060   33  ; 101    alkane H.
+  H442   lpls_140    0.060   33  ; 102    alkane H.
+  C45    lpls_136   -0.120   34  ; 103    alkane CH2 
+  H451   lpls_140    0.060   34  ; 104    alkane H.
+  H452   lpls_140    0.060   34  ; 105    alkane H.
+  C46    lpls_135   -0.180   35  ; 106    alkane CH3 
+  H461   lpls_140    0.060   35  ; 107    alkane H.
+  H462   lpls_140    0.060   35  ; 108    alkane H.
+  H463   lpls_140    0.060   35  ; 109    alkane H.
+ 
+[ bonds ]
+  C1    C2
+  C2    C3
+  C3    C4
+  C4    C5
+  C5    C6
+  C6    C7
+  C7    C8
+  C8    C9
+  C9    C10
+  C10   C11
+  C11   C12
+  C12   C13
+  C17   C30
+  C17   C18
+  C24   C25
+  C34   C35
+  C35   C36
+  C36   C37
+  C37   C38
+  C38   C39
+  C39   C40
+  C40   C41
+  C41   C42
+  C42   C43
+  C43   C44
+  C44   C45
+  C45   C46
+  C46   H461
+  C6    H62
+  C1    H12
+  C1    H11
+  C1    H13
+  C2    H21
+  C2    H22
+  C3    H31
+  C3    H32
+  C4    H41
+  C4    H42
+  C5    H51
+  C5    H52
+  C6    H61
+  C7    H71
+  C7    H72
+  C8    H81
+  C8    H82
+  C9    H91
+  C9    H92
+  C10   H101
+  C10   H102
+  C11   H111
+  C11   H112
+  C12   H121
+  C12   H122
+  C13   H131
+  C13   H132
+  C17   H171
+  C18   H182
+  C18   H181
+  C24   H242
+  C24   H241
+  C25   H252
+  C25   H251
+  C30   H301
+  C30   H302
+  C34   H341
+  C34   H342
+  C35   H351
+  C35   H352
+  C36   H361
+  C36   H362
+  C37   H371
+  C37   H372
+  C38   H381
+  C38   H382
+  C39   H391
+  C39   H392
+  C40   H401
+  C40   H402
+  C41   H411
+  C41   H412
+  C42   H421
+  C42   H422
+  C43   H431
+  C43   H432
+  C44   H441
+  C44   H442
+  C45   H451
+  C45   H452
+  C46   H462
+  C46   H463
+  C13   C14
+  C32   C34
+  C14   O16
+  O31   C32
+  C14   O15
+  C32   O33
+  O16   C17
+  C18   O19
+  O23   C24
+  C30   O31
+  O19   P20
+  P20   O23
+  P20   O22
+  P20   O21
+  C25   N26
+  N26   H262
+  N26   H263
+  N26   H261
+
+[dihedrals]
+; tail no.1
+ C1  C2  C3  C4   LIPID_BERGER
+ C2  C3  C4  C5   LIPID_BERGER
+ C3  C4  C5  C6   LIPID_BERGER
+ C4  C5  C6  C7   LIPID_BERGER
+ C5  C6  C7  C8   LIPID_BERGER
+ C6  C7  C8  C9   LIPID_BERGER
+ C7  C8  C9  C10  LIPID_BERGER
+ C8  C9  C10 C11  LIPID_BERGER
+ C9  C10 C11 C12  LIPID_BERGER
+ C10 C11 C12 C13  LIPID_BERGER
+; tail no.2
+ C34 C35 C36 C37  LIPID_BERGER
+ C35 C36 C37 C38  LIPID_BERGER
+ C36 C37 C38 C39  LIPID_BERGER
+ C37 C38 C39 C40  LIPID_BERGER
+ C38 C39 C40 C41  LIPID_BERGER
+ C39 C40 C41 C42  LIPID_BERGER
+ C40 C41 C42 C43  LIPID_BERGER
+ C41 C42 C43 C44  LIPID_BERGER
+ C42 C43 C44 C45  LIPID_BERGER
+ C43 C44 C45 C46  LIPID_BERGER
+
+[impropers]
+; plane -C(=O)O- of fat acids
+ O15 C14 O16 C13  improper_O_C_X_Y
+ O33 C32 O31 C34  improper_O_C_X_Y
+
+[  MNE ] ; MethylAminoEthanol as phtallocyanine radical
+
+[ atoms ]
+CA   opls_223  0.080  1
+HA1  opls_911  0.060  1
+HA2  opls_911  0.060  1
+NB   opls_901 -0.780  2
+HB   opls_910  0.380  2
+CG   opls_223  0.080  3
+HG1  opls_911  0.060  3
+HG2  opls_911  0.060  3
+CD   opls_157  0.145  4
+HD1  opls_140  0.060  4
+HD2  opls_140  0.060  4
+OE   opls_154 -0.683  5
+HE   opls_155  0.418  5
+
+[ bonds ]
+  CA  HA1
+  CA  HA2
+  CG  HG1
+  CG  HG2
+  CD  HD1
+  CD  HD2
+  CG   CD
+  CA   NB
+  NB   CG
+  NB   HB
+  CD   OE
+  OE   HE
+; topology successfully writed
+
+
+[ PHC ] ; Phtallocyanine core
+
+[ atoms ]
+NA1  opls_620  -0.239   1
+CA2  opls_623  -0.163   2
+CA3  opls_595  -0.149   3
+CA4  opls_145  -0.115   4
+HA4  opls_146   0.115   4
+CA5  opls_145  -0.115   5
+CA6  opls_145  -0.115   6
+CA7  opls_145  -0.115   7
+HA7  opls_146   0.115   7
+CA8  opls_544  -0.149   8
+CA9  opls_623  -0.163   9
+NAB  opls_620   0.800  10
+NB1  opls_620   0.800  11
+CB2  opls_623   0.130  12
+CB3  opls_595  -0.115  13
+CB4  opls_145  -0.115  14
+HB4  opls_146   0.115  14
+CB5  opls_145  -0.115  15
+CB6  opls_145  -0.115  16
+CB7  opls_145  -0.115  17
+HB7  opls_146   0.115  17
+CB8  opls_544  -0.115  18
+CB9  opls_623   0.130  19
+NBC  opls_620   0.800  20
+NC1  opls_620  -0.239  21
+CC2  opls_623  -0.163  22
+CC3  opls_595  -0.149  23
+CC4  opls_145  -0.115  24
+HC4  opls_146   0.115  24
+CC5  opls_145  -0.115  25
+CC6  opls_145  -0.115  26
+CC7  opls_145  -0.115  27
+HC7  opls_146   0.115  27
+CC8  opls_544  -0.149  28
+CC9  opls_623  -0.163  29
+NCD  opls_620   0.800  30
+ND1  opls_620   0.800  31
+CD2  opls_623   0.130  32
+CD3  opls_595  -0.115  33
+CD4  opls_145  -0.115  34
+HD4  opls_146   0.115  34
+CD5  opls_145  -0.115  35
+CD6  opls_145  -0.115  36
+CD7  opls_145  -0.115  37
+HD7  opls_146   0.115  37
+CD8  opls_544  -0.115  38
+CD9  opls_623   0.130  39
+NDA  opls_620   0.800  40
+ZN   Zn2+      +2.000  41
+
+[ bonds ]
+ CB2  CB3
+ CB8  CB9
+ CD2  CD3
+ CD8  CD9
+ NA1  CA2
+ NA1  CA9
+ CA2  NDA
+ CA9  NAB
+ NBC  CC2
+ NC1  CC2
+ NC1  CC9
+ CC9  NCD
+ CA2  CA3
+ CA8  CA9
+ CC2  CC3
+ CC8  CC9
+ CA3  CA4
+ CA3  CA8
+ CA7  CA8
+ CC3  CC4
+ CC3  CC8
+ CC7  CC8
+ CA4  CA5
+ CA5  CA6
+ CA6  CA7
+ CB3  CB8
+ CB3  CB4
+ CB4  CB5
+ CB5  CB6
+ CB6  CB7
+ CB7  CB8
+ CC4  CC5
+ CC5  CC6
+ CC6  CC7
+ CD3  CD8
+ CD3  CD4
+ CD4  CD5
+ CD5  CD6
+ CD6  CD7
+ CD7  CD8
+ CA4  HA4
+ CA7  HA7
+ CB4  HB4
+ CB7  HB7
+ CC4  HC4
+ CC7  HC7
+ CD4  HD4
+ CD7  HD7
+ NAB  CB2
+ NB1  CB9
+ NB1  CB2
+ CB9  NBC
+ NCD  CD2
+ ND1  CD9
+ ND1  CD2
+ CD9  NDA
+ ZN   NA1
+ ZN   NB1
+ ZN   NC1
+ ZN   ND1
+
+
+; A piece of infinite graphene list!!!
+[ GRAF ]
+
+[ atoms ]
+C1    GrafInf  0.00  1
+C2    GrafInf  0.00  2
+C3    GrafInf  0.00  3
+C4    GrafInf  0.00  4
+C5    GrafInf  0.00  5
+C6    GrafInf  0.00  6
+C7    GrafInf  0.00  7
+C8    GrafInf  0.00  8
+C9    GrafInf  0.00  9
+C10   GrafInf  0.00  10
+C11   GrafInf  0.00  11
+C12   GrafInf  0.00  12
+C13   GrafInf  0.00  13
+C14   GrafInf  0.00  14
+C15   GrafInf  0.00  15
+C16   GrafInf  0.00  16
+C17   GrafInf  0.00  17
+C18   GrafInf  0.00  18
+C19   GrafInf  0.00  19
+C20   GrafInf  0.00  20
+C21   GrafInf  0.00  21
+C22   GrafInf  0.00  22
+C23   GrafInf  0.00  23
+C24   GrafInf  0.00  24
+C25   GrafInf  0.00  25
+C26   GrafInf  0.00  26
+C27   GrafInf  0.00  27
+C28   GrafInf  0.00  28
+C29   GrafInf  0.00  29
+C30   GrafInf  0.00  30
+C31   GrafInf  0.00  31
+C32   GrafInf  0.00  32
+C33   GrafInf  0.00  33
+C34   GrafInf  0.00  34
+C35   GrafInf  0.00  35
+C36   GrafInf  0.00  36
+C37   GrafInf  0.00  37
+C38   GrafInf  0.00  38
+C39   GrafInf  0.00  39
+C40   GrafInf  0.00  40
+C41   GrafInf  0.00  41
+C42   GrafInf  0.00  42
+C43   GrafInf  0.00  43
+C44   GrafInf  0.00  44
+C45   GrafInf  0.00  45
+C46   GrafInf  0.00  46
+C47   GrafInf  0.00  47
+C48   GrafInf  0.00  48
+C49   GrafInf  0.00  49
+C50   GrafInf  0.00  50
+C51   GrafInf  0.00  51
+C52   GrafInf  0.00  52
+C53   GrafInf  0.00  53
+C54   GrafInf  0.00  54
+C55   GrafInf  0.00  55
+C56   GrafInf  0.00  56
+C57   GrafInf  0.00  57
+C58   GrafInf  0.00  58
+C59   GrafInf  0.00  59
+C60   GrafInf  0.00  60
+C61   GrafInf  0.00  61
+C62   GrafInf  0.00  62
+C63   GrafInf  0.00  63
+C64   GrafInf  0.00  64
+C65   GrafInf  0.00  65
+C66   GrafInf  0.00  66
+C67   GrafInf  0.00  67
+C68   GrafInf  0.00  68
+C69   GrafInf  0.00  69
+C70   GrafInf  0.00  70
+C71   GrafInf  0.00  71
+C72   GrafInf  0.00  72
+C73   GrafInf  0.00  73
+C74   GrafInf  0.00  74
+C75   GrafInf  0.00  75
+C76   GrafInf  0.00  76
+C77   GrafInf  0.00  77
+C78   GrafInf  0.00  78
+C79   GrafInf  0.00  79
+C80   GrafInf  0.00  80
+C81   GrafInf  0.00  81
+C82   GrafInf  0.00  82
+C83   GrafInf  0.00  83
+C84   GrafInf  0.00  84
+C85   GrafInf  0.00  85
+C86   GrafInf  0.00  86
+C87   GrafInf  0.00  87
+C88   GrafInf  0.00  88
+C89   GrafInf  0.00  89
+C90   GrafInf  0.00  90
+C91   GrafInf  0.00  91
+C92   GrafInf  0.00  92
+C93   GrafInf  0.00  93
+C94   GrafInf  0.00  94
+C95   GrafInf  0.00  95
+C96   GrafInf  0.00  96
+C97   GrafInf  0.00  97
+C98   GrafInf  0.00  98
+C99   GrafInf  0.00  99
+C100  GrafInf  0.00  100
+C101  GrafInf  0.00  101
+C102  GrafInf  0.00  102
+C103  GrafInf  0.00  103
+C104  GrafInf  0.00  104
+C105  GrafInf  0.00  105
+C106  GrafInf  0.00  106
+C107  GrafInf  0.00  107
+C108  GrafInf  0.00  108
+C109  GrafInf  0.00  109
+C110  GrafInf  0.00  110
+C111  GrafInf  0.00  111
+C112  GrafInf  0.00  112
+C113  GrafInf  0.00  113
+C114  GrafInf  0.00  114
+C115  GrafInf  0.00  115
+C116  GrafInf  0.00  116
+C117  GrafInf  0.00  117
+C118  GrafInf  0.00  118
+C119  GrafInf  0.00  119
+C120  GrafInf  0.00  120
+C121  GrafInf  0.00  121
+C122  GrafInf  0.00  122
+C123  GrafInf  0.00  123
+C124  GrafInf  0.00  124
+C125  GrafInf  0.00  125
+C126  GrafInf  0.00  126
+C127  GrafInf  0.00  127
+C128  GrafInf  0.00  128
+C129  GrafInf  0.00  129
+C130  GrafInf  0.00  130
+C131  GrafInf  0.00  131
+C132  GrafInf  0.00  132
+C133  GrafInf  0.00  133
+C134  GrafInf  0.00  134
+C135  GrafInf  0.00  135
+C136  GrafInf  0.00  136
+C137  GrafInf  0.00  137
+C138  GrafInf  0.00  138
+C139  GrafInf  0.00  139
+C140  GrafInf  0.00  140
+C141  GrafInf  0.00  141
+C142  GrafInf  0.00  142
+C143  GrafInf  0.00  143
+C144  GrafInf  0.00  144
+C145  GrafInf  0.00  145
+C146  GrafInf  0.00  146
+C147  GrafInf  0.00  147
+C148  GrafInf  0.00  148
+C149  GrafInf  0.00  149
+C150  GrafInf  0.00  150
+C151  GrafInf  0.00  151
+C152  GrafInf  0.00  152
+C153  GrafInf  0.00  153
+C154  GrafInf  0.00  154
+C155  GrafInf  0.00  155
+C156  GrafInf  0.00  156
+C157  GrafInf  0.00  157
+C158  GrafInf  0.00  158
+C159  GrafInf  0.00  159
+C160  GrafInf  0.00  160
+C161  GrafInf  0.00  161
+C162  GrafInf  0.00  162
+C163  GrafInf  0.00  163
+C164  GrafInf  0.00  164
+C165  GrafInf  0.00  165
+C166  GrafInf  0.00  166
+C167  GrafInf  0.00  167
+C168  GrafInf  0.00  168
+C169  GrafInf  0.00  169
+C170  GrafInf  0.00  170
+C171  GrafInf  0.00  171
+C172  GrafInf  0.00  172
+C173  GrafInf  0.00  173
+C174  GrafInf  0.00  174
+C175  GrafInf  0.00  175
+C176  GrafInf  0.00  176
+C177  GrafInf  0.00  177
+C178  GrafInf  0.00  178
+C179  GrafInf  0.00  179
+C180  GrafInf  0.00  180
+C181  GrafInf  0.00  181
+C182  GrafInf  0.00  182
+C183  GrafInf  0.00  183
+C184  GrafInf  0.00  184
+C185  GrafInf  0.00  185
+C186  GrafInf  0.00  186
+C187  GrafInf  0.00  187
+C188  GrafInf  0.00  188
+C189  GrafInf  0.00  189
+C190  GrafInf  0.00  190
+C191  GrafInf  0.00  191
+C192  GrafInf  0.00  192
+C193  GrafInf  0.00  193
+C194  GrafInf  0.00  194
+C195  GrafInf  0.00  195
+C196  GrafInf  0.00  196
+C197  GrafInf  0.00  197
+C198  GrafInf  0.00  198
+C199  GrafInf  0.00  199
+C200  GrafInf  0.00  200
+C201  GrafInf  0.00  201
+C202  GrafInf  0.00  202
+C203  GrafInf  0.00  203
+C204  GrafInf  0.00  204
+C205  GrafInf  0.00  205
+C206  GrafInf  0.00  206
+C207  GrafInf  0.00  207
+C208  GrafInf  0.00  208
+C209  GrafInf  0.00  209
+C210  GrafInf  0.00  210
+C211  GrafInf  0.00  211
+C212  GrafInf  0.00  212
+C213  GrafInf  0.00  213
+C214  GrafInf  0.00  214
+C215  GrafInf  0.00  215
+C216  GrafInf  0.00  216
+C217  GrafInf  0.00  217
+C218  GrafInf  0.00  218
+C219  GrafInf  0.00  219
+C220  GrafInf  0.00  220
+C221  GrafInf  0.00  221
+C222  GrafInf  0.00  222
+C223  GrafInf  0.00  223
+C224  GrafInf  0.00  224
+C225  GrafInf  0.00  225
+C226  GrafInf  0.00  226
+C227  GrafInf  0.00  227
+C228  GrafInf  0.00  228
+C229  GrafInf  0.00  229
+C230  GrafInf  0.00  230
+C231  GrafInf  0.00  231
+C232  GrafInf  0.00  232
+C233  GrafInf  0.00  233
+C234  GrafInf  0.00  234
+C235  GrafInf  0.00  235
+C236  GrafInf  0.00  236
+C237  GrafInf  0.00  237
+C238  GrafInf  0.00  238
+C239  GrafInf  0.00  239
+C240  GrafInf  0.00  240
+C241  GrafInf  0.00  241
+C242  GrafInf  0.00  242
+C243  GrafInf  0.00  243
+C244  GrafInf  0.00  244
+C245  GrafInf  0.00  245
+C246  GrafInf  0.00  246
+C247  GrafInf  0.00  247
+C248  GrafInf  0.00  248
+C249  GrafInf  0.00  249
+C250  GrafInf  0.00  250
+C251  GrafInf  0.00  251
+C252  GrafInf  0.00  252
+C253  GrafInf  0.00  253
+C254  GrafInf  0.00  254
+C255  GrafInf  0.00  255
+C256  GrafInf  0.00  256
+C257  GrafInf  0.00  257
+C258  GrafInf  0.00  258
+C259  GrafInf  0.00  259
+C260  GrafInf  0.00  260
+C261  GrafInf  0.00  261
+C262  GrafInf  0.00  262
+C263  GrafInf  0.00  263
+C264  GrafInf  0.00  264
+C265  GrafInf  0.00  265
+C266  GrafInf  0.00  266
+C267  GrafInf  0.00  267
+C268  GrafInf  0.00  268
+C269  GrafInf  0.00  269
+C270  GrafInf  0.00  270
+C271  GrafInf  0.00  271
+C272  GrafInf  0.00  272
+C273  GrafInf  0.00  273
+C274  GrafInf  0.00  274
+C275  GrafInf  0.00  275
+C276  GrafInf  0.00  276
+C277  GrafInf  0.00  277
+C278  GrafInf  0.00  278
+C279  GrafInf  0.00  279
+C280  GrafInf  0.00  280
+C281  GrafInf  0.00  281
+C282  GrafInf  0.00  282
+C283  GrafInf  0.00  283
+C284  GrafInf  0.00  284
+C285  GrafInf  0.00  285
+C286  GrafInf  0.00  286
+C287  GrafInf  0.00  287
+C288  GrafInf  0.00  288
+C289  GrafInf  0.00  289
+C290  GrafInf  0.00  290
+C291  GrafInf  0.00  291
+C292  GrafInf  0.00  292
+C293  GrafInf  0.00  293
+C294  GrafInf  0.00  294
+C295  GrafInf  0.00  295
+C296  GrafInf  0.00  296
+C297  GrafInf  0.00  297
+C298  GrafInf  0.00  298
+C299  GrafInf  0.00  299
+C300  GrafInf  0.00  300
+C301  GrafInf  0.00  301
+C302  GrafInf  0.00  302
+C303  GrafInf  0.00  303
+C304  GrafInf  0.00  304
+C305  GrafInf  0.00  305
+C306  GrafInf  0.00  306
+C307  GrafInf  0.00  307
+C308  GrafInf  0.00  308
+C309  GrafInf  0.00  309
+C310  GrafInf  0.00  310
+C311  GrafInf  0.00  311
+C312  GrafInf  0.00  312
+C313  GrafInf  0.00  313
+C314  GrafInf  0.00  314
+C315  GrafInf  0.00  315
+C316  GrafInf  0.00  316
+C317  GrafInf  0.00  317
+C318  GrafInf  0.00  318
+C319  GrafInf  0.00  319
+C320  GrafInf  0.00  320
+C321  GrafInf  0.00  321
+C322  GrafInf  0.00  322
+C323  GrafInf  0.00  323
+C324  GrafInf  0.00  324
+C325  GrafInf  0.00  325
+C326  GrafInf  0.00  326
+C327  GrafInf  0.00  327
+C328  GrafInf  0.00  328
+C329  GrafInf  0.00  329
+C330  GrafInf  0.00  330
+C331  GrafInf  0.00  331
+C332  GrafInf  0.00  332
+C333  GrafInf  0.00  333
+C334  GrafInf  0.00  334
+C335  GrafInf  0.00  335
+C336  GrafInf  0.00  336
+C337  GrafInf  0.00  337
+C338  GrafInf  0.00  338
+C339  GrafInf  0.00  339
+C340  GrafInf  0.00  340
+C341  GrafInf  0.00  341
+C342  GrafInf  0.00  342
+C343  GrafInf  0.00  343
+C344  GrafInf  0.00  344
+C345  GrafInf  0.00  345
+C346  GrafInf  0.00  346
+C347  GrafInf  0.00  347
+C348  GrafInf  0.00  348
+C349  GrafInf  0.00  349
+C350  GrafInf  0.00  350
+C351  GrafInf  0.00  351
+C352  GrafInf  0.00  352
+C353  GrafInf  0.00  353
+C354  GrafInf  0.00  354
+C355  GrafInf  0.00  355
+C356  GrafInf  0.00  356
+C357  GrafInf  0.00  357
+C358  GrafInf  0.00  358
+C359  GrafInf  0.00  359
+C360  GrafInf  0.00  360
+C361  GrafInf  0.00  361
+C362  GrafInf  0.00  362
+C363  GrafInf  0.00  363
+C364  GrafInf  0.00  364
+C365  GrafInf  0.00  365
+C366  GrafInf  0.00  366
+C367  GrafInf  0.00  367
+C368  GrafInf  0.00  368
+C369  GrafInf  0.00  369
+C370  GrafInf  0.00  370
+C371  GrafInf  0.00  371
+C372  GrafInf  0.00  372
+C373  GrafInf  0.00  373
+C374  GrafInf  0.00  374
+C375  GrafInf  0.00  375
+C376  GrafInf  0.00  376
+C377  GrafInf  0.00  377
+C378  GrafInf  0.00  378
+C379  GrafInf  0.00  379
+C380  GrafInf  0.00  380
+C381  GrafInf  0.00  381
+C382  GrafInf  0.00  382
+C383  GrafInf  0.00  383
+C384  GrafInf  0.00  384
+C385  GrafInf  0.00  385
+C386  GrafInf  0.00  386
+C387  GrafInf  0.00  387
+C388  GrafInf  0.00  388
+C389  GrafInf  0.00  389
+C390  GrafInf  0.00  390
+C391  GrafInf  0.00  391
+C392  GrafInf  0.00  392
+C393  GrafInf  0.00  393
+C394  GrafInf  0.00  394
+C395  GrafInf  0.00  395
+C396  GrafInf  0.00  396
+C397  GrafInf  0.00  397
+C398  GrafInf  0.00  398
+C399  GrafInf  0.00  399
+C400  GrafInf  0.00  400
+C401  GrafInf  0.00  401
+C402  GrafInf  0.00  402
+C403  GrafInf  0.00  403
+C404  GrafInf  0.00  404
+C405  GrafInf  0.00  405
+C406  GrafInf  0.00  406
+C407  GrafInf  0.00  407
+C408  GrafInf  0.00  408
+C409  GrafInf  0.00  409
+C410  GrafInf  0.00  410
+C411  GrafInf  0.00  411
+C412  GrafInf  0.00  412
+C413  GrafInf  0.00  413
+C414  GrafInf  0.00  414
+C415  GrafInf  0.00  415
+C416  GrafInf  0.00  416
+C417  GrafInf  0.00  417
+C418  GrafInf  0.00  418
+C419  GrafInf  0.00  419
+C420  GrafInf  0.00  420
+C421  GrafInf  0.00  421
+C422  GrafInf  0.00  422
+C423  GrafInf  0.00  423
+C424  GrafInf  0.00  424
+C425  GrafInf  0.00  425
+C426  GrafInf  0.00  426
+C427  GrafInf  0.00  427
+C428  GrafInf  0.00  428
+C429  GrafInf  0.00  429
+C430  GrafInf  0.00  430
+C431  GrafInf  0.00  431
+C432  GrafInf  0.00  432
+C433  GrafInf  0.00  433
+C434  GrafInf  0.00  434
+C435  GrafInf  0.00  435
+C436  GrafInf  0.00  436
+C437  GrafInf  0.00  437
+C438  GrafInf  0.00  438
+C439  GrafInf  0.00  439
+C440  GrafInf  0.00  440
+C441  GrafInf  0.00  441
+C442  GrafInf  0.00  442
+C443  GrafInf  0.00  443
+C444  GrafInf  0.00  444
+C445  GrafInf  0.00  445
+C446  GrafInf  0.00  446
+C447  GrafInf  0.00  447
+C448  GrafInf  0.00  448
+
+[ bonds ]
+C295 C296 
+C295 C310 
+C295 C278 
+C308 C307 
+C308 C293 
+C308 C325 
+C307 C292 
+C307 C324 
+C306 C305 
+C306 C291 
+C306 C323 
+C305 C290 
+C304 C303 
+C304 C287 
+C304 C319 
+C303 C286 
+C303 C318 
+C302 C301 
+C302 C285 
+C302 C317 
+C301 C284 
+C301 C316 
+C300 C299 
+C300 C283 
+C300 C315 
+C299 C282 
+C299 C314 
+C298 C297 
+C298 C281 
+C298 C313 
+C297 C312 
+C297 C280 
+C296 C311 
+C296 C279 
+C309 C294 
+C309 C326 
+C309 C310 
+C294 C293 
+C294 C277 
+C293 C276 
+C292 C291 
+C292 C275 
+C290 C273 
+C287 C272 
+C286 C285 
+C285 C270 
+C284 C283 
+C284 C269 
+C283 C268 
+C282 C281 
+C282 C267 
+C323 C324 
+C323 C338 
+C336 C335 
+C336 C319 
+C335 C318 
+C335 C350 
+C334 C333 
+C334 C317 
+C334 C349 
+C333 C316 
+C333 C348 
+C332 C331 
+C332 C315 
+C332 C347 
+C331 C314 
+C331 C346 
+C330 C329 
+C330 C313 
+C330 C345 
+C329 C312 
+C329 C344 
+C328 C327 
+C328 C311 
+C328 C343 
+C327 C310 
+C327 C342 
+C326 C325 
+C326 C341 
+C325 C340 
+C324 C339 
+C281 C266 
+C318 C317 
+C316 C315 
+C314 C313 
+C312 C311 
+C239 C240 
+C239 C254 
+C239 C222 
+C252 C251 
+C252 C237 
+C252 C269 
+C251 C236 
+C251 C268 
+C250 C249 
+C250 C235 
+C250 C267 
+C249 C234 
+C249 C266 
+C248 C247 
+C248 C233 
+C248 C265 
+C247 C232 
+C247 C264 
+C246 C245 
+C246 C231 
+C246 C263 
+C245 C230 
+C245 C262 
+C244 C243 
+C244 C229 
+C244 C261 
+C243 C228 
+C243 C260 
+C242 C241 
+C242 C227 
+C242 C259 
+C241 C226 
+C241 C258 
+C240 C255 
+C240 C223 
+C253 C238 
+C253 C270 
+C253 C254 
+C238 C237 
+C238 C221 
+C237 C220 
+C236 C235 
+C236 C219 
+C235 C218 
+C234 C233 
+C234 C217 
+C233 C216 
+C232 C231 
+C232 C215 
+C231 C214 
+C230 C229 
+C230 C213 
+C229 C212 
+C228 C227 
+C228 C211 
+C227 C210 
+C226 C209 
+C267 C268 
+C280 C279 
+C280 C265 
+C279 C264 
+C278 C277 
+C278 C263 
+C277 C262 
+C276 C275 
+C276 C261 
+C275 C260 
+C273 C258 
+C272 C255 
+C270 C269 
+C337 C354 
+C337 C338 
+C266 C265 
+C264 C263 
+C262 C261 
+C260 C259 
+C407 C408 
+C407 C424 
+C407 C392 
+C420 C419 
+C420 C403 
+C420 C435 
+C419 C402 
+C419 C434 
+C418 C401 
+C418 C433 
+C414 C413 
+C414 C399 
+C414 C431 
+C413 C398 
+C413 C430 
+C412 C411 
+C412 C397 
+C412 C429 
+C411 C396 
+C411 C428 
+C410 C409 
+C410 C395 
+C410 C427 
+C409 C394 
+C409 C426 
+C408 C393 
+C408 C425 
+C421 C404 
+C421 C436 
+C421 C422 
+C406 C405 
+C406 C423 
+C406 C391 
+C405 C422 
+C405 C390 
+C404 C403 
+C404 C389 
+C403 C388 
+C402 C401 
+C402 C387 
+C400 C399 
+C400 C383 
+C399 C382 
+C398 C397 
+C398 C381 
+C397 C380 
+C396 C395 
+C396 C379 
+C395 C378 
+C394 C393 
+C394 C377 
+C435 C436 
+C446 C445 
+C446 C431 
+C445 C430 
+C444 C443 
+C444 C429 
+C443 C428 
+C442 C441 
+C442 C427 
+C441 C426 
+C440 C439 
+C440 C425 
+C439 C424 
+C438 C437 
+C438 C423 
+C437 C422 
+C393 C376 
+C434 C433 
+C430 C429 
+C428 C427 
+C426 C425 
+C424 C423 
+C364 C363 
+C364 C347 
+C364 C379 
+C363 C346 
+C363 C378 
+C362 C361 
+C362 C345 
+C362 C377 
+C361 C344 
+C361 C376 
+C360 C359 
+C360 C343 
+C360 C375 
+C359 C342 
+C359 C374 
+C358 C357 
+C358 C341 
+C358 C373 
+C357 C340 
+C357 C372 
+C356 C355 
+C356 C339 
+C356 C371 
+C355 C338 
+C355 C370 
+C354 C369 
+C365 C348 
+C365 C380 
+C365 C366 
+C350 C349 
+C350 C367 
+C349 C366 
+C348 C347 
+C346 C345 
+C344 C343 
+C342 C341 
+C340 C339 
+C379 C380 
+C392 C391 
+C392 C375 
+C391 C374 
+C390 C389 
+C390 C373 
+C389 C372 
+C388 C387 
+C388 C371 
+C387 C370 
+C383 C368 
+C382 C381 
+C382 C367 
+C381 C366 
+C378 C377 
+C376 C375 
+C374 C373 
+C372 C371 
+C370 C369 
+C368 C367 
+ C71  C72 
+ C71  C86 
+ C71  C54 
+ C84  C83 
+ C84  C69 
+ C84 C101 
+ C83  C68 
+ C83 C100 
+ C82  C81 
+ C82  C67 
+ C82  C99 
+ C81  C98 
+ C80  C79 
+ C80  C63 
+ C79  C62 
+ C79  C94 
+ C78  C77 
+ C78  C61 
+ C78  C93 
+ C77  C60 
+ C77  C92 
+ C76  C75 
+ C76  C59 
+ C76  C91 
+ C75  C58 
+ C75  C90 
+ C74  C73 
+ C74  C57 
+ C74  C89 
+ C73  C88 
+ C73  C56 
+ C72  C87 
+ C72  C55 
+ C85  C70 
+ C85 C102 
+ C85  C86 
+ C70  C69 
+ C70  C53 
+ C69  C52 
+ C68  C67 
+ C68  C51 
+ C67  C50 
+ C63  C48 
+ C62  C61 
+ C62  C47 
+ C61  C46 
+ C60  C59 
+ C60  C45 
+ C59  C44 
+ C58  C57 
+ C58  C43 
+ C99 C100 
+ C99 C114 
+C112 C111 
+C112 C127 
+C111  C94 
+C111 C126 
+C110 C109 
+C110  C93 
+C110 C125 
+C109  C92 
+C109 C124 
+C108 C107 
+C108  C91 
+C108 C123 
+C107  C90 
+C107 C122 
+C106 C105 
+C106  C89 
+C106 C121 
+C105  C88 
+C105 C120 
+C104 C103 
+C104  C87 
+C104 C119 
+C103  C86 
+C103 C118 
+C102 C101 
+C102 C117 
+C101 C116 
+C100 C115 
+ C57  C42 
+ C98 C113 
+ C94  C93 
+ C92  C91 
+ C90  C89 
+ C88  C87 
+ C28  C27 
+ C28  C13 
+ C28  C45 
+ C27  C12 
+ C27  C44 
+ C26  C25 
+ C26  C11 
+ C26  C43 
+ C25  C10 
+ C25  C42 
+ C24  C23 
+ C24   C9 
+ C24  C41 
+ C23   C8 
+ C23  C40 
+ C22  C21 
+ C22   C7 
+ C22  C39 
+ C21   C6 
+ C21  C38 
+ C20  C19 
+ C20   C5 
+ C20  C37 
+ C19   C4 
+ C19  C36 
+ C18  C17 
+ C18   C3 
+ C18  C35 
+ C17  C34 
+ C29  C14 
+ C29  C46 
+ C29  C30 
+ C14  C13 
+ C12  C11 
+ C10   C9 
+  C8   C7 
+  C6   C5 
+  C4   C3 
+ C43  C44 
+ C56  C55 
+ C56  C41 
+ C55  C40 
+ C54  C53 
+ C54  C39 
+ C53  C38 
+ C52  C51 
+ C52  C37 
+ C51  C36 
+ C50  C49 
+ C50  C35 
+ C49  C34 
+ C48  C47 
+ C47  C30 
+ C46  C45 
+C113 C130 
+C113 C114 
+ C42  C41 
+ C40  C39 
+ C38  C37 
+ C36  C35 
+C183 C184 
+C183 C200 
+C183 C168 
+C195 C178 
+C195 C210 
+C194 C177 
+C194 C209 
+C191 C176 
+C191 C208 
+C190 C189 
+C190 C175 
+C189 C174 
+C189 C206 
+C188 C187 
+C188 C173 
+C188 C205 
+C187 C172 
+C187 C204 
+C186 C185 
+C186 C171 
+C186 C203 
+C185 C170 
+C185 C202 
+C184 C169 
+C184 C201 
+C197 C180 
+C197 C212 
+C197 C198 
+C182 C181 
+C182 C199 
+C182 C167 
+C181 C198 
+C181 C166 
+C180 C179 
+C180 C165 
+C179 C164 
+C178 C177 
+C178 C163 
+C177 C162 
+C176 C175 
+C175 C158 
+C174 C173 
+C174 C157 
+C173 C156 
+C172 C171 
+C172 C155 
+C171 C154 
+C170 C169 
+C170 C153 
+C211 C212 
+C223 C208 
+C222 C221 
+C221 C206 
+C220 C219 
+C220 C205 
+C219 C204 
+C218 C217 
+C218 C203 
+C217 C202 
+C216 C215 
+C216 C201 
+C215 C200 
+C214 C213 
+C214 C199 
+C213 C198 
+C169 C152 
+C210 C209 
+C206 C205 
+C204 C203 
+C202 C201 
+C200 C199 
+C127 C144 
+C140 C139 
+C140 C123 
+C140 C155 
+C139 C122 
+C139 C154 
+C138 C137 
+C138 C121 
+C138 C153 
+C137 C120 
+C137 C152 
+C136 C135 
+C136 C119 
+C136 C151 
+C135 C118 
+C135 C150 
+C134 C133 
+C134 C117 
+C134 C149 
+C133 C116 
+C133 C148 
+C132 C131 
+C132 C115 
+C132 C147 
+C131 C114 
+C130 C145 
+C141 C124 
+C141 C156 
+C141 C142 
+C126 C125 
+C126 C143 
+C125 C142 
+C124 C123 
+C122 C121 
+C120 C119 
+C118 C117 
+C116 C115 
+C155 C156 
+C168 C167 
+C168 C151 
+C167 C150 
+C166 C165 
+C166 C149 
+C165 C148 
+C164 C163 
+C164 C147 
+C162 C145 
+C158 C157 
+C158 C143 
+C157 C142 
+C154 C153 
+C152 C151 
+C150 C149 
+C148 C147 
+C144 C143 
+C305 C322 
+C291 C274 
+C286 C271 
+C336 C351 
+C322 C337 
+C274 C273 
+C274 C259 
+C272 C271 
+C271 C254 
+C415 C400 
+C401 C386 
+C432 C431 
+C351 C368 
+C386 C369 
+ C81  C66 
+ C80  C95 
+ C66  C49 
+C112  C95 
+ C15  C30 
+ C48  C31 
+C196 C195 
+C196 C179 
+C196 C211 
+C190 C207 
+C176 C159 
+C222 C207 
+C208 C207 
+C131 C146 
+C163 C146 
+C159 C144 
+C146 C145 
+ C17   C2 
+C290 C289 
+C288 C287 
+C322 C321 
+C320 C319 
+C226 C225 
+C258 C257 
+C256 C255 
+C418 C417 
+C416 C415 
+C448 C447 
+C351 C352 
+C354 C353 
+C386 C385 
+C384 C383 
+ C66  C65 
+ C64  C63 
+ C98  C97 
+ C96  C95 
+ C34  C33 
+ C32  C31 
+C194 C193 
+C192 C191 
+C224 C223 
+C127 C128 
+C130 C129 
+C162 C161 
+C160 C159 
+C415 C432 
+C447 C432 
+ C15  C16 
+ C16  C31 
+  C2   C1 
+;border bonds
+  C1  C32
+  C1 C448
+  C2 C433
+  C3 C434
+  C4 C435
+  C5 C436
+  C6 C437
+  C7 C438
+  C8 C439
+  C9 C440
+ C10 C441
+ C11 C442
+ C12 C443
+ C13 C444
+ C14 C445
+ C15 C446
+ C16 C447
+ C33  C32
+ C33  C64
+ C65  C64
+ C65  C96
+ C97  C96
+ C97 C128
+C129 C128
+C129 C160
+C161 C160
+C161 C192
+C193 C192
+C193 C224
+C225 C224
+C225 C256
+C257 C256
+C257 C288
+C289 C288
+C289 C320
+C321 C320
+C321 C352
+C353 C352
+C353 C384
+C385 C384
+C385 C416
+C417 C416
+C417 C448
+
+[ angles ]
+ C49  C66  C81 dhTPP_CA_CM_CA 
+ C80  C95 C112 dhTPP_CA_CM_CA 
+C131 C146 C163 dhTPP_CA_CM_CA 
+C131 C146 C145 dhTPP_CA_CM_CA 
+C145 C146 C163 dhTPP_CA_CM_CA 
+C144 C159 C176 dhTPP_CA_CM_CA 
+C179 C196 C195 dhTPP_CA_CM_CA 
+C195 C196 C211 dhTPP_CA_CM_CA 
+C179 C196 C211 dhTPP_CA_CM_CA 
+C190 C207 C222 dhTPP_CA_CM_CA 
+C190 C207 C208 dhTPP_CA_CM_CA 
+C208 C207 C222 dhTPP_CA_CM_CA 
+C272 C271 C286 dhTPP_CA_CM_CA 
+C254 C271 C286 dhTPP_CA_CM_CA 
+C254 C271 C272 dhTPP_CA_CM_CA 
+C273 C274 C291 dhTPP_CA_CM_CA 
+C259 C274 C291 dhTPP_CA_CM_CA 
+C259 C274 C273 dhTPP_CA_CM_CA 
+C305 C322 C337 dhTPP_CA_CM_CA 
+C336 C351 C368 dhTPP_CA_CM_CA 
+C369 C386 C401 dhTPP_CA_CM_CA 
+
+[ dihedrals ]
+C306 C305 C322 C337 dhTPP_CA_CA_CM_CA 
+C290 C305 C322 C337 dhTPP_CA_CA_CM_CA 
+C306 C291 C274 C273 dhTPP_CA_CA_CM_CA 
+C306 C291 C274 C259 dhTPP_CA_CA_CM_CA 
+C292 C291 C274 C273 dhTPP_CA_CA_CM_CA 
+C292 C291 C274 C259 dhTPP_CA_CA_CM_CA 
+C303 C286 C271 C272 dhTPP_CA_CA_CM_CA 
+C303 C286 C271 C254 dhTPP_CA_CA_CM_CA 
+C285 C286 C271 C272 dhTPP_CA_CA_CM_CA 
+C285 C286 C271 C254 dhTPP_CA_CA_CM_CA 
+C335 C336 C351 C368 dhTPP_CA_CA_CM_CA 
+C319 C336 C351 C368 dhTPP_CA_CA_CM_CA 
+C305 C322 C337 C354 dhTPP_CA_CM_CA_CA 
+C305 C322 C337 C338 dhTPP_CA_CM_CA_CA 
+C291 C274 C273 C290 dhTPP_CA_CM_CA_CA 
+C291 C274 C273 C258 dhTPP_CA_CM_CA_CA 
+C259 C274 C273 C290 dhTPP_CA_CM_CA_CA 
+C259 C274 C273 C258 dhTPP_CA_CM_CA_CA 
+C291 C274 C259 C242 dhTPP_CA_CM_CA_CA 
+C291 C274 C259 C260 dhTPP_CA_CM_CA_CA 
+C273 C274 C259 C242 dhTPP_CA_CM_CA_CA 
+C273 C274 C259 C260 dhTPP_CA_CM_CA_CA 
+C287 C272 C271 C286 dhTPP_CA_CA_CM_CA 
+C287 C272 C271 C254 dhTPP_CA_CA_CM_CA 
+C255 C272 C271 C286 dhTPP_CA_CA_CM_CA 
+C255 C272 C271 C254 dhTPP_CA_CA_CM_CA 
+C286 C271 C254 C239 dhTPP_CA_CM_CA_CA 
+C286 C271 C254 C253 dhTPP_CA_CM_CA_CA 
+C272 C271 C254 C239 dhTPP_CA_CM_CA_CA 
+C272 C271 C254 C253 dhTPP_CA_CM_CA_CA 
+C418 C401 C386 C369 dhTPP_CA_CA_CM_CA 
+C402 C401 C386 C369 dhTPP_CA_CA_CM_CA 
+C336 C351 C368 C383 dhTPP_CA_CM_CA_CA 
+C336 C351 C368 C367 dhTPP_CA_CM_CA_CA 
+C401 C386 C369 C354 dhTPP_CA_CM_CA_CA 
+C401 C386 C369 C370 dhTPP_CA_CM_CA_CA 
+ C82  C81  C66  C49 dhTPP_CA_CA_CM_CA 
+ C98  C81  C66  C49 dhTPP_CA_CA_CM_CA 
+ C79  C80  C95 C112 dhTPP_CA_CA_CM_CA 
+ C63  C80  C95 C112 dhTPP_CA_CA_CM_CA 
+ C81  C66  C49  C50 dhTPP_CA_CM_CA_CA 
+ C81  C66  C49  C34 dhTPP_CA_CM_CA_CA 
+C111 C112  C95  C80 dhTPP_CA_CA_CM_CA 
+C127 C112  C95  C80 dhTPP_CA_CA_CM_CA 
+C179 C196 C195 C178 dhTPP_CA_CM_CA_CA 
+C179 C196 C195 C210 dhTPP_CA_CM_CA_CA 
+C211 C196 C195 C178 dhTPP_CA_CM_CA_CA 
+C211 C196 C195 C210 dhTPP_CA_CM_CA_CA 
+C195 C196 C179 C180 dhTPP_CA_CM_CA_CA 
+C195 C196 C179 C164 dhTPP_CA_CM_CA_CA 
+C211 C196 C179 C180 dhTPP_CA_CM_CA_CA 
+C211 C196 C179 C164 dhTPP_CA_CM_CA_CA 
+C195 C196 C211 C228 dhTPP_CA_CM_CA_CA 
+C195 C196 C211 C212 dhTPP_CA_CM_CA_CA 
+C179 C196 C211 C228 dhTPP_CA_CM_CA_CA 
+C179 C196 C211 C212 dhTPP_CA_CM_CA_CA 
+C189 C190 C207 C222 dhTPP_CA_CA_CM_CA 
+C189 C190 C207 C208 dhTPP_CA_CA_CM_CA 
+C175 C190 C207 C222 dhTPP_CA_CA_CM_CA 
+C175 C190 C207 C208 dhTPP_CA_CA_CM_CA 
+C191 C176 C159 C144 dhTPP_CA_CA_CM_CA 
+C175 C176 C159 C144 dhTPP_CA_CA_CM_CA 
+C239 C222 C207 C190 dhTPP_CA_CA_CM_CA 
+C239 C222 C207 C208 dhTPP_CA_CA_CM_CA 
+C221 C222 C207 C190 dhTPP_CA_CA_CM_CA 
+C221 C222 C207 C208 dhTPP_CA_CA_CM_CA 
+C191 C208 C207 C190 dhTPP_CA_CA_CM_CA 
+C191 C208 C207 C222 dhTPP_CA_CA_CM_CA 
+C223 C208 C207 C190 dhTPP_CA_CA_CM_CA 
+C223 C208 C207 C222 dhTPP_CA_CA_CM_CA 
+C132 C131 C146 C163 dhTPP_CA_CA_CM_CA 
+C132 C131 C146 C145 dhTPP_CA_CA_CM_CA 
+C114 C131 C146 C163 dhTPP_CA_CA_CM_CA 
+C114 C131 C146 C145 dhTPP_CA_CA_CM_CA 
+C178 C163 C146 C131 dhTPP_CA_CA_CM_CA 
+C178 C163 C146 C145 dhTPP_CA_CA_CM_CA 
+C164 C163 C146 C131 dhTPP_CA_CA_CM_CA 
+C164 C163 C146 C145 dhTPP_CA_CA_CM_CA 
+C176 C159 C144 C127 dhTPP_CA_CM_CA_CA 
+C176 C159 C144 C143 dhTPP_CA_CM_CA_CA 
+C131 C146 C145 C130 dhTPP_CA_CM_CA_CA 
+C131 C146 C145 C162 dhTPP_CA_CM_CA_CA 
+C163 C146 C145 C130 dhTPP_CA_CM_CA_CA 
+C163 C146 C145 C162 dhTPP_CA_CM_CA_CA 
+
+

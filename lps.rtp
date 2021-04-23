@@ -1,0 +1,1953 @@
+;
+; TODO: proper header
+;
+;
+
+[bondedtypes]
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          1	    1         3      1     0
+
+;
+; Lipid A with hexadecimal numeration
+; Summary charge -4.4; -0.4 excess charge.
+;
+[  LPA ]
+
+[ atoms ]
+  C1     opls_135   -0.180     1 
+  H11    opls_140    0.060     1 
+  H12    opls_140    0.060     1 
+  H13    opls_140    0.060     1 
+  C2     opls_136   -0.120     2 
+  H21    opls_140    0.060     2 
+  H22    opls_140    0.060     2 
+  C3     opls_136   -0.120     3 
+  H31    opls_140    0.060     3 
+  H32    opls_140    0.060     3 
+  C4     opls_136   -0.120     4 
+  H41    opls_140    0.060     4 
+  H42    opls_140    0.060     4 
+  C5     opls_136   -0.120     5 
+  H51    opls_140    0.060     5 
+  H52    opls_140    0.060     5 
+  C6     opls_136   -0.120     6 
+  H61    opls_140    0.060     6 
+  H62    opls_140    0.060     6 
+  C7     opls_136   -0.120     7 
+  H71    opls_140    0.060     7 
+  H72    opls_140    0.060     7 
+  C8     opls_136   -0.120     8 
+  H81    opls_140    0.060     8 
+  H82    opls_140    0.060     8 
+  C9     opls_136   -0.120     9 
+  H91    opls_140    0.060     9 
+  H92    opls_140    0.060     9 
+  CA     opls_136   -0.120    10 
+  HA1    opls_140    0.060    10 
+  HA2    opls_140    0.060    10 
+  CB     opls_136   -0.120    11 
+  HB1    opls_140    0.060    11 
+  HB2    opls_140    0.060    11 
+  CC     opls_136   -0.120    12 
+  HC1    opls_140    0.060    12 
+  HC2    opls_140    0.060    12 
+  CD     opls_158    0.205    13 
+  HD1    opls_140    0.060    13 
+  OE     opls_154   -0.683    14 
+  HE1    opls_155    0.418    15 
+  CF     opls_465    0.510    16 
+  O10    opls_466   -0.430    16 
+  O11    opls_467   -0.330    16 
+  C12    opls_491    0.220    17 
+  H121   opls_469    0.030    17 
+  C13    opls_158    0.205    18 
+  H131   opls_140    0.060    18 
+  O14    opls_154   -0.683    19 
+  H141   opls_155    0.418    20 
+  C15    opls_229    0.140    21 
+  H151   opls_911    0.060    21 
+  N16    opls_238   -0.500    22 
+  H161   opls_241    0.300    22 
+  C17    opls_235    0.500    23 
+  O18    opls_236   -0.500    24 
+  C19    opls_158    0.205    25 
+  H191   opls_140    0.060    25 
+  O1A    opls_154   -0.683    26 
+  H1A1   opls_155    0.418    27 
+  C1B    opls_136   -0.120    28 
+  H1B1   opls_140    0.060    28 
+  H1B2   opls_140    0.060    28 
+  C1C    opls_136   -0.120    29 
+  H1C1   opls_140    0.060    29 
+  H1C2   opls_140    0.060    29 
+  C1D    opls_136   -0.120    30 
+  H1D1   opls_140    0.060    30 
+  H1D2   opls_140    0.060    30 
+  C1E    opls_136   -0.120    31 
+  H1E1   opls_140    0.060    31 
+  H1E2   opls_140    0.060    31 
+  C1F    opls_136   -0.120    32 
+  H1F1   opls_140    0.060    32 
+  H1F2   opls_140    0.060    32 
+  C20    opls_136   -0.120    33 
+  H201   opls_140    0.060    33 
+  H202   opls_140    0.060    33 
+  C21    opls_136   -0.120    34 
+  H211   opls_140    0.060    34 
+  H212   opls_140    0.060    34 
+  C22    opls_136   -0.120    35 
+  H221   opls_140    0.060    35 
+  H222   opls_140    0.060    35 
+  C23    opls_136   -0.120    36 
+  H231   opls_140    0.060    36 
+  H232   opls_140    0.060    36 
+  C24    opls_136   -0.120    37 
+  H241   opls_140    0.060    37 
+  H242   opls_140    0.060    37 
+  C25    opls_136   -0.120    38 
+  H251   opls_140    0.060    38 
+  H252   opls_140    0.060    38 
+  C26    opls_135   -0.180    39 
+  H261   opls_140    0.060    39 
+  H262   opls_140    0.060    39 
+  H263   opls_140    0.060    39 
+  C27    PhAc_193    0.270    40 
+  H271   PhAc_194    0.070    40 
+  O28    opls_447   -0.700    41 
+  P29    opls_445    1.920    41 
+  O2A    opls_446   -1.120    41 
+  O2B    opls_446   -1.120    41 
+  O2C    opls_446   -1.120    41 
+  O2D    opls_186   -0.400    42 
+  C2E    opls_183    0.170    43 
+  H2E1   opls_185    0.030    43 
+  C2F    opls_182    0.140    44 
+  H2F1   opls_185    0.030    44 
+  H2F2   opls_185    0.030    44 
+  O30    opls_186   -0.400    45 
+  C31    opls_193    0.300    46 
+  H311   opls_194    0.100    46 
+  C32    opls_229    0.140    47 
+  H321   opls_911    0.060    47 
+  N33    opls_238   -0.500    48 
+  H331   opls_241    0.300    48 
+  C34    opls_235    0.500    49 
+  O35    opls_236   -0.500    50 
+  C36    opls_136   -0.120    51 
+  H361   opls_140    0.060    51 
+  H362   opls_140    0.060    51 
+  C37    opls_491    0.220    52 
+  H371   opls_469    0.030    52 
+  C38    opls_136   -0.120    53 
+  H381   opls_140    0.060    53 
+  H382   opls_140    0.060    53 
+  C39    opls_136   -0.120    54 
+  H391   opls_140    0.060    54 
+  H392   opls_140    0.060    54 
+  C3A    opls_136   -0.120    55 
+  H3A1   opls_140    0.060    55 
+  H3A2   opls_140    0.060    55 
+  C3B    opls_136   -0.120    56 
+  H3B1   opls_140    0.060    56 
+  H3B2   opls_140    0.060    56 
+  C3C    opls_136   -0.120    57 
+  H3C1   opls_140    0.060    57 
+  H3C2   opls_140    0.060    57 
+  C3D    opls_136   -0.120    58 
+  H3D1   opls_140    0.060    58 
+  H3D2   opls_140    0.060    58 
+  C3E    opls_136   -0.120    59 
+  H3E1   opls_140    0.060    59 
+  H3E2   opls_140    0.060    59 
+  C3F    opls_136   -0.120    60 
+  H3F1   opls_140    0.060    60 
+  H3F2   opls_140    0.060    60 
+  C40    opls_136   -0.120    61 
+  H401   opls_140    0.060    61 
+  H402   opls_140    0.060    61 
+  C41    opls_136   -0.120    62 
+  H411   opls_140    0.060    62 
+  H412   opls_140    0.060    62 
+  C42    opls_135   -0.180    63 
+  H421   opls_140    0.060    63 
+  H422   opls_140    0.060    63 
+  H423   opls_140    0.060    63 
+  O43    opls_467   -0.330    64 
+  C44    opls_465    0.510    64 
+  O45    opls_466   -0.430    64 
+  C46    opls_136   -0.120    65 
+  H461   opls_140    0.060    65 
+  H462   opls_140    0.060    65 
+  C47    opls_136   -0.120    66 
+  H471   opls_140    0.060    66 
+  H472   opls_140    0.060    66 
+  C48    opls_136   -0.120    67 
+  H481   opls_140    0.060    67 
+  H482   opls_140    0.060    67 
+  C49    opls_136   -0.120    68 
+  H491   opls_140    0.060    68 
+  H492   opls_140    0.060    68 
+  C4A    opls_136   -0.120    69 
+  H4A1   opls_140    0.060    69 
+  H4A2   opls_140    0.060    69 
+  C4B    opls_136   -0.120    70 
+  H4B1   opls_140    0.060    70 
+  H4B2   opls_140    0.060    70 
+  C4C    opls_136   -0.120    71 
+  H4C1   opls_140    0.060    71 
+  H4C2   opls_140    0.060    71 
+  C4D    opls_136   -0.120    72 
+  H4D1   opls_140    0.060    72 
+  H4D2   opls_140    0.060    72 
+  C4E    opls_136   -0.120    73 
+  H4E1   opls_140    0.060    73 
+  H4E2   opls_140    0.060    73 
+  C4F    opls_136   -0.120    74 
+  H4F1   opls_140    0.060    74 
+  H4F2   opls_140    0.060    74 
+  C50    opls_135   -0.180    75 
+  H501   opls_140    0.060    75 
+  H502   opls_140    0.060    75 
+  H503   opls_140    0.060    75 
+  O51    opls_186   -0.400    76 
+  C52    opls_183    0.170    77 
+  H521   opls_185    0.030    77 
+  C53    opls_157    0.140    78 
+  H531   opls_140    0.030    78 
+  H532   opls_140    0.030    78 
+  O54    ADMP_180   -0.600    79 
+  C55    opls_448    0.240    81 
+  H551   opls_449   -0.100    81 
+  O56    opls_447   -0.700    82 
+  P57    opls_445    1.920    82 
+  O58    opls_446   -1.120    82 
+  O59    opls_446   -1.120    82 
+  O5A    opls_446   -1.120    82 
+  C5B    opls_491    0.220    83 
+  H5B1   opls_469    0.030    83 
+  O5C    opls_467   -0.330    84 
+  C5D    opls_465    0.510    84 
+  O5E    opls_466   -0.430    84 
+  C5F    opls_136   -0.120    85 
+  H5F1   opls_140    0.060    85 
+  H5F2   opls_140    0.060    85 
+  C60    opls_491    0.220    86 
+  H601   opls_469    0.030    86 
+  C61    opls_136   -0.120    87 
+  H611   opls_140    0.060    87 
+  H612   opls_140    0.060    87 
+  C62    opls_136   -0.120    88 
+  H621   opls_140    0.060    88 
+  H622   opls_140    0.060    88 
+  C63    opls_136   -0.120    89 
+  H631   opls_140    0.060    89 
+  H632   opls_140    0.060    89 
+  C64    opls_136   -0.120    90 
+  H641   opls_140    0.060    90 
+  H642   opls_140    0.060    90 
+  C65    opls_136   -0.120    91 
+  H651   opls_140    0.060    91 
+  H652   opls_140    0.060    91 
+  C66    opls_136   -0.120    92 
+  H661   opls_140    0.060    92 
+  H662   opls_140    0.060    92 
+  C67    opls_136   -0.120    93 
+  H671   opls_140    0.060    93 
+  H672   opls_140    0.060    93 
+  C68    opls_136   -0.120    94 
+  H681   opls_140    0.060    94 
+  H682   opls_140    0.060    94 
+  C69    opls_136   -0.120    95 
+  H691   opls_140    0.060    95 
+  H692   opls_140    0.060    95 
+  C6A    opls_136   -0.120    96 
+  H6A1   opls_140    0.060    96 
+  H6A2   opls_140    0.060    96 
+  C6B    opls_135   -0.180    97 
+  H6B1   opls_140    0.060    97 
+  H6B2   opls_140    0.060    97 
+  H6B3   opls_140    0.060    97 
+  O6C    opls_467   -0.330    98 
+  C6D    opls_465    0.510    98 
+  O6E    opls_466   -0.430    98 
+  C6F    opls_136   -0.120    99 
+  H6F1   opls_140    0.060    99 
+  H6F2   opls_140    0.060    99 
+  C70    opls_136   -0.120   100 
+  H701   opls_140    0.060   100 
+  H702   opls_140    0.060   100 
+  C71    opls_136   -0.120   101 
+  H711   opls_140    0.060   101 
+  H712   opls_140    0.060   101 
+  C72    opls_136   -0.120   102 
+  H721   opls_140    0.060   102 
+  H722   opls_140    0.060   102 
+  C73    opls_136   -0.120   103 
+  H731   opls_140    0.060   103 
+  H732   opls_140    0.060   103 
+  C74    opls_136   -0.120   104 
+  H741   opls_140    0.060   104 
+  H742   opls_140    0.060   104 
+  C75    opls_136   -0.120   105 
+  H751   opls_140    0.060   105 
+  H752   opls_140    0.060   105 
+  C76    opls_136   -0.120   106 
+  H761   opls_140    0.060   106 
+  H762   opls_140    0.060   106 
+  C77    opls_136   -0.120   107 
+  H771   opls_140    0.060   107 
+  H772   opls_140    0.060   107 
+  C78    opls_136   -0.120   108 
+  H781   opls_140    0.060   108 
+  H782   opls_140    0.060   108 
+  C79    opls_136   -0.120   109 
+  H791   opls_140    0.060   109 
+  H792   opls_140    0.060   109 
+  C7A    opls_136   -0.120   110 
+  H7A1   opls_140    0.060   110 
+  H7A2   opls_140    0.060   110 
+  C7B    opls_135   -0.180   111 
+  H7B1   opls_140    0.060   111 
+  H7B2   opls_140    0.060   111 
+  H7B3   opls_140    0.060   111 
+
+[ bonds ]
+ O2C    P29  
+ O2A    P29  
+ P29    O2B  
+ O5A    P57  
+ P57    O58  
+ P57    O59  
+ H141   O14  
+ H541   O54  
+ HE1    OE   
+ H1A1   O1A  
+ C7B    H7B3 
+ H2E1   C2E  
+ H2F1   C2F  
+ H2F2   C2F  
+ H121   C12  
+ H531   C53  
+ C13    H131 
+ C53    H532 
+ H311   C31  
+ C27    H271 
+ H551   C55  
+ C15    H151 
+ C52    H521 
+ CD     HD1  
+ HC1    CC   
+ C32    H321 
+ CC     HC2  
+ C5B    H5B1 
+ H371   C37  
+ H381   C38  
+ C19    H191 
+ HB1    CB   
+ H461   C46  
+ CB     HB2  
+ H382   C38  
+ H1B1   C1B  
+ H1C1   C1C  
+ C1B    H1B2 
+ C46    H462 
+ HA1    CA   
+ C5F    H5F1 
+ C5F    H5F2 
+ H361   C36  
+ H391   C39  
+ C36    H362 
+ H611   C61  
+ H471   C47  
+ CA     HA2  
+ H472   C47  
+ C39    H392 
+ H601   C60  
+ C1C    H1C2 
+ H91    C9   
+ C61    H612 
+ H1D1   C1D  
+ H621   C62  
+ C9     H92  
+ H3A1   C3A  
+ C1D    H1D2 
+ H3C1   C3C  
+ C3A    H3A2 
+ C62    H622 
+ C48    H481 
+ C48    H482 
+ H1E1   C1E  
+ H491   C49  
+ H492   C49  
+ H81    C8   
+ H631   C63  
+ H3C2   C3C  
+ C8     H82  
+ C1E    H1E2 
+ C3B    H3B1 
+ C3B    H3B2 
+ C63    H632 
+ H1F1   C1F  
+ H3D1   C3D  
+ H6F1   C6F  
+ H641   C64  
+ H71    C7   
+ C3D    H3D2 
+ C1F    H1F2 
+ C7     H72  
+ C6F    H6F2 
+ C64    H642 
+ C4A    H4A1 
+ C4A    H4A2 
+ H4B1   C4B  
+ H201   C20  
+ H4B2   C4B  
+ C20    H202 
+ H701   C70  
+ H651   C65  
+ H61    C6   
+ H3E1   C3E  
+ H4E1   C4E  
+ C3E    H3E2 
+ C6     H62  
+ H211   C21  
+ C70    H702 
+ C65    H652 
+ H4F1   C4F  
+ H4F2   C4F  
+ H3F1   C3F  
+ H661   C66  
+ C21    H212 
+ H711   C71  
+ C4E    H4E2 
+ H221   C22  
+ C3F    H3F2 
+ H51    C5   
+ C66    H662 
+ C71    H712 
+ C5     H52  
+ C4C    H4C1 
+ C4C    H4C2 
+ H721   C72  
+ H4D1   C4D  
+ C22    H222 
+ C4D    H4D2 
+ H231   C23  
+ C72    H722 
+ H671   C67  
+ H741   C74  
+ H31    C3   
+ H421   C42  
+ H401   C40  
+ H41    C4   
+ C40    H402 
+ C67    H672 
+ H501   C50  
+ C50    H502 
+ C50    H503 
+ C4     H42  
+ C23    H232 
+ H742   C74  
+ H422   C42  
+ H681   C68  
+ H241   C24  
+ C3     H32  
+ C42    H423 
+ C73    H731 
+ C73    H732 
+ C68    H682 
+ C41    H411 
+ C41    H412 
+ C24    H242 
+ H751   C75  
+ H251   C25  
+ H21    C2   
+ C75    H752 
+ C2     H22  
+ H691   C69  
+ C25    H252 
+ C69    H692 
+ H261   C26  
+ H6A1   C6A  
+ H761   C76  
+ C26    H262 
+ C26    H263 
+ H11    C1   
+ C76    H762 
+ C1     H12  
+ C1     H13  
+ C6A    H6A2 
+ H771   C77  
+ C77    H772 
+ H6B1   C6B  
+ C6B    H6B2 
+ C6B    H6B3 
+ H781   C78  
+ C78    H782 
+ H791   C79  
+ C79    H792 
+ H7A1   C7A  
+ C7A    H7A2 
+ H7B1   C7B  
+ C7B    H7B2 
+ P29    O28  
+ O56    P57  
+ O28    C27  
+ C27    O2D  
+ O51    C31  
+ O30    C31  
+ O10    CF   
+ C17    O18  
+ O5E    C5D  
+ C34    O35  
+ C44    O45  
+ O6E    C6D  
+ O14    C13  
+ O54    C53  
+ O54   +C63
+ C2F    O30  
+ C2E    O2D  
+ C12    O11  
+ OE     CD   
+ O51    C52  
+ C55    O56  
+ O5C    C5B  
+ O1A    C19  
+ O43    C37  
+ C60    O6C  
+ C63    C64  
+ C2F    C2E  
+ C2E    C13  
+ C13    C12  
+ C12    C15  
+ C53    C52  
+ C27    C15  
+ C31    C32  
+ C52    C55  
+ CD     CC   
+ C55    C5B  
+ C32    C5B  
+ CC     CB   
+ C19    C1B  
+ CB     CA   
+ C37    C38  
+ C37    C36  
+ C38    C39  
+ C1B    C1C  
+ C46    C47  
+ C5F    C60  
+ CA     C9   
+ C39    C3A  
+ C1C    C1D  
+ C47    C48  
+ C60    C61  
+ C61    C62  
+ C9     C8   
+ C1D    C1E  
+ C3A    C3B  
+ C62    C63  
+ C48    C49  
+ C3C    C3B  
+ C3C    C3D  
+ C8     C7   
+ C49    C4A  
+ C1E    C1F  
+ C3D    C3E  
+ C1F    C20  
+ C7     C6   
+ C6F    C70  
+ C64    C65  
+ C4A    C4B  
+ C20    C21  
+ C4B    C4C  
+ C3E    C3F  
+ C6     C5   
+ C70    C71  
+ C65    C66  
+ C21    C22  
+ C4E    C4F  
+ C4E    C4D  
+ C3F    C40  
+ C4F    C50  
+ C66    C67  
+ C71    C72  
+ C5     C4   
+ C4C    C4D  
+ C22    C23  
+ C72    C73  
+ C40    C41  
+ C67    C68  
+ C4     C3   
+ C23    C24  
+ C74    C73  
+ C74    C75  
+ C3     C2   
+ C42    C41  
+ C68    C69  
+ C24    C25  
+ C75    C76  
+ C2     C1   
+ C25    C26  
+ C69    C6A  
+ C76    C77  
+ C6A    C6B  
+ C77    C78  
+ C78    C79  
+ C79    C7A  
+ C7A    C7B  
+ H161   N16  
+ H331   N33  
+ CF     O11  
+ O5C    C5D  
+ O43    C44  
+ O6C    C6D  
+ CF     CD   
+ C17    C19  
+ C5D    C5F  
+ C34    C36  
+ C46    C44  
+ C6D    C6F  
+ C15    N16  
+ C32    N33  
+ N16    C17  
+ N33    C34  
+
+[ impropers ]
+  CD  O11   CF  O10 improper_O_C_X_Y 
+ N16  C19  C17  O18 improper_O_C_X_Y 
+ N33  C36  C34  O35 improper_O_C_X_Y 
+ O43  C46  C44  O45 improper_O_C_X_Y 
+ O5C  C5F  C5D  O5E improper_O_C_X_Y 
+ O6C  C6F  C6D  O6E improper_O_C_X_Y 
+ C15  C17  N16 H161 improper_Z_N_X_Y 
+ C32  C34  N33 H331 improper_Z_N_X_Y 
+
+[dihedrals]
+;;
+; 9
+C42 C41 C40 C3F   LIPID_BERGER
+C41 C40 C3F C3E   LIPID_BERGER
+C40 C3F C3E C3D   LIPID_BERGER
+C3F C3E C3D C3C   LIPID_BERGER
+C3E C3D C3C C3B   LIPID_BERGER 
+C3D C3C C3B C3A   LIPID_BERGER  
+C3C C3B C3A C39   LIPID_BERGER  
+C3B C3A C39 C38   LIPID_BERGER
+C3A C39 C38 C37   LIPID_BERGER
+;;  
+; 10              
+C26 C25 C24 C23   LIPID_BERGER
+C25 C24 C23 C22   LIPID_BERGER
+C24 C23 C22 C21   LIPID_BERGER 
+C23 C22 C21 C20   LIPID_BERGER
+C22 C21 C20 C1F   LIPID_BERGER
+C21 C20 C1F C1E   LIPID_BERGER 
+C20 C1F C1E C1D   LIPID_BERGER
+C1F C1E C1D C1C   LIPID_BERGER
+C1E C1D C1C C1B   LIPID_BERGER
+C1D C1C C1B C19   LIPID_BERGER
+;;
+; 10 
+C1 C2 C3 C4   LIPID_BERGER
+C2 C3 C4 C5   LIPID_BERGER
+C3 C4 C5 C6   LIPID_BERGER
+C4 C5 C6 C7   LIPID_BERGER
+C5 C6 C7 C8   LIPID_BERGER
+C6 C7 C8 C9   LIPID_BERGER
+C7 C8 C9 CA   LIPID_BERGER
+C8 C9 CA CB   LIPID_BERGER
+C9 CA CB CC   LIPID_BERGER
+C9 CA CB CD   LIPID_BERGER
+;;
+; 9
+C50 C4F C4E C4D   LIPID_BERGER
+C4F C4E C4D C4C   LIPID_BERGER
+C4E C4D C4C C4B   LIPID_BERGER
+C4D C4C C4B C4A   LIPID_BERGER
+C4C C4B C4A C49   LIPID_BERGER
+C4B C4A C49 C48   LIPID_BERGER 
+C4A C49 C48 C47   LIPID_BERGER
+C49 C48 C47 C46   LIPID_BERGER
+C48 C47 C46 C44   LIPID_BERGER
+;;
+; 11                
+C7B C7A C79 C78   LIPID_BERGER
+C7A C79 C78 C77   LIPID_BERGER
+C79 C78 C77 C76   LIPID_BERGER
+C78 C77 C76 C75   LIPID_BERGER
+C77 C76 C75 C74   LIPID_BERGER
+C76 C75 C74 C73   LIPID_BERGER
+C75 C74 C73 C72   LIPID_BERGER
+C74 C73 C72 C71   LIPID_BERGER
+C73 C72 C71 C70   LIPID_BERGER
+C72 C71 C70 C6F   LIPID_BERGER
+C71 C70 C6F C6D   LIPID_BERGER
+;
+; 9                
+C6B C6A C69 C68   LIPID_BERGER 
+C6A C69 C68 C67   LIPID_BERGER
+C69 C68 C67 C66   LIPID_BERGER
+C68 C67 C66 C65   LIPID_BERGER
+C67 C66 C65 C64   LIPID_BERGER
+C66 C65 C64 C63   LIPID_BERGER
+C65 C64 C63 C62   LIPID_BERGER
+C64 C63 C62 C61   LIPID_BERGER
+C63 C62 C61 C60   LIPID_BERGER
+
+
+;
+; Inner core intermediate in decimal numeration.
+; Summary charge: 6.0. Excess charge: 0.0
+
+[ INC ]
+
+[ atoms ]
+O1   opls_169  -0.700   1
+H1   opls_170   0.435   1
+C2   opls_157   0.145   2
+H21  opls_140   0.060   2
+H22  opls_140   0.060   2
+C3   opls_158   0.205   3
+H3   opls_140   0.060   3
+O4   opls_169  -0.700   4
+H4   opls_170   0.435   4
+C5   opls_183   0.170   5
+H5   opls_185   0.030   5
+O6   opls_186  -0.400   6
+C7   opls_174   0.205   7
+H7   opls_176   0.060   7
+O8   opls_171  -0.730   8
+H8   opls_172   0.465   8
+C9   opls_174   0.205   9
+H9   opls_176   0.060   9
+O10  opls_171  -0.730  10
+H10  opls_172   0.465  10
+C11  opls_174   0.205  11
+H11  opls_176   0.060  11
+O12  opls_171  -0.730  12
+H12  opls_172   0.465  12
+C13  opls_193   0.300  13
+H13  opls_194   0.100  13
+O14  opls_186  -0.400  14
+C15  opls_182   0.140  15
+H151 opls_185   0.030  15
+H152 opls_185   0.030  15
+C16  opls_158   0.205  16
+H16  opls_140   0.060  16
+O17  opls_154  -0.683  17
+H17  opls_155   0.418  17
+C18  opls_183   0.170  18
+H18  opls_185   0.030  18
+O19  opls_186  -0.400  19
+C20  opls_448   0.240  20
+H20  opls_449  -0.100  20
+O21  opls_447  -0.700  20
+P22  opls_445   1.920  20
+O23  opls_446  -1.120  20
+O24  opls_446  -1.120  20
+O25  opls_446  -1.120  20
+C26  opls_183   0.170  26
+H26  opls_185   0.030  26
+O27  opls_186  -0.600  27
+                            ; H27  opls_170   0.435  27
+C28  opls_158   0.205  28
+H28  opls_140   0.060  28
+O29  opls_169  -0.700  29
+H29  opls_170   0.435  29
+C30  opls_193   0.300  30
+H30  opls_194   0.100  30
+                            ; O31  opls_186  -0.400  31
+O31  opls_154  -0.683  31 
+C32  opls_183   0.170  32
+H32  opls_185   0.030  32
+C33  opls_158   0.205  33
+H33  opls_140   0.060  33
+                            ; O34  opls_154  -0.683  34
+O34  opls_186  -0.400  34
+H34  opls_155   0.418  34
+C35  APP_137    0.280  35
+H35  APP_140   -0.100  35
+O36  opls_442  -0.600  36
+P37  APP_440    1.470  36
+O38  opls_441  -0.920  36
+O39  APP_442   -0.420  36
+O40  opls_441  -0.920  36
+P41  APP_440    1.470  36
+O42  opls_442  -0.600  36
+O43  opls_441  -0.920  36
+O44  opls_441  -0.920  36
+C45  APP_136    0.380  45
+H451 APP_140   -0.100  45
+H452 APP_140   -0.100  45
+C46  opls_292   0.190  46
+H461 opls_911   0.060  46
+H462 opls_911   0.060  46
+N47  opls_287  -0.300  47
+H471 opls_290   0.330  47
+H472 opls_290   0.330  47
+H473 opls_290   0.330  47
+C48  opls_183   0.170  48
+H48  opls_185   0.030  48
+C49  opls_158   0.205  49
+H49  opls_140   0.060  49
+O50  opls_169  -0.700  50
+H50  opls_170   0.435  50
+C51  opls_157   0.145  51
+H511 opls_140   0.060  51
+H512 opls_140   0.060  51
+O52  opls_169  -0.700  52
+H52  opls_170   0.435  52
+O53  opls_186  -0.400  53
+C54  opls_193   0.300  54
+H54  opls_194   0.100  54
+O55  opls_186  -0.400  55
+C56  opls_183   0.170  56
+H56  opls_185   0.030  56
+C57  opls_183   0.170  59
+H57  opls_185   0.030  59
+C58  opls_158   0.205  58
+H58  opls_140   0.060  58
+C59  opls_157   0.145  59
+H591 opls_140   0.060  59
+H592 opls_140   0.060  59
+O60  opls_169  -0.700  60
+H60  opls_170   0.435  60
+O61  opls_169  -0.700  61
+H61  opls_170   0.435  61
+O62  ADMP_180  -0.600  59
+C63  opls_197   0.700  59
+C65  ADMP_271   0.500  59
+O66  ADMP_272  -0.700  59
+O67  ADMP_272  -0.700  59
+C68  opls_136  -0.120  68
+H681 opls_140   0.060  68
+H682 opls_140   0.060  68
+C69  opls_183   0.170  69
+H69  opls_185   0.030  69
+O70  ADMP_180  -0.600  70
+C71  ADMP_197   0.700  71
+C72  ADMP_271   0.500  72
+O73  ADMP_272  -0.700  73
+O74  ADMP_272  -0.700  74
+C75  opls_136  -0.120  75
+H751 opls_140   0.060  75
+H752 opls_140   0.060  75
+O76  ADMP_180  -0.600  76
+C77  opls_183   0.170  77
+H77  opls_185   0.030  77
+C78  opls_158   0.205  78
+H78  opls_140   0.060  78
+O79  opls_169  -0.700  79
+H79  opls_170   0.435  79
+C80  opls_157   0.145  80
+H801 opls_140   0.060  80
+H802 opls_140   0.060  80
+O81  opls_169  -0.700  81
+H81  opls_170   0.435  81
+C82  opls_158   0.205  82
+H82  opls_140   0.060  82
+O83  opls_154  -0.683  83
+H83  opls_155   0.418  83
+C84  opls_183   0.170  84
+H84  opls_185   0.030  84
+O85  ADMP_180  -0.600  85
+C86  ADMP_197   0.700  86
+O87  ADMP_272  -0.700  87
+O88  ADMP_272  -0.700  88
+C89  ADMP_271   0.500  89
+C90  opls_136  -0.120  90
+H901 opls_140   0.060  90
+H902 opls_140   0.060  90
+C91  opls_158   0.205  91
+H91  opls_140   0.060  91
+O92  opls_169  -0.700  92
+H92  opls_170   0.435  92
+C93  opls_158   0.205  93
+H93  opls_140   0.060  93
+O94  opls_169  -0.700  94
+H94  opls_170   0.435  94
+C95  opls_183   0.170  95
+H95  opls_185   0.030  95
+C96  opls_158   0.205  96
+H96  opls_140   0.060  96
+O97  opls_169  -0.700  97
+H97  opls_170   0.435  97
+C98  opls_157   0.145  98
+H981 opls_140   0.060  98
+H982 opls_140   0.060  98
+O99  opls_169  -0.700  99
+H99  opls_170   0.435  99
+O100 ADMP_180  -0.600 100
+
+[ bonds ]
+ H61  O61 
+ H52  O52 
+ H50  O50 
+ O60  H60 
+ H29  O29 
+ ;O27  H27 
+ O27 +C82
+ O31  H34 
+ H99  O99 
+ H97  O97 
+ O83  H83 
+ O17  H17 
+ O92  H92 
+ O94  H94 
+ O79  H79 
+  H8   O8 
+ O81  H81 
+ H12  O12 
+  H1   O1 
+  O4   H4 
+ O10  H10 
+ O61  C59 
+ O52  C51 
+ O50  C49 
+ C58  O60 
+ C48  O53 
+ C57  O62 
+ C32  O31 
+ O55  C56 
+ C35  O36 
+ C28  O29 
+ C33  O34 
+ O27  C26 
+ O42  C45 
+ O85  C84 
+ O70  C69 
+ O19  C18 
+ C20  O21 
+ C98  O99 
+O100  C95 
+ O76  C77 
+ C96  O97 
+ C82  O83 
+ C91  O92 
+ C16  O17 
+ C93  O94 
+ C15  O14 
+ C78  O79 
+ C80  O81 
+  O8   C7 
+  O6   C5 
+ C11  O12 
+  C2   O1 
+  C9  O10 
+  C3   O4 
+H511  C51 
+H591  C59 
+ C59 H592 
+ C51 H512 
+ H58  C58 
+ C49  H49 
+ H48  C48 
+ H32  C32 
+ H57  C57 
+ H28  C28 
+ H33  C33 
+ H30  C30 
+ C35  H35 
+ C54  H54 
+ H56  C56 
+H751  C75 
+H461  C46 
+ H26  C26 
+H451  C45 
+ C75 H752 
+H681  C68 
+ C46 H462 
+ C45 H452 
+ C69  H69 
+H981  C98 
+H901  C90 
+ C68 H682 
+ H84  C84 
+H982  C98 
+ C20  H20 
+ H96  C96 
+ C90 H902 
+ C18  H18 
+ C82  H82 
+ H16  C16 
+ H77  C77 
+ H91  C91 
+ C95  H95 
+ C93  H93 
+H151  C15 
+ C15 H152 
+ C78  H78 
+H801  C80 
+H802  C80 
+ H13  C13 
+  H5   C5 
+ H21   C2 
+  C7   H7 
+ H22   C2 
+ C11  H11 
+  H9   C9 
+  C3   H3 
+ C59  C58 
+ C51  C49 
+ C58  C57 
+ C49  C48 
+ C48  C35 
+ C57  C56 
+ C32  C54 
+ C32  C33 
+ C35  C33 
+ C28  C30 
+ C28  C26 
+ C56  C69 
+ C26  C20 
+ C75  C71 
+ C75  C84 
+ C63  C68 
+ C46  C45 
+ C69  C68 
+ C86  C90 
+ C84  C82 
+ C20  C18 
+ C90  C91 
+ C98  C96 
+ C18  C16 
+ C96  C95 
+ C82  C77 
+ C77  C78 
+ C95  C93 
+ C91  C93 
+ C16  C15 
+ C78  C80 
+ C13  C11 
+  C5   C7 
+  C5   C3 
+  C7   C9 
+ C11   C9 
+  C2   C3 
+ O53  C54 
+ O55  C54 
+ O34  C30 
+ C30  O19 
+ O62  C63 
+ O85  C86 
+ C63 -O54
+ O70  C71 
+ C71  O76 
+ C86 O100 
+ O14  C13 
+  O6  C13 
+ O73  C72 
+ O87  C89 
+ O88  C89 
+ C72  O74 
+ O66  C65 
+ C65  O67 
+ O38  P37 
+ P37  O40 
+ O43  P41 
+ P41  O44 
+ O23  P22 
+ P22  O24 
+ P22  O25 
+ O36  P37 
+ P37  O39 
+ O39  P41 
+ O42  P41 
+ O21  P22 
+ C72  C71 
+ C89  C86 
+ C63  C65 
+H471  N47 
+H472  N47 
+ N47 H473 
+ C46  N47 
+;
+[ impropers ]
+  O66  C65  O67  C63   improper_O_C_X_Y
+  O73  C72  O74  C71   improper_O_C_X_Y
+  O87  C89  O88  C86   improper_O_C_X_Y
+
+
+;
+; Outer Core of LipoPolyScharide molecule
+;
+
+[  OUC ] 
+
+[ atoms ]
+C1   opls_135 -0.180   1
+H2   opls_140  0.060   1
+H3   opls_140  0.060   1
+H4   opls_140  0.060   1
+C5   opls_235  0.500   2
+O6   opls_236 -0.500   3
+N7   opls_238 -0.500   4
+H8   opls_241  0.300   4
+C9   opls_229  0.140   5
+H10  opls_911  0.060   5
+C11  opls_158  0.205   6
+H12  opls_140  0.060   6
+O13  opls_169 -0.700   7
+H14  opls_170  0.435   7
+C15  opls_158  0.205   8
+H16  opls_140  0.060   8
+O17  opls_169 -0.700   9
+H18  opls_170  0.435   9
+C19  opls_183  0.170  10
+H20  opls_185  0.030  10
+C21  opls_157  0.145  11
+H22  opls_140  0.060  11
+H23  opls_140  0.060  11
+O24  opls_154 -0.683  12
+H25  opls_155  0.418  12
+O26  opls_186 -0.400  13
+C27  opls_193  0.300  14
+H28  opls_194  0.100  14
+O29  opls_186 -0.400  15
+C30  opls_183  0.170  16
+H31  opls_185  0.030  16
+C32  opls_158  0.205  17
+H33  opls_140  0.060  17
+O34  opls_169 -0.700  18
+H35  opls_170  0.435  18
+C36  opls_183  0.170  19
+H37  opls_185  0.030  19
+O38  opls_186 -0.400  20
+                          ; H39  opls_170  0.435  20
+C40  opls_183  0.170  21
+H41  opls_185  0.030  21
+C42  opls_157  0.145  22
+H43  opls_140  0.060  22
+H44  opls_140  0.060  22
+O45  opls_154 -0.683  23
+H46  opls_155  0.418  23
+O47  opls_186 -0.400  24
+C48  opls_193  0.300  25
+H49  opls_194  0.100  25
+O50  opls_186 -0.400  26
+C51  opls_183  0.170  27
+H52  opls_185  0.030  27
+C53  opls_158  0.205  28
+H54  opls_140  0.060  28
+O55  opls_169 -0.700  29
+H56  opls_170  0.435  29
+C57  opls_158  0.205  30
+H58  opls_140  0.060  30
+O59  opls_169 -0.700  31
+H60  opls_170  0.435  31
+C61  opls_183  0.170  32
+H62  opls_185  0.030  32
+C63  opls_157  0.145  33
+H64  opls_140  0.060  33
+H65  opls_140  0.060  33
+O66  opls_154 -0.683  34
+H67  opls_155  0.418  34
+O68  opls_186 -0.400  35
+C69  opls_193  0.300  36
+H70  opls_194  0.100  36
+O71  opls_186 -0.400  37
+C72  opls_183  0.170  38
+H73  opls_185  0.030  38
+C74  opls_158  0.205  39
+H75  opls_140  0.060  39
+O76  opls_154 -0.683  40
+H77  opls_155  0.418  40
+C78  opls_158  0.205  41
+H79  opls_140  0.060  41
+O80  opls_169 -0.700  42
+H81  opls_170  0.435  42
+C82  opls_193  0.300  43
+H83  opls_194  0.100  43
+O86  opls_186 -0.400  45
+C87  opls_183  0.170  46
+H88  opls_185  0.030  46
+C89  opls_182  0.140  47
+H90  opls_185  0.030  47
+H91  opls_185  0.030  47
+O92  opls_186 -0.400  48
+C93  opls_193  0.300  49
+H94  opls_194  0.100  49
+O95  opls_186 -0.400  50
+C96  opls_174  0.205  51
+H97  opls_176  0.060  51
+O98  opls_171 -0.730  52
+H99  opls_172  0.465  52
+C100 opls_174  0.205  53
+H101 opls_176  0.060  53
+O102 opls_171 -0.730  54
+H103 opls_172  0.465  54
+C104 opls_174  0.205  55
+H105 opls_176  0.060  55
+O106 opls_171 -0.730  56
+H107 opls_172  0.465  56
+C108 opls_183  0.170  57
+H109 opls_185  0.030  57
+C110 opls_157  0.145  58
+H111 opls_140  0.060  58
+H112 opls_140  0.060  58
+O113 opls_154 -0.683  59
+H114 opls_155  0.418  59
+
+[ bonds ]
+ H83  C82 
+ C78  H79 
+ H73  C72 
+ H70  C69 
+ H88  C87 
+ H90  C89 
+ C74  H75 
+ C89  H91 
+ H52  C51 
+ H16  C15 
+ H97  C96 
+ C53  H54 
+ H22  C21 
+ H94  C93 
+ C21  H23 
+ C61  H62 
+ H10   C9 
+ H64  C63 
+ C57  H58 
+ H28  C27 
+ C11  H12 
+ H65  C63 
+ C19  H20 
+H101 C100 
+ H49  C48 
+C104 H105 
+ C30  H31 
+C110 H111 
+C110 H112 
+C108 H109 
+  H2   C1 
+ H33  C32 
+ H41  C40 
+  C1   H3 
+  C1   H4 
+ C42  H43 
+ C42  H44 
+ C36  H37 
+ H56  O55 
+ O80  H81 
+ H18  O17 
+ H25  O24 
+ H14  O13 
+ O76  H77 
+H103 O102 
+ O59  H60 
+ H99  O98 
+H114 O113 
+ O66  H67 
+H107 O106 
+ O45  H46 
+ H35  O34 
+ C82  O86 
+ O71  C69 
+ C69  O68 
+ O92  C93 
+ C93  O95 
+ O50  C48 
+ C27  O26 
+ C27  O29 
+ C48  O47 
+ C82  C78 
+ C78  C72 
+ C72  C74 
+ C87  C74 
+ C87  C89 
+ C69  C51 
+ C51  C53 
+ C53  C57 
+ C15  C11 
+ C15  C19 
+ C96  C93 
+ C96 C100 
+ C21  C19 
+ C61  C57 
+ C61  C63 
+ C11   C9 
+  C9  C27 
+C100 C104 
+ C48  C30 
+C104 C108 
+ C30  C32 
+C110 C108 
+ C40  C42 
+ C40  C36 
+ C32  C36 
+O102 C100 
+ O80  C78 
+ O86  C87 
+ C72  O71 
+ O55  C53 
+ C74  O76 
+ C89  O92 
+ O68  C61 
+ O17  C15 
+ O24  C21 
+ C51  O50 
+ O13  C11 
+ O59  C57 
+ C96  O98 
+ C63  O66 
+ C19  O26 
+O113 C110 
+ O95 C108 
+ O29  C30 
+C104 O106 
+ O47  C40 
+ O45  C42 
+ C32  O34 
+ C36  O38 
+  C9   N7 
+  H8   N7 
+  N7   C5 
+  C5   C1 
+  C5   O6 
+; H39  O38 
+ O38  +C5 ; !!!!!!!!!!!!!!
+ C82 -O27  
+
+[ impropers ]
+  O6   C5   N7   C1    improper_O_C_X_Y ; 
+  H8   N7   C5   C9    improper_Z_N_X_Y ;
+
+;
+; Outer Core of LipoPolyScharide molecule
+; Summary charge: +0.4. Excess charge: +0.4
+[  OUE ] 
+
+[ atoms ]
+C1   opls_135 -0.180   1
+H2   opls_140  0.060   1
+H3   opls_140  0.060   1
+H4   opls_140  0.060   1
+C5   opls_235  0.500   2
+O6   opls_236 -0.500   3
+N7   opls_238 -0.500   4
+H8   opls_241  0.300   4
+C9   opls_229  0.140   5
+H10  opls_911  0.060   5
+C11  opls_158  0.205   6
+H12  opls_140  0.060   6
+O13  opls_169 -0.700   7
+H14  opls_170  0.435   7
+C15  opls_158  0.205   8
+H16  opls_140  0.060   8
+O17  opls_169 -0.700   9
+H18  opls_170  0.435   9
+C19  opls_183  0.170  10
+H20  opls_185  0.030  10
+C21  opls_157  0.145  11
+H22  opls_140  0.060  11
+H23  opls_140  0.060  11
+O24  opls_154 -0.683  12
+H25  opls_155  0.418  12
+O26  opls_186 -0.400  13
+C27  opls_193  0.300  14
+H28  opls_194  0.100  14
+O29  opls_186 -0.400  15
+C30  opls_183  0.170  16
+H31  opls_185  0.030  16
+C32  opls_158  0.205  17
+H33  opls_140  0.060  17
+O34  opls_169 -0.700  18
+H35  opls_170  0.435  18
+C36  opls_183  0.170  19
+H37  opls_185  0.030  19
+;O38  opls_186 -0.400  20
+O38  opls_169 -0.700  20
+H39  opls_170  0.435  20
+C40  opls_183  0.170  21
+H41  opls_185  0.030  21
+C42  opls_157  0.145  22
+H43  opls_140  0.060  22
+H44  opls_140  0.060  22
+O45  opls_154 -0.683  23
+H46  opls_155  0.418  23
+O47  opls_186 -0.400  24
+C48  opls_193  0.300  25
+H49  opls_194  0.100  25
+O50  opls_186 -0.400  26
+C51  opls_183  0.170  27
+H52  opls_185  0.030  27
+C53  opls_158  0.205  28
+H54  opls_140  0.060  28
+O55  opls_169 -0.700  29
+H56  opls_170  0.435  29
+C57  opls_158  0.205  30
+H58  opls_140  0.060  30
+O59  opls_169 -0.700  31
+H60  opls_170  0.435  31
+C61  opls_183  0.170  32
+H62  opls_185  0.030  32
+C63  opls_157  0.145  33
+H64  opls_140  0.060  33
+H65  opls_140  0.060  33
+O66  opls_154 -0.683  34
+H67  opls_155  0.418  34
+O68  opls_186 -0.400  35
+C69  opls_193  0.300  36
+H70  opls_194  0.100  36
+O71  opls_186 -0.400  37
+C72  opls_183  0.170  38
+H73  opls_185  0.030  38
+C74  opls_158  0.205  39
+H75  opls_140  0.060  39
+O76  opls_154 -0.683  40
+H77  opls_155  0.418  40
+C78  opls_158  0.205  41
+H79  opls_140  0.060  41
+O80  opls_169 -0.700  42
+H81  opls_170  0.435  42
+C82  opls_193  0.565  43
+H83  opls_194  0.100  43
+O86  opls_186 -0.400  45
+C87  opls_183  0.170  46
+H88  opls_185  0.030  46
+C89  opls_182  0.140  47
+H90  opls_185  0.030  47
+H91  opls_185  0.030  47
+O92  opls_186 -0.400  48
+C93  opls_193  0.300  49
+H94  opls_194  0.100  49
+O95  opls_186 -0.400  50
+C96  opls_174  0.205  51
+H97  opls_176  0.060  51
+O98  opls_171 -0.730  52
+H99  opls_172  0.465  52
+C100 opls_174  0.205  53
+H101 opls_176  0.060  53
+O102 opls_171 -0.730  54
+H103 opls_172  0.465  54
+C104 opls_174  0.205  55
+H105 opls_176  0.060  55
+O106 opls_171 -0.730  56
+H107 opls_172  0.465  56
+C108 opls_183  0.170  57
+H109 opls_185  0.030  57
+C110 opls_157  0.145  58
+H111 opls_140  0.060  58
+H112 opls_140  0.060  58
+O113 opls_154 -0.683  59
+H114 opls_155  0.418  59
+
+[ bonds ]
+ H83  C82 
+ C78  H79 
+ H73  C72 
+ H70  C69 
+ H88  C87 
+ H90  C89 
+ C74  H75 
+ C89  H91 
+ H52  C51 
+ H16  C15 
+ H97  C96 
+ C53  H54 
+ H22  C21 
+ H94  C93 
+ C21  H23 
+ C61  H62 
+ H10   C9 
+ H64  C63 
+ C57  H58 
+ H28  C27 
+ C11  H12 
+ H65  C63 
+ C19  H20 
+H101 C100 
+ H49  C48 
+C104 H105 
+ C30  H31 
+C110 H111 
+C110 H112 
+C108 H109 
+  H2   C1 
+ H33  C32 
+ H41  C40 
+  C1   H3 
+  C1   H4 
+ C42  H43 
+ C42  H44 
+ C36  H37 
+ H56  O55 
+ O80  H81 
+ H18  O17 
+ H25  O24 
+ H14  O13 
+ O76  H77 
+H103 O102 
+ O59  H60 
+ H99  O98 
+H114 O113 
+ O66  H67 
+H107 O106 
+ O45  H46 
+ H35  O34 
+ C82  O86 
+ O71  C69 
+ C69  O68 
+ O92  C93 
+ C93  O95 
+ O50  C48 
+ C27  O26 
+ C27  O29 
+ C48  O47 
+ C82  C78 
+ C78  C72 
+ C72  C74 
+ C87  C74 
+ C87  C89 
+ C69  C51 
+ C51  C53 
+ C53  C57 
+ C15  C11 
+ C15  C19 
+ C96  C93 
+ C96 C100 
+ C21  C19 
+ C61  C57 
+ C61  C63 
+ C11   C9 
+  C9  C27 
+C100 C104 
+ C48  C30 
+C104 C108 
+ C30  C32 
+C110 C108 
+ C40  C42 
+ C40  C36 
+ C32  C36 
+O102 C100 
+ O80  C78 
+ O86  C87 
+ C72  O71 
+ O55  C53 
+ C74  O76 
+ C89  O92 
+ O68  C61 
+ O17  C15 
+ O24  C21 
+ C51  O50 
+ O13  C11 
+ O59  C57 
+ C96  O98 
+ C63  O66 
+ C19  O26 
+O113 C110 
+ O95 C108 
+ O29  C30 
+C104 O106 
+ O47  C40 
+ O45  C42 
+ C32  O34 
+ C36  O38 
+  C9   N7 
+  H8   N7 
+  N7   C5 
+  C5   C1 
+  C5   O6 
+ H39  O38 
+;O38  +C5 ; !!!!!!!!!!!!!!
+ C82 -O27  
+
+[ impropers ]
+  O6   C5   N7   C1    improper_O_C_X_Y ; 
+  H8   N7   C5   C9    improper_Z_N_X_Y ;
+;
+;
+;
+[ OAN ] ; O-antigen of LipoPolySacharide
+
+[ atoms ]
+O1   opls_169 -0.700  1
+H2   opls_170  0.435  1
+C3   opls_158  0.205  2
+H4   opls_140  0.060  2
+C5   opls_193  0.300  3
+H6   opls_194  0.100  3
+;O7   opls_187 -0.700  4
+;H8   opls_188  0.435  4
+O9   opls_186 -0.400  5
+C10  opls_183  0.170  6
+H11  opls_185  0.030  6
+C12  opls_157  0.145  7
+H13  opls_140  0.060  7
+H14  opls_140  0.060  7
+O15  opls_154 -0.683  8
+H16  opls_155  0.418  8
+C17  opls_158  0.205  9
+H18  opls_140  0.060  9
+O19  opls_154 -0.683 10
+H20  opls_155  0.418 10
+C21  opls_183  0.170 11
+H22  opls_185  0.030 11
+O23  opls_186 -0.400 12
+C24  opls_193  0.300 13
+H25  opls_194  0.100 13
+C26  opls_158  0.205 14
+H27  opls_140  0.060 14
+O28  opls_169 -0.700 15
+H29  opls_170  0.435 15
+C30  opls_158  0.205 16
+H31  opls_140  0.060 16
+O32  opls_169 -0.700 17
+H33  opls_170  0.435 17
+O34  opls_186 -0.400 18
+C35  opls_183  0.170 19
+H36  opls_185  0.030 19
+C37  opls_135 -0.180 20
+H38  opls_140  0.060 20
+H39  opls_140  0.060 20
+H40  opls_140  0.060 20
+C41  opls_183  0.170 21
+H42  opls_185  0.030 21
+O43  opls_186 -0.400 22
+C44  opls_193  0.300 23
+H45  opls_194  0.100 23
+C46  opls_183  0.170 24
+H47  opls_185  0.030 24
+O48  opls_186 -0.400 25
+;H49  opls_155  0.418 25
+O50  opls_186 -0.400 26
+C51  opls_183  0.170 27
+H52  opls_185  0.030 27
+C53  opls_157  0.145 28
+H54  opls_140  0.060 28
+H55  opls_140  0.060 28
+O56  opls_154 -0.683 29
+H57  opls_155  0.418 29
+C58  opls_158  0.205 30
+H59  opls_140  0.060 30
+O60  opls_154 -0.683 31
+H61  opls_155  0.418 31
+C62  opls_183  0.170 32
+H63  opls_185  0.030 32
+O64  opls_186 -0.400 33
+C65  opls_193  0.300 34
+H66  opls_194  0.100 34
+O67  opls_186 -0.400 35
+C68  opls_183  0.170 36
+H69  opls_185  0.030 36
+C70  opls_135 -0.180 37
+H71  opls_140  0.060 37
+H72  opls_140  0.060 37
+H73  opls_140  0.060 37
+C74  opls_158  0.205 38
+H75  opls_140  0.060 38
+O76  opls_154 -0.683 39
+H77  opls_155  0.418 39
+C78  opls_136 -0.120 40
+H79  opls_140  0.060 40
+H80  opls_140  0.060 40
+C81  opls_158  0.205 41
+H82  opls_140  0.060 41
+O83  opls_154 -0.683 42
+H84  opls_155  0.418 42
+
+[ bonds ]
+ H71  C70 
+ H72  C70 
+ H73  C70 
+ H55  C53 
+ H54  C53 
+ C68  H69 
+ H75  C74 
+ H11  C10 
+ H13  C12 
+ H59  C58 
+ H38  C37 
+ H14  C12 
+ C51  H52 
+ H40  C37 
+ C37  H39 
+ H22  C21 
+ C78  H80 
+ C78  H79 
+ C65  H66 
+ H18  C17 
+ H36  C35 
+  C5   H6 
+ C81  H82 
+ C62  H63 
+ C44  H45 
+  C3   H4 
+ H47  C46 
+ C41  H42 
+ C24  H25 
+ H31  C30 
+ C26  H27 
+ C70  C68 
+ C53  C51 
+ C68  C74 
+ C74  C78 
+ C51  C58 
+ C58  C62 
+ C12  C10 
+ C10  C17 
+ C37  C35 
+ C78  C81 
+ C65  C81 
+  C5   C3 
+ C17  C21 
+ C62  C46 
+ C35  C41 
+ C21   C3 
+ C44  C46 
+ C41  C30 
+ C24  C26 
+ C30  C26 
+ O56  H57 
+ H77  O76 
+;  H8   O7 
+ O60  H61 
+ H16  O15 
+ O83  H84 
+  O1   H2 
+ O19  H20 
+; O48  H49 
+ O28  H29 
+ O32  H33 
+ C62  O64 
+ O56  C53 
+ C68  O67 
+ O76  C74 
+ C51  O50 
+ O60  C58 
+ C12  O15 
+ C10   O9 
+ O83  C81 
+ C17  O19 
+ C35  O34 
+ C21  O23 
+  C3   O1 
+ C46  O48 
+ O43  C41 
+ C30  O32 
+ C26  O28 
+ O67  C65 
+;  O7   C5 
+ O50  C44 
+  O9   C5 
+ C65  O64 
+ C44  O43 
+ O34  C24 
+ O23  C24 
+;  C5 -O48
+ O48  +C5
+
+[ impropers ]
+;O9	C10	C17	C21	 improper_OAN_1
+;O9	C5	C3	C21	 improper_OAN_2
+;O34	C35	C41	C30	 improper_OAN_1
+;O34	C24	C26	C30	 improper_OAN_2
+;O50	C51	C58	C62	 improper_OAN_1
+;O50	C44	C46	C62	 improper_OAN_2
+;O67	C68	C74	C78	 improper_OAN_1
+;O67	C65	C81	C78	 improper_OAN_2
+;H63	C62	O64	C65	 improper_OAN_3
+;C62	O64	C65	H66	 improper_OAN_1
+;H47	C46	O48	+C5	 improper_OAN_3
+;C46	O48	+C5	+H6	 improper_OAN_1
+;H22	C21	O23	C24	 improper_OAN_6
+;C21	O23	C24	H25	 improper_OAN_5
+;H42	C41	O43	C44	 improper_OAN_7
+;C41	O43	C44	H45	 improper_OAN_4
+
+[  OAE ] ; Edge O-antigen of LipoPolySacharide
+
+[ atoms ]
+O1   opls_169 -0.700  1
+H2   opls_170  0.435  1
+C3   opls_158  0.205  2
+H4   opls_140  0.060  2
+C5   opls_193  0.300  3
+H6   opls_194  0.100  3
+;O7   opls_187 -0.700  4
+;H8   opls_188  0.435  4
+O9   opls_186 -0.400  5
+C10  opls_183  0.170  6
+H11  opls_185  0.030  6
+C12  opls_157  0.145  7
+H13  opls_140  0.060  7
+H14  opls_140  0.060  7
+O15  opls_154 -0.683  8
+H16  opls_155  0.418  8
+C17  opls_158  0.205  9
+H18  opls_140  0.060  9
+O19  opls_154 -0.683 10
+H20  opls_155  0.418 10
+C21  opls_183  0.170 11
+H22  opls_185  0.030 11
+O23  opls_186 -0.400 12
+C24  opls_193  0.300 13
+H25  opls_194  0.100 13
+C26  opls_158  0.205 14
+H27  opls_140  0.060 14
+O28  opls_169 -0.700 15
+H29  opls_170  0.435 15
+C30  opls_158  0.205 16
+H31  opls_140  0.060 16
+O32  opls_169 -0.700 17
+H33  opls_170  0.435 17
+O34  opls_186 -0.400 18
+C35  opls_183  0.170 19
+H36  opls_185  0.030 19
+C37  opls_135 -0.180 20
+H38  opls_140  0.060 20
+H39  opls_140  0.060 20
+H40  opls_140  0.060 20
+C41  opls_183  0.170 21
+H42  opls_185  0.030 21
+O43  opls_186 -0.400 22
+C44  opls_193  0.300 23
+H45  opls_194  0.100 23
+C46  opls_158  0.205 24
+H47  opls_140  0.060 24
+O48  opls_154 -0.683 25
+H49  opls_155  0.418 25
+O50  opls_186 -0.400 26
+C51  opls_183  0.170 27
+H52  opls_185  0.030 27
+C53  opls_157  0.145 28
+H54  opls_140  0.060 28
+H55  opls_140  0.060 28
+O56  opls_154 -0.683 29
+H57  opls_155  0.418 29
+C58  opls_158  0.205 30
+H59  opls_140  0.060 30
+O60  opls_154 -0.683 31
+H61  opls_155  0.418 31
+C62  opls_183  0.170 32
+H63  opls_185  0.030 32
+O64  opls_186 -0.400 33
+C65  opls_193  0.300 34
+H66  opls_194  0.100 34
+O67  opls_186 -0.400 35
+C68  opls_183  0.170 36
+H69  opls_185  0.030 36
+C70  opls_135 -0.180 37
+H71  opls_140  0.060 37
+H72  opls_140  0.060 37
+H73  opls_140  0.060 37
+C74  opls_158  0.205 38
+H75  opls_140  0.060 38
+O76  opls_154 -0.683 39
+H77  opls_155  0.418 39
+C78  opls_136 -0.120 40
+H79  opls_140  0.060 40
+H80  opls_140  0.060 40
+C81  opls_158  0.205 41
+H82  opls_140  0.060 41
+O83  opls_154 -0.683 42
+H84  opls_155  0.418 42
+
+[ bonds ]
+ H71  C70 
+ H72  C70 
+ H73  C70 
+ H55  C53 
+ H54  C53 
+ C68  H69 
+ H75  C74 
+ H11  C10 
+ H13  C12 
+ H59  C58 
+ H38  C37 
+ H14  C12 
+ C51  H52 
+ H40  C37 
+ C37  H39 
+ H22  C21 
+ C78  H80 
+ C78  H79 
+ C65  H66 
+ H18  C17 
+ H36  C35 
+  C5   H6 
+ C81  H82 
+ C62  H63 
+ C44  H45 
+  C3   H4 
+ H47  C46 
+ C41  H42 
+ C24  H25 
+ H31  C30 
+ C26  H27 
+ C70  C68 
+ C53  C51 
+ C68  C74 
+ C74  C78 
+ C51  C58 
+ C58  C62 
+ C12  C10 
+ C10  C17 
+ C37  C35 
+ C78  C81 
+ C65  C81 
+  C5   C3 
+ C17  C21 
+ C62  C46 
+ C35  C41 
+ C21   C3 
+ C44  C46 
+ C41  C30 
+ C24  C26 
+ C30  C26 
+ O56  H57 
+ H77  O76 
+;  H8   O7 
+ O60  H61 
+ H16  O15 
+ O83  H84 
+  O1   H2 
+ O19  H20 
+ O48  H49 
+ O28  H29 
+ O32  H33 
+ C62  O64 
+ O56  C53 
+ C68  O67 
+ O76  C74 
+ C51  O50 
+ O60  C58 
+ C12  O15 
+ C10   O9 
+ O83  C81 
+ C17  O19 
+ C35  O34 
+ C21  O23 
+  C3   O1 
+ C46  O48 
+ O43  C41 
+ C30  O32 
+ C26  O28 
+ O67  C65 
+;  O7   C5 
+ O50  C44 
+  O9   C5 
+ C65  O64 
+ C44  O43 
+ O34  C24 
+ O23  C24 
+  C5 -O48
+; O48  +C5
+
+[ impropers ]
+;O9	C10	C17	C21	 improper_OAN_1
+;O9	C5	C3	C21	 improper_OAN_2
+;O34	C35	C41	C30	 improper_OAN_1
+;O34	C24	C26	C30	 improper_OAN_2
+;O50	C51	C58	C62	 improper_OAN_1
+;O50	C44	C46	C62	 improper_OAN_2
+;O67	C68	C74	C78	 improper_OAN_1
+;O67	C65	C81	C78	 improper_OAN_2
+;H63	C62	O64	C65	 improper_OAN_3
+;C62	O64	C65	H66	 improper_OAN_1
+;;H47	C46	O48	+C5	 improper_OAN_3
+;;C46	O48	+C5	+H6	 improper_OAN_1
+;H22	C21	O23	C24	 improper_OAN_6
+;C21	O23	C24	H25	 improper_OAN_5
+;H42	C41	O43	C44	 improper_OAN_7
+;C41	O43	C44	H45	 improper_OAN_4

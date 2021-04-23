@@ -1,0 +1,19 @@
+; **
+; Ionic liquids atomtypes
+; ** 
+;
+; Please cite: JCTC,2009 5(4): 1038
+;
+
+bmim_ca     12.011  ; BMIM R-C-[N-Imi+] JCTC:2009 5(4), 1038-50
+bmim_ha     1.008   ; BMIM R-HC-[N-Imi+] JCTC:2009 5(4), 1038-50
+bmim_cm     12.011  ; BMIM CH3-[N-Imi+] JCTC:2009 5(4), 1038-50
+bmim_hm     1.008   ; BMIM CH3-[N-Imi+] JCTC:2009 5(4), 1038-50
+bmim_cr     12.011  ; c2 in imidazole (BMIM); JCTC:2009 5(4), 1038-50
+bmim_hr     1.008   ; H on c2 in imidazole (BMIM); JCTC:2009 5(4), 1038
+bmim_na     14.0067 ; n in imidazole (BMIM); JCTC:2009 5(4), 1038-50 
+bmim_cw     12.011  ; c4,5 in imidazole (BMIM); JCTC:2009 5(4), 1038-50
+bmim_hw     1.008   ; H at C4,5 in imidazole (BMIM); JCTC:2009 5(4), 1038
+bf4_b       10.811  ; BF4-; JPCB: 2002, 106, 13344
+bf4_f       18.9984 ; BF4-; JPCB: 2002, 106, 13344
+

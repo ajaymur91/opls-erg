@@ -1,0 +1,18 @@
+[ atomtypes ]
+PhAc_193   CO    6   12.01100     0.270   A    3.50000e-01  2.76144e-01  ; Acetal carbon atom for PhosphoAcetales in LipoPolySaccharides: P(~O)(~O)(~O)-O-[CH](C)-O
+PhAc_194   HC    1    1.00800     0.070   A    2.50000e-01  1.25520e-01  ; Hydrogen bound to central carbon atom for PhosphoAcetales in LipoPolySaccharides P(~O)(~O)(~O)-O-[CH]([#1])(C)-O
+ADMP_180   OS    8   15.99940    -0.600   A    2.90000e-01  5.85760e-01  ; Metoxy oxygen atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 2
+ADMP_197   CO    6   12.01100     0.700   A    3.50000e-01  2.76144e-01  ; Acetal carbon atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 3
+ADMP_271   C_3   6   12.01100     0.500   A    3.75000e-01  4.39320e-01  ; Carboxyl carbon atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 6
+ADMP_272   O2    8   15.99940    -0.700   A    2.96000e-01  8.78640e-01  ; Carboxyl oxygen atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 7,8
+APP_440    P    15  30.97376      1.470   A    3.74000e-01  8.36800e-01  ; Phosphor atom from AlkylPyroPhosphate in LipoPolySaccharides: O-P(=O)(-[Oh1])-O-P(=O)(-[Oh1])-O 
+APP_442    OS    8  15.99940     -0.420   A    2.90000e-01  5.85760e-01  ; Central oxygen atom from AlkylPyroPhosphate in LipoPolySaccharides: O-P(=O)(-[Oh1])-O-P(=O)(-[Oh1])-O
+APP_135    CT    6  12.01100      0.480   A    3.50000e-01  2.76144e-01  ; Carbon atom in DiMetylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH3]
+APP_136    CT    6  12.01100      0.380   A    3.50000e-01  2.76144e-01  ; Carbon atom in DiEthylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH2]-C
+APP_137    CT    6  12.01100      0.280   A    3.50000e-01  2.76144e-01  ; Carbon atom in DiIsoPropylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH](C)-C
+APP_139    CT    6  12.01100      0.180   A    3.50000e-01  2.76144e-01  ; Carbon atom in DiTretButylPyroPhosphate: O-P(=O)(-[Oh1])-O-C(C)(C)-C
+APP_140    HC    1   1.00800     -0.100   A    2.50000e-01  1.25520e-01  ; Hydrogene atom in AlkylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH]-[#1]
+GrafInf    CA    6  12.01100      0.000   A    4.31750e-01  6.25165e-01  ; Carbon atom of infinite graphana sheet 
+opls_446B  O2    8  15.99940     -0.980   A    2.96000e-01  8.78640e-01  ; O= in MeOPO2H-, 6-31+G* B3LYP5
+opls_446C  OH    8  15.99940     -0.820   A    3.07000e-01  7.11280e-01  ; Oh in MeOPO2H-, 6-31+G* B3LYP5
+opls_446D  HO    1   1.00800      0.420   A    2.50000e-01  1.25520e-01  ; H in MeOPO2H-, 6-31+G* B3LYP5

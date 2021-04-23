@@ -1,0 +1,20 @@
+; LPS atom types. Made in ERG group :)
+;
+PhAc_193    12.01100  ; Acetal carbon atom for PhosphoAcetales in LipoPolySaccharides: P(~O)(~O)(~O)-O-[CH](C)-O
+PhAc_194     1.00800  ; Hydrogen bound to central carbon atom for PhosphoAcetales in LipoPolySaccharides P(~O)(~O)(~O)-O-[CH]([#1])(C)-O
+ADMP_180    15.99940  ; Metoxy oxygen atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 2
+ADMP_197    12.01100  ; Acetal carbon atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 3
+ADMP_271    12.01100  ; Carboxyl carbon atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 6
+ADMP_272    15.99940  ; Carboxyl oxygen atom from AlphaDiMetoxyPropionate in LipoPolySaccharides: C-O-C(-O)(C)-C(=O)(-[Oh1]) - 7,8
+APP_440     30.97376  ; Phosphor atom from AlkylPyroPhosphate in LipoPolySaccharides: O-P(=O)(-[Oh1])-O-P(=O)(-[Oh1])-O 
+APP_442     15.99940  ; Central oxygen atom from AlkylPyroPhosphate in LipoPolySaccharides: O-P(=O)(-[Oh1])-O-P(=O)(-[Oh1])-O
+APP_135     12.01100  ; Carbon atom in DiMetylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH3]
+APP_136     12.01100  ; Carbon atom in DiEthylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH2]-C
+APP_137     12.01100  ; Carbon atom in DiIsoPropylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH](C)-C
+APP_139     12.01100  ; Carbon atom in DiTretButylPyroPhosphate: O-P(=O)(-[Oh1])-O-C(C)(C)-C
+APP_140      1.00800  ; Hydrogene atom in AlkylPyroPhosphate: O-P(=O)(-[Oh1])-O-[CH]-[#1]
+lpls_135    12.0110   ; lipid-spec. (by c1) 
+lpls_136    12.0110   ; lipid-spec.
+lpls_140     1.0080   ; lipid-spec.
+amin_905    12.0110   ; Carbon in (CH3)4N+ according to JPC 90(10):2174-2182. 1986. For hydrogen use 911!!!
+amin_908    12.0110   ; Carbon in R-CH2-N(CH3)3+ acording to JPC 90(10):2174-2182. 1986. For hydrogen use 911!!!

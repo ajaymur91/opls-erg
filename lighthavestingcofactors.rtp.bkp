@@ -1,0 +1,2174 @@
+[ bondedtypes ]
+; Column 1 : default bondtype
+; Column 2 : default angletype
+; Column 3 : default proper dihedraltype
+; Column 4 : default improper dihedraltype
+; Column 5 : This controls the generation of dihedrals from the bonding.
+;            All possible dihedrals are generated automatically. A value of
+;            1 here means that all these are retained. A value of
+;            0 here requires generated dihedrals be removed if
+;              * there are any dihedrals on the same central atoms
+;                specified in the residue topology, or
+;              * there are other identical generated dihedrals
+;                sharing the same central atoms, or
+;              * there are other generated dihedrals sharing the
+;                same central bond that have fewer hydrogen atoms
+; Column 6 : number of neighbors to exclude from non-bonded interactions
+; Column 7 : 1 = generate 1,4 interactions between pairs of hydrogen atoms
+;            0 = do not generate such
+; Column 8 : 1 = remove proper dihedrals if found centered on the same
+;                bond as an improper dihedral
+;            0 = do not generate such
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          1	    1         3      1     0
+
+
+;
+; PhycoCyanoBiline molecule. Resp charges + many dihedrals from nucleotide residues. Actually not very good!!!
+;
+[ CYC ]
+[ atoms ]
+
+   CHA    opls_142    -0.115    6    ;  alkene C (RH-C=)
+   HHA    opls_144     0.115    6    ;  alkene H (H-C=)
+    NA    opls_542    -0.142    7    ;  N in pyrrole, opls entry - charge corrected from -0.239
+   C1A    opls_543     0.042    8    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   C2A    opls_544    -0.089    9    ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+   C3A    opls_544    -0.089   10    ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+   C4A    opls_543     0.042   11    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   CMA    opls_135    -0.062   12    ;  Alkane CH3 carbon with reduced charge as opls_678
+  HMA1    opls_140     0.060   12    ;  alkane H.
+  HMA2    opls_140     0.060   12    ;  alkane H.
+  HMA3    opls_140     0.060   12    ;  alkane H.
+   CAA    opls_136    -0.002   13    ;  Alkane CH2 carbon with reduced charge as opls_679
+  HAA1    opls_140     0.060   13    ;  alkane H.
+  HAA2    opls_140     0.060   13    ;  alkane H.
+   CBA    opls_274    -0.220   14    ;  C: CH2, carboxylate ion
+  HBA1    opls_140     0.060   14    ;  alkane H.
+  HBA2    opls_140     0.060   14    ;  alkane H.
+   CGA    opls_271     0.700   15    ;  C in COO- carboxylate
+   O1A    opls_272    -0.800   15    ;  O: O in COO- carboxylate,peptide terminus
+   O2A    opls_272    -0.800   15    ;  O: O in COO- carboxylate,peptide terminus
+   CHB    opls_142    -0.115   16    ;  alkene C (RH-C=)
+   HHB    opls_144     0.115   16    ;  alkene H (H-C=)
+    NB    opls_319    -0.600   17    ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HB    opls_325     0.410   17    ;  Uracil & Thymine H-N1
+   C1B    opls_324     0.090   18    ;  Uracil & Thymine C6 - charge cprrected from +0.080
+   C2B    opls_323     0.000   19    ;  Uracil & Thymine C5 - charge corrected from -0.070
+   C3B    opls_141     0.000   20    ;  alkene C (R2-C=)
+   C4B    opls_320     0.500   21    ;  Uracil & Thymine C2
+   CMB    opls_135    -0.180   22    ;  alkane CH3
+  HMB1    opls_140     0.060   22    ;  alkane H.
+  HMB2    opls_140     0.060   22    ;  alkane H.
+  HMB3    opls_140     0.060   22    ;  alkane H.
+   CAB    opls_136    -0.120   23    ;  alkane CH2
+  HAB1    opls_140     0.060   23    ;  alkane H.
+  HAB2    opls_140     0.060   23    ;  alkane H.
+   CBB    opls_135    -0.180   24    ;  alkane CH3
+  HBB1    opls_140     0.060   24    ;  alkane H.
+  HBB2    opls_140     0.060   24    ;  alkane H.
+  HBB3    opls_140     0.060   24    ;  alkane H.
+    OB    opls_326    -0.400   25    ;  Uracil O-C2
+    NC    opls_319    -0.600   26    ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HC    opls_325     0.410   26    ;  Uracil & Thymine H-N1
+   C1C    opls_320     0.500   27    ;  Uracil & Thymine C2
+   C2C    opls_137    -0.060   28    ;  alkane CH
+   H2C    opls_140     0.060   28    ;  alkane H.
+   C3C    opls_137    -0.060   29    ;  alkane CH
+   H3C    opls_140     0.060   29    ;  alkane H.
+   C4C    opls_324     0.090   30    ;  Uracil & Thymine C6 - charge corrected from +0.080
+   CMC    opls_135    -0.180   31    ;  alkane CH3
+  HMC1    opls_140     0.060   31    ;  alkane H.
+  HMC2    opls_140     0.060   31    ;  alkane H.
+  HMC3    opls_140     0.060   31    ;  alkane H.
+   CAC    opls_211     0.107   32    ;  all-atom C: CH, sulfides
+   HAC    opls_140     0.060   32    ;  alkane H.
+   CBC    opls_135    -0.180   33    ;  alkane CH3
+  HBC1    opls_140     0.060   33    ;  alkane H.
+  HBC2    opls_140     0.060   33    ;  alkane H.
+  HBC3    opls_140     0.060   33    ;  alkane H.
+    OC    opls_326    -0.400   34    ;  Uracil O-C2
+   CHD    opls_323    -0.115   35    ;  alkene C (RH-C=)
+   HHD    opls_329     0.115   35    ;  alkene H (H-C=)
+    ND    opls_542    -0.239   36    ;  N in pyrrole, opls entry
+    HD    opls_545     0.317   36    ;  H1  in pyrrole, opls entry
+   C1D    opls_543    -0.008   37    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   C2D    opls_544    -0.149   38    ;  C3  in pyrrole, opls entry
+   C3D    opls_544    -0.149   39    ;  C3  in pyrrole, opls entry
+   C4D    opls_543    -0.008   40    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   CMD    opls_135    -0.062   41    ;  Alkane CH3 carbon with reduced charge as opls_678
+  HMD1    opls_140     0.060   41    ;  alkane H.
+  HMD2    opls_140     0.060   41    ;  alkane H.
+  HMD3    opls_140     0.060   41    ;  alkane H.
+   CAD    opls_136    -0.002   42    ;  Alkane CH2 carbon with reduced charge as opls_679
+  HAD1    opls_140     0.060   42    ;  alkane H.
+  HAD2    opls_140     0.060   42    ;  alkane H.
+   CBD    opls_274    -0.220   43    ;  C: CH2, carboxylate ion
+  HBD1    opls_140     0.060   43    ;  alkane H.
+  HBD2    opls_140     0.060   43    ;  alkane H.
+   CGD    opls_271     0.700   44    ;  C in COO- carboxylate
+   O1D    opls_272    -0.800   44    ;  O: O in COO- carboxylate,peptide terminus
+   O2D    opls_272    -0.800   44    ;  O: O in COO- carboxylate,peptide terminus
+
+[ bonds ]
+HMC1  CMC
+HMC2  CMC
+HMC3  CMC
+HBC3  CBC
+HBC2  CBC
+ H2C  C2C
+ CBC HBC1
+ H3C  C3C
+ CAC  HAC
+HMB3  CMB
+;  CB  HB1
+;  CB  HB2
+HMD1  CMD
+HMB1  CMB
+ CMB HMB2
+;  HA   CA
+HMD2  CMD
+HAB1  CAB
+ CMD HMD3
+HAB2  CAB
+HBD2  CBD
+HBD1  CBD
+HBB1  CBB
+ CBB HBB2
+ CBB HBB3
+ CAD HAD1
+ CAD HAD2
+HMA2  CMA
+HAA2  CAA
+ CMA HMA3
+ CMA HMA1
+ CAA HAA1
+HBA2  CBA
+ CBA HBA1
+ CMC  C2C
+ C2C  C3C
+ CBC  CAC
+ C3C  CAC
+;  CB   CA
+ CAB  CBB
+ CBD  CAD
+ CAA  CBA
+ C2C  C1C
+ CBD  CGD
+ CBA  CGA
+  OC  C1C
+ C4B   OB
+ C1C   NC
+ C4B   NB
+ C3C  C4C
+ CMB  C2B
+;   C   CA
+ CAB  C3B
+ CAC   SG
+;  SG   CB
+  NC  C4C
+ C1B   NB
+  NC   HC
+  HD   ND
+;   N    H
+  NB   HB
+ C4C  CHD
+ C2B  C3B
+ C2B  C1B
+ CHB  C1B
+ CHD  HHD
+ HHB  CHB
+ CHA  HHA
+ CHD  C1D
+ C4D  CHA
+ CHB  C4A
+ CHA  C1A
+;   O    C
+ C1D   ND
+  ND  C4D
+  NA  C4A
+  NA  C1A
+ C1D  C2D
+ C4D  C3D
+ C4A  C3A
+ C1A  C2A
+;  CA    N
+ CMD  C2D
+ C3D  CAD
+ C3A  CMA
+ C2A  CAA
+ C2D  C3D
+ C3A  C2A
+ C3B  C4B
+ O1D  CGD
+ CGD  O2D
+ O2A  CGA
+ CGA  O1A
+
+
+;
+; Cysteine residue that bounds the phycobiline. Charges are from RESP!!!!
+;
+[ CYSP ] ; aka CYX
+ [ atoms ]
+     N    opls_238   -0.500     1
+     H    opls_241    0.300     1
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_214    0.048     2
+   HB1    opls_140    0.060     2
+   HB2    opls_140    0.060     2
+    SG    opls_203   -0.335     2
+     C    opls_235    0.500     3
+     O    opls_236   -0.500     3
+ [ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    SG
+     C     O
+    -C     N
+ [ dihedrals ] ; override some of the typebased dihedrals
+     N    CA    CB    SG    dih_CYS_chi1_N_C_C_S
+     C    CA    CB    SG    dih_CYS_chi1_CO_C_C_S
+ [ impropers ]
+    -C    CA     N     H    improper_Z_N_X_Y 
+    CA    +N     C     O    improper_O_C_X_Y 
+
+;
+; 3'-hydroxyechinenone
+; I need it here. It is necessary to switch off some NB interaction between it and apo-protein. zoidberg.
+[ HEQ ]
+
+[ atoms ]
+C1   opls_139  0.000 1
+C2   opls_135 -0.180 2
+H21  opls_140  0.060 2 
+H22  opls_140  0.060 2
+H23  opls_140  0.060 2
+C3   opls_135 -0.180 3
+H31  opls_140  0.060 3
+H32  opls_140  0.060 3
+H33  opls_140  0.060 3
+C4   opls_136 -0.120 4
+H41  opls_140  0.060 4
+H42  opls_140  0.060 4
+C5   opls_158  0.205 5
+H5   opls_140  0.060 5
+O6   opls_154 -0.683 5
+H6   opls_155  0.418 5
+C7   opls_136 -0.120 6
+H71  opls_140  0.060 6
+H72  opls_140  0.060 6
+C8   opls_141  0.000 7
+C9   opls_135 -0.180 8
+H91  opls_140  0.060 8
+H92  opls_140  0.060 8
+H93  opls_140  0.060 8
+C10  opls_178  0.000 9
+C11  opls_150 -0.115 10
+H11  opls_144  0.115 10
+C12  opls_150 -0.115 11
+H12  opls_144  0.115 11
+C13  opls_178  0.000 12
+C14  opls_135 -0.180 13
+H141 opls_140  0.060 13
+H142 opls_140  0.060 13
+H143 opls_140  0.060 13
+C15  opls_150 -0.115 14
+H15  opls_144  0.115 14
+C16  opls_150 -0.115 15
+H16  opls_144  0.115 15
+C17  opls_150 -0.115 16
+H17  opls_144  0.115 16
+C18  opls_178  0.000 17
+C19  opls_135 -0.180 18
+H191 opls_140  0.060 18
+H192 opls_140  0.060 18
+H193 opls_140  0.060 18
+C20  opls_150 -0.115 19
+H20  opls_144  0.115 19
+C021 opls_150 -0.115 20
+H021 opls_144  0.115 20
+C022 opls_150 -0.115 21
+H022 opls_144  0.115 21
+C023 opls_150 -0.115 22
+H023 opls_144  0.115 22
+C24  opls_178  0.000 23
+C25  opls_135 -0.180 24
+H251 opls_140  0.060 24
+H252 opls_140  0.060 24
+H253 opls_140  0.060 24
+C26  opls_150 -0.115 25
+H26  opls_144  0.115 25
+C27  opls_150 -0.115 26
+H27  opls_144  0.115 26
+C28  opls_150 -0.115 27
+H28  opls_144  0.115 27
+C29  opls_178  0.000 28
+C30  opls_135 -0.180 29
+H301 opls_140  0.060 29
+H302 opls_140  0.060 29
+H303 opls_140  0.060 29
+C031 opls_150 -0.115 30
+H031 opls_144  0.115 30
+C032 opls_150 -0.115 31
+H032 opls_144  0.115 31
+C33  opls_178  0.000 32
+C34  opls_141  0.000 33
+C35  opls_135 -0.180 34
+H351 opls_140  0.060 34
+H352 opls_140  0.060 34
+H353 opls_140  0.060 34
+C36  opls_280  0.470 35
+O37  opls_281 -0.470 35
+C38  opls_136 -0.120 36
+H381 opls_282  0.060 36
+H382 opls_282  0.060 36
+C39  opls_136 -0.120 37
+H391 opls_140  0.060 37
+H392 opls_140  0.060 37
+C40  opls_139  0.000 37
+C41  opls_135 -0.180 38
+H411 opls_140  0.060 38
+H412 opls_140  0.060 38
+H413 opls_140  0.060 38
+C42  opls_135 -0.180 39
+H421 opls_140  0.060 39
+H422 opls_140  0.060 39
+H423 opls_140  0.060 39
+
+[ bonds ]
+H391  C39 
+H382  C38 
+H392  C39 
+H412  C41 
+H381  C38 
+H413  C41 
+H423  C42 
+ C41 H411 
+ C42 H421 
+ C42 H422 
+H351  C35 
+ C35 H353 
+ C35 H352 
+H192  C19 
+ H92   C9 
+H142  C14 
+ H91   C9 
+H191  C19 
+ C19 H193 
+ H71   C7 
+H303  C30 
+  C9  H93 
+ H23   C2 
+ C30 H302 
+ C30 H301 
+ C14 H141 
+ C14 H143 
+  C7  H72 
+ H22   C2 
+  C2  H21 
+H253  C25 
+ C25 H251 
+ C25 H252 
+ H42   C4 
+  C5   H5 
+  C4  H41 
+ H33   C3 
+  C3  H31 
+  C3  H32 
+ C39  C38 
+ C39  C40 
+ C41  C40 
+ C40  C42 
+  C7   C5 
+  C2   C1 
+  C1   C4 
+  C1   C3 
+  C5   C4 
+ C38  C36 
+ C40  C33 
+ C34  C35 
+ C29  C30 
+ C19  C18 
+  C9   C8 
+ C14  C13 
+ C24  C25 
+  C8   C7 
+ C10   C1 
+ C36  O37 
+ C36  C34 
+H031 C031 
+ H28  C28 
+C032 H032 
+ H26  C26 
+H023 C023 
+ C27  H27 
+H021 C021 
+ H11  C11 
+C022 H022 
+ H16  C16 
+ C20  H20 
+ C17  H17 
+ C12  H12 
+ C15  H15 
+ C33  C34 
+  C8  C10 
+ C33 C032 
+C031 C032 
+C031  C29 
+ C28  C29 
+ C28  C27 
+ C26  C27 
+ C26  C24 
+C023  C24 
+C023 C022 
+C021 C022 
+C021  C20 
+ C18  C20 
+ C18  C17 
+ C13  C12 
+ C13  C15 
+ C11  C10 
+ C11  C12 
+ C16  C17 
+ C16  C15 
+  H6   O6 
+  O6   C5 
+
+# UBIQUINONE-10
+[ U10 ]
+
+[ atoms ]
+C1   uqCM      0.130  1
+C2   uqCO      0.270  1
+C3   uqCE      0.280  1
+C4   uqCE      0.280  1
+C5   uqCO      0.270  1
+C6   uqCM      0.130  1
+C1M  opls_135 -0.180  1
+C3M  opls_181  0.110  1
+C4M  opls_181  0.110  1
+O2   uqOG     -0.360  1
+O3   uqOE     -0.520  1
+O4   uqOE     -0.520  1
+O5   uqOG     -0.360  1
+H17  opls_140  0.060  1
+H18  opls_140  0.060  1
+H19  opls_140  0.060  1
+H52  opls_185  0.030  1
+H53  opls_185  0.030  1
+H54  opls_185  0.030  1
+H71  opls_185  0.030  1
+H72  opls_185  0.030  1
+H73  opls_185  0.030  1
+C7   opls_136 -0.120  2
+C8   opls_142 -0.115  2
+C9   opls_141  0.000  2
+C10  opls_135 -0.180  2
+C11  opls_136 -0.120  2
+H88  opls_140  0.060  2
+H89  opls_140  0.060  2
+H90  opls_144  0.115  2
+H1   opls_140  0.060  2
+H2   opls_140  0.060  2
+H3   opls_140  0.060  2
+H4   opls_140  0.060  2
+H5   opls_140  0.060  2
+C12  opls_136 -0.120  3
+C13  opls_142 -0.115  3
+C14  opls_141  0.000  3
+C15  opls_135 -0.180  3
+C16  opls_136 -0.120  3
+H6   opls_140  0.060  3
+H7   opls_140  0.060  3
+H8   opls_144  0.115  3
+H9   opls_140  0.060  3
+H10  opls_140  0.060  3
+H11  opls_140  0.060  3
+H12  opls_140  0.060  3
+H13  opls_140  0.060  3
+C17  opls_136 -0.120  4
+C18  opls_142 -0.115  4
+C19  opls_141  0.000  4
+C20  opls_135 -0.180  4
+C21  opls_136 -0.120  4
+H14  opls_140  0.060  4
+H15  opls_140  0.060  4
+H16  opls_144  0.115  4
+H20  opls_140  0.060  4
+H21  opls_140  0.060  4
+H22  opls_140  0.060  4
+H23  opls_140  0.060  4
+H24  opls_140  0.060  4
+C22  opls_136 -0.120  5
+C23  opls_142 -0.115  5
+C24  opls_141  0.000  5
+C25  opls_135 -0.180  5
+C26  opls_136 -0.120  5
+H25  opls_140  0.060  5
+H26  opls_140  0.060  5
+H27  opls_144  0.115  5
+H28  opls_140  0.060  5
+H29  opls_140  0.060  5
+H30  opls_140  0.060  5
+H31  opls_140  0.060  5
+H32  opls_140  0.060  5
+C27  opls_136 -0.120  6
+C28  opls_142 -0.115  6
+C29  opls_141  0.000  6
+C30  opls_135 -0.180  6
+C31  opls_136 -0.120  6
+H33  opls_140  0.060  6
+H34  opls_140  0.060  6
+H35  opls_144  0.115  6
+H36  opls_140  0.060  6
+H37  opls_140  0.060  6
+H38  opls_140  0.060  6
+H39  opls_140  0.060  6
+H40  opls_140  0.060  6
+C32  opls_136 -0.120  7
+C33  opls_142 -0.115  7
+C34  opls_141  0.000  7
+C35  opls_135 -0.180  7
+C36  opls_136 -0.120  7
+H41  opls_140  0.060  7
+H42  opls_140  0.060  7
+H43  opls_144  0.115  7
+H44  opls_140  0.060  7
+H45  opls_140  0.060  7
+H46  opls_140  0.060  7
+H47  opls_140  0.060  7
+H48  opls_140  0.060  7
+C37  opls_136 -0.120  8
+C38  opls_142 -0.115  8
+C39  opls_141  0.000  8
+C40  opls_135 -0.180  8
+C41  opls_136 -0.120  8
+H49  opls_140  0.060  8
+H50  opls_140  0.060  8
+H51  opls_144  0.115  8
+H55  opls_140  0.060  8
+H56  opls_140  0.060  8
+H57  opls_140  0.060  8
+H58  opls_140  0.060  8
+H59  opls_140  0.060  8
+C42  opls_136 -0.120  9
+C43  opls_142 -0.115  9
+C44  opls_141  0.000  9
+C45  opls_135 -0.180  9
+C46  opls_136 -0.120  9
+H60  opls_140  0.060  9
+H61  opls_140  0.060  9
+H62  opls_144  0.115  9
+H63  opls_140  0.060  9
+H64  opls_140  0.060  9
+H65  opls_140  0.060  9
+H66  opls_140  0.060  9
+H67  opls_140  0.060  9
+C47  opls_136 -0.120  10
+C48  opls_142 -0.115  10
+C49  opls_141  0.000  10
+C50  opls_135 -0.180  10
+C51  opls_136 -0.120  10
+H68  opls_140  0.060  10
+H69  opls_140  0.060  10
+H70  opls_144  0.115  10
+H74  opls_140  0.060  10
+H75  opls_140  0.060  10
+H76  opls_140  0.060  10
+H77  opls_140  0.060  10
+H78  opls_140  0.060  10
+C52  opls_136 -0.120  11
+C53  opls_142 -0.115  11
+C54  opls_141  0.000  11
+C55  opls_135 -0.180  11
+C56  opls_135 -0.180  11
+H79  opls_140  0.060  11
+H80  opls_140  0.060  11
+H81  opls_144  0.115  11
+H82  opls_140  0.060  11
+H83  opls_140  0.060  11
+H84  opls_140  0.060  11
+H85  opls_140  0.060  11
+H86  opls_140  0.060  11
+H87  opls_140  0.060  11
+
+[ bonds ]
+ H45  C35 
+ H48  C36 
+ H44  C35 
+ C35  H46 
+ H49  C37 
+ C36  H47 
+ C37  H50 
+ H42  C32 
+ C32  H41 
+ H56  C40 
+ H59  C41 
+ H40  C31 
+ C31  H39 
+ C40  H55 
+ C40  H57 
+ C41  H58 
+ H60  C42 
+ H61  C42 
+ H37  C30 
+ H64  C45 
+ C30  H36 
+ C30  H38 
+ H63  C45 
+ C45  H65 
+ H32  C26 
+ H31  C26 
+ C27  H34 
+ C27  H33 
+ H29  C25 
+ H28  C25 
+ C25  H30 
+ C46  H66 
+ C46  H67 
+ H68  C47 
+ C47  H69 
+ H25  C22 
+ C22  H26 
+ H75  C50 
+ H24  C21 
+ H72  C4M 
+ H74  C50 
+ C50  H76 
+ C21  H23 
+ H88   C7 
+ C4M  H71 
+ C4M  H73 
+ H89   C7 
+  H2  C10 
+ H77  C51 
+  H1  C10 
+ C51  H78 
+ H18  C1M 
+ H21  C20 
+ C10   H3 
+ H53  C3M 
+ C20  H20 
+ C20  H22 
+ C1M  H17 
+ C1M  H19 
+ C3M  H52 
+ C3M  H54 
+ H79  C52 
+ H12  C16 
+ C52  H80 
+  H7  C12 
+ C17  H14 
+ C17  H15 
+ C16  H13 
+ C11   H5 
+ C11   H4 
+ C12   H6 
+ H86  C56 
+ H83  C55 
+ C56  H85 
+ C56  H87 
+ C55  H82 
+ C55  H84 
+ C15   H9 
+ C15  H10 
+ C15  H11 
+ C44  C46 
+ C35  C34 
+ C36  C34 
+ C37  C38 
+ C33  C32 
+ C39  C40 
+ C39  C41 
+ C31  C29 
+ C42  C43 
+ C29  C30 
+ C28  C27 
+ C45  C44 
+ C26  C24 
+ C25  C24 
+ C47  C48 
+ C23  C22 
+ C50  C49 
+ C49  C51 
+ C21  C19 
+  C7   C6 
+  C7   C8 
+ C19  C20 
+ C10   C9 
+  C1  C1M 
+ C18  C17 
+  C9  C11 
+ C52  C53 
+ C13  C12 
+ C16  C14 
+ C14  C15 
+ C54  C56 
+ C54  C55 
+ C36  C37 
+ C32  C31 
+ C41  C42 
+ C27  C26 
+ C46  C47 
+ C22  C21 
+ C51  C52 
+ C17  C16 
+ C11  C12 
+ C34  C33 
+ C38  C39 
+ C29  C28 
+ C43  C44 
+ C24  C23 
+ C48  C49 
+ C19  C18 
+  C8   C9 
+ C13  C14 
+ C53  C54 
+ H81  C53 
+ H51  C38 
+ C33  H43 
+ H35  C28 
+ C43  H62 
+ H27  C23 
+ C48  H70 
+ H16  C18 
+  C8  H90 
+  H8  C13 
+  O4  C4M 
+  O3  C3M 
+  O4   C4 
+  O5   C5 
+  O3   C3 
+  C2   O2 
+  C4   C5 
+  C4   C3 
+  C5   C6 
+  C6   C1 
+  C3   C2 
+  C1   C2 
+
+[ dihedrals ]
+ C34  C36  C37  C38 dhTPP_CM_CT_CT_CM 
+ C36  C37  C38  H51 dhTPP_CT_CT_CM_HC 
+ H43  C33  C32  C31 dhTPP_HC_CM_CT_CT 
+ C33  C32  C31  C29 dhTPP_CM_CT_CT_CM 
+ C39  C41  C42  C43 dhTPP_CM_CT_CT_CM 
+ C41  C42  C43  H62 dhTPP_CT_CT_CM_HC 
+ H35  C28  C27  C26 dhTPP_HC_CM_CT_CT 
+ C28  C27  C26  C24 dhTPP_CM_CT_CT_CM 
+ C44  C46  C47  C48 dhTPP_CM_CT_CT_CM 
+ C46  C47  C48  H70 dhTPP_CT_CT_CM_HC 
+ H27  C23  C22  C21 dhTPP_HC_CM_CT_CT 
+ C23  C22  C21  C19 dhTPP_CM_CT_CT_CM 
+  C6   C7   C8   C9 dhTPP_CA_CT_CM_CM 
+  C6   C7   C8  H90 dhTPP_CA_CT_CM_HC 
+ C49  C51  C52  C53 dhTPP_CM_CT_CT_CM 
+ H16  C18  C17  C16 dhTPP_HC_CM_CT_CT 
+ C51  C52  C53  H81 dhTPP_CT_CT_CM_HC 
+  H8  C13  C12  C11 dhTPP_HC_CM_CT_CT 
+ C18  C17  C16  C14 dhTPP_CM_CT_CT_CM 
+  C9  C11  C12  C13 dhTPP_CM_CT_CT_CM 
+
+
+[  BCL ]
+
+[ atoms ]
+MG     MGCLR       0.840    0 
+CHA    opls_145   -0.115    1
+C1A    pyrRC2      0.220    2
+C2A    pyrRC3H     0.050    2
+H2A    opls_144    0.115    2
+C3A    pyrRC3H     0.050    2
+H3A    opls_144    0.115    2
+C4A    pyrRC2      0.220    2
+NA     nCHLR      -0.750    2
+CMA    opls_135   -0.180    3
+HMA1   opls_140    0.060    3
+HMA2   opls_140    0.060    3
+HMA3   opls_140    0.060    3
+CAA    opls_136   -0.120    4
+HAA1   opls_140    0.060    4
+HAA2   opls_140    0.060    4
+CBA    opls_274   -0.220    5
+HBA1   opls_282    0.060    5
+HBA2   opls_282    0.060    5
+CGA    opls_465    0.510    5
+O1A    opls_466   -0.430    5
+O2A    opls_467   -0.330    5
+C1     opls_182    0.140    5
+H11    opls_185    0.030    5
+H12    opls_185    0.030    5
+C2     opls_142   -0.120    6
+H2     opls_144    0.060    6
+C3     opls_141   -0.060    7
+C4     opls_135   -0.180    8
+H41    opls_140    0.060    8
+H42    opls_140    0.060    8
+H43    opls_140    0.060    8
+C5     opls_136   -0.120    9
+H51    opls_140    0.060    9
+H52    opls_140    0.060    9
+C6     opls_136   -0.120   10
+H61    opls_140    0.060   10
+H62    opls_140    0.060   10
+C7     opls_136   -0.120   11
+H71    opls_140    0.060   11
+H72    opls_140    0.060   11
+C8     opls_137   -0.060   12
+H8     opls_140    0.060   12
+C9     opls_135   -0.180   13
+H91    opls_140    0.060   13 
+H92    opls_140    0.060   13 
+H93    opls_140    0.060   13 
+C10    opls_136   -0.120   14
+H101   opls_140    0.060   14
+H102   opls_140    0.060   14
+C11    opls_136   -0.120   15
+H111   opls_140    0.060   15
+H112   opls_140    0.060   15
+C12    opls_136   -0.120   16
+H121   opls_140    0.060   16
+H122   opls_140    0.060   16
+C13    opls_137   -0.060   17
+H13    opls_140    0.060   17
+C14    opls_135   -0.180   18
+H141   opls_140    0.060   18
+H142   opls_140    0.060   18
+H143   opls_140    0.060   18
+C15    opls_136   -0.120   19
+H151   opls_140    0.060   19
+H152   opls_140    0.060   19
+C16    opls_136   -0.120   20
+H161   opls_140    0.060   20
+H162   opls_140    0.060   20
+C17    opls_136   -0.120   21
+H171   opls_140    0.060   21
+H172   opls_140    0.060   21
+C18    opls_137   -0.060   22
+H18    opls_140    0.060   22
+C19    opls_135   -0.180   23
+H191   opls_140    0.060   23
+H192   opls_140    0.060   23
+H193   opls_140    0.060   23
+C20    opls_135   -0.180   24
+H201   opls_140    0.060   24
+H202   opls_140    0.060   24
+H203   opls_140    0.060   24
+CHB    opls_145   -0.115   25
+HHB    opls_146    0.115   25
+C1B    pyrRC2      0.220   26
+C2B    pyrRC3H     0.050   26
+C3B    pyrRC3H     0.050   26
+C4B    pyrRC2      0.220   26
+NB     nCHLR      -0.750   26
+CMB    opls_135   -0.180   27
+HMB1   opls_140    0.060   27
+HMB2   opls_140    0.060   27
+HMB3   opls_140    0.060   27
+CAB    opls_280    0.470   28
+OBB    opls_281   -0.470   28
+CBB    opls_135   -0.180   29
+HBB1   opls_282    0.060   29
+HBB2   opls_282    0.060   29
+HBB3   opls_282    0.060   29
+CHC    opls_145   -0.115   30
+HHC    opls_146    0.115   30
+C1C    pyrRC2      0.220   31
+C2C    pyrRC3H     0.050   31
+H2C    opls_144    0.115   31
+C3C    pyrRC3H     0.050   31
+H3C    opls_144    0.115   31
+C4C    pyrRC2      0.220   31
+NC     nCHLR      -0.750   31
+CMC    opls_135   -0.180   32
+HMC1   opls_140    0.060   32
+HMC2   opls_140    0.060   32
+HMC3   opls_140    0.060   32
+CAC    opls_136   -0.120   33
+HAC1   opls_140    0.060   33
+HAC2   opls_140    0.060   33
+CBC    opls_135   -0.180   34
+HBC1   opls_140    0.060   34
+HBC2   opls_140    0.060   34
+HBC3   opls_140    0.060   34
+CHD    opls_145   -0.115   35
+HHD    opls_146    0.115   35
+C1D    pyrRC2      0.220   36
+C2D    pyrRC3H     0.050   36
+C3D    pyrRC3H     0.050   36
+C4D    pyrRC2      0.220   36
+ND     nCHLR      -0.750   36
+CMD    opls_135   -0.180   37
+HMD1   opls_140    0.060   37
+HMD2   opls_140    0.060   37
+HMD3   opls_140    0.060   37
+CAD    opls_280    0.470   38
+OBD    opls_281   -0.470   38
+CBD    oplsCHL1   -0.085   39
+HBD    opls_282    0.060   39
+CGD    opls_465    0.510   39
+O1D    opls_466   -0.430   39
+O2D    opls_467   -0.330   39
+CED    opls_181    0.110   40
+HED1   opls_185    0.030   40
+HED2   opls_185    0.030   40
+HED3   opls_185    0.030   40
+
+[ bonds ]
+ CAA  CBA 
+ CAC  CBC 
+  C1   C2 
+  C2   C3 
+  C3   C4 
+  C3   C5 
+  C5   C6 
+  C6   C7 
+  C7   C8 
+  C8   C9 
+  C8  C10 
+ C10  C11 
+ C11  C12 
+ C12  C13 
+ C13  C14 
+ C13  C15 
+ C15  C16 
+ C16  C17 
+ C17  C18 
+ C18  C19 
+ C18  C20 
+ CAA  C2A 
+ CAC  C3C 
+ CMA  C3A 
+ CMB  C2B 
+ CMC  C2C 
+ CMD  C2D 
+ CAA  HAA1 
+ CAA  HAA2
+ CAC  HAC1 
+ CAC  HAC2 
+ CBA  H48 
+ CBA  H49 
+ CBB  HBB1 
+ CBB  HBB2 
+ CBB  HBB3 
+ CBC  HBC1 
+ CBC  HBC2
+ CBC  HBC3
+ CBD  HBD 
+ CED  HED1 
+ CED  HED2 
+ CED  HED3 
+ CMA  HMA1
+ CMA  HMA2
+ CMA  HMA3
+ CMB  HMB1 
+ CMB  HMB2 
+ CMB  HMB3 
+ CMC  HMC1 
+ CMC  HMC2 
+ CMC  HMC3 
+ CMD  HMD1
+ CMD  HMD2
+ CMD  HMD3
+  C1  H11 
+  C1  H12 
+  C2  H2 
+  C4  H41 
+  C4  H42 
+  C4  H43 
+  C5  H51 
+  C5  H52 
+  C6  H61 
+  C6  H61 
+  C7  H71 
+  C7  H71 
+  C8  H8 
+  C9  H91 
+  C9  H92 
+  C9  H93 
+ C10  H101 
+ C10  H102 
+ C11  H112 
+ C11  H113 
+ C12  H121 
+ C12  H122 
+ C13  H13 
+ C14  H141 
+ C14  H142 
+ C14  H143 
+ C15  H151 
+ C15  H152 
+ C16  H161 
+ C16  H162 
+ C17  H171 
+ C17  H172 
+ C18  H18 
+ C19  H191 
+ C19  H192 
+ C19  H193 
+ C20  H201 
+ C20  H202 
+ C20  H203 
+ CAB  CBB 
+ CBA  CGA 
+ CAB  OBB 
+ CAD  OBD 
+ CGA  O1A 
+ CGD  O1D 
+ CAB  C3B 
+ CAD  C3D 
+ CAD  CBD 
+ CBD  CGD 
+  NA  C1A 
+  NA  C4A 
+  NB  C1B 
+  NB  C4B 
+  ND  C1D 
+  ND  C4D 
+ C1C   NC 
+ C4C   NC 
+ CBD  CHA 
+  NB   MG 
+  ND   MG 
+ CGA  O2A 
+ CGD  O2D 
+ CED  O2D 
+  C1  O2A 
+ CHA  C1A 
+ CHA  C4D 
+ CHB  C1B 
+ CHB  C4A 
+ CHC  C1C 
+ CHC  C4B 
+ CHD  C1D 
+ CHD  C4C 
+ C1A  C2A 
+ C1B  C2B 
+ C1C  C2C 
+ C1D  C2D 
+ C3A  C4A 
+ C3B  C4B 
+ C3C  C4C 
+ C3D  C4D 
+ CHB  HHB 
+ CHC  HHC 
+ CHD  HHD 
+ C2A  C3A 
+ C2B  C3B 
+ C2C  C3C 
+ C2D  C3D 
+ C2A  H2A 
+ C2C  H2C 
+ C3A  H3A 
+ C3C  H3C 
+
+[ angles ]
+ CBD  CAD  C3D dhTPP_CL1_C_2_CS 
+ C1B   NB   MG dhTPP_CW_NA_MG 
+ C4B   NB   MG dhTPP_CW_NA_MG 
+ C1D   ND   MG dhTPP_CW_NA_MG 
+ C4D   ND   MG dhTPP_CW_NA_MG 
+  NB   MG   ND dhTPP_NA_MG_NA 
+
+[ dihedrals ]
+ OBD  CAD  CBD  CGD dhTPP_O_2_C_2_CL1_C_2 
+ OBD  CAD  CBD  HBD dhTPP_O_2_C_2_CL1_HC 
+ C3D  CAD  CBD  CGD dhTPP_CS_C_2_CL1_C_2 
+ C3D  CAD  CBD  CHA dhTPP_CS_C_2_CL1_CA 
+ C3D  CAD  CBD  HBD dhTPP_CS_C_2_CL1_HC 
+ CBD  CAD  C3D  C2D dhTPP_CL1_C_2_CS_CS 
+ CBD  CAD  C3D  C4D dhTPP_CL1_C_2_CS_CW 
+ CAD  CBD  CGD  O1D dhTPP_C_2_CL1_C_2_O_2 
+ HBD  CBD  CGD  O1D dhTPP_HC_CL1_C_2_O_2 
+ HBD  CBD  CHA  C1A dhTPP_HC_CL1_CA_CW 
+ HBD  CBD  CHA  C4D dhTPP_HC_CL1_CA_CW 
+ C1B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C4B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C1D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+ C4D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+  C2   C1  O2A  CGA 0 0 0 0 0 0
+
+[  BC+ ]
+
+[ atoms ]
+CAA  opls_136 -0.120  4
+CAB  opls_280  0.470  2
+CAC  opls_136 -0.120  1
+CAD  opls_280  0.470  3
+NA   nCHLR -0.650     4
+CBA  opls_274 -0.220  4
+CBB  opls_135 -0.180  2
+CBC  opls_135 -0.180  1
+CBD  oplsCHL1 -0.085  3
+NB   nCHLR -0.650     2
+OBB  opls_281 -0.470  2
+OBD  opls_281 -0.470  3
+CGA  opls_465  0.510  4
+CGD  opls_465  0.510  3
+ND   nCHLR -0.650     3
+CED  opls_181  0.110  3
+CHA  opls_145 -0.115  3
+CHB  opls_145 -0.115  2
+CHC  opls_145 -0.115  1
+CHD  opls_145 -0.115  1
+CMA  opls_135 -0.180  4
+CMB  opls_135 -0.180  2
+CMC  opls_135 -0.180  1
+CMD  opls_135 -0.180  3
+C1   opls_182  0.140  5
+C1A  pyrRC2  0.220    4
+C1B  pyrRC2  0.220    2
+C1C  pyrRC2  0.220    1
+C1D  pyrRC2  0.220    3
+O1A  opls_466 -0.430  4
+O1D  opls_466 -0.430  3
+C2   opls_142 -0.120  5
+C2A  pyrRC3H  0.050   4
+C2B  pyrRC3H  0.050   2
+C2C  pyrRC3H  0.050   1
+C2D  pyrRC3H  0.050   3
+O2A  opls_467 -0.330  4
+O2D  opls_467 -0.330  3
+C3   opls_141 -0.060  5
+C3A  pyrRC3H  0.050   4
+C3B  pyrRC3H  0.050   2
+C3C  pyrRC3H  0.050   1
+C3D  pyrRC3H  0.050   3
+C4   opls_135 -0.180  5
+C4A  pyrRC2  0.220    4
+C4B  pyrRC2  0.220    2
+C4C  pyrRC2  0.220    1
+C4D  pyrRC2  0.220    3
+C5   opls_136 -0.120  5
+C6   opls_136 -0.120  6
+C7   opls_136 -0.120  6
+C8   opls_137 -0.060  6
+C9   opls_135 -0.180  6
+C10  opls_136 -0.120  6
+C11  opls_136 -0.120  7
+C12  opls_136 -0.120  7
+C13  opls_137 -0.060  7
+C14  opls_135 -0.180  7
+C15  opls_136 -0.120  7
+C16  opls_136 -0.120  8
+C17  opls_136 -0.120  8
+C18  opls_137 -0.060  8
+C19  opls_135 -0.180  8
+C20  opls_135 -0.180  8
+NC   nCHLR -0.650     1
+H1   opls_185  0.030  5
+H2   opls_185  0.030  5
+H3   opls_140  0.060  6
+H4   opls_140  0.060  6
+H5   opls_140  0.060  7
+H6   opls_140  0.060  7
+H7   opls_140  0.060  7
+H8   opls_140  0.060  7
+H9   opls_140  0.060  7
+H10  opls_140  0.060  7
+H11  opls_140  0.060  7
+H12  opls_140  0.060  7
+H13  opls_140  0.060  7
+H14  opls_140  0.060  7
+H15  opls_140  0.060  8
+H16  opls_140  0.060  8
+H17  opls_140  0.060  8
+H18  opls_140  0.060  8
+H19  opls_140  0.060  8
+H20  opls_140  0.060  8
+H21  opls_140  0.060  8
+H22  opls_140  0.060  8
+H23  opls_144  0.060  5
+H24  opls_140  0.060  8
+H25  opls_140  0.060  8
+H26  opls_140  0.060  8
+H27  opls_144  0.115  4
+H28  opls_144  0.115  1
+H29  opls_144  0.115  4
+H30  opls_144  0.115  1
+H31  opls_140  0.060  5
+H32  opls_140  0.060  5
+H33  opls_140  0.060  5
+H34  opls_140  0.060  5
+H35  opls_140  0.060  5
+H36  opls_140  0.060  6
+H37  opls_140  0.060  6
+H38  opls_140  0.060  6
+H39  opls_140  0.060  6
+H40  opls_140  0.060  6
+H41  opls_140  0.060  6
+H42  opls_140  0.060  6
+H43  opls_140  0.060  6
+H44  opls_140  0.060  4
+H45  opls_140  0.060  4
+H46  opls_140  0.060  1
+H47  opls_140  0.060  1
+H48  opls_282  0.060  4
+H49  opls_282  0.060  4
+H50  opls_282  0.060  2
+H51  opls_282  0.060  2
+H52  opls_282  0.060  2
+H53  opls_140  0.060  1
+H54  opls_140  0.060  1
+H55  opls_140  0.060  1
+H56  opls_282  0.060  3
+H57  opls_185  0.030  3
+H58  opls_185  0.030  3
+H59  opls_185  0.030  3
+H60  opls_146  0.115  2
+H61  opls_146  0.115  1
+H62  opls_146  0.115  1
+H63  opls_140  0.060  4
+H64  opls_140  0.060  4
+H65  opls_140  0.060  4
+H66  opls_140  0.060  2
+H67  opls_140  0.060  2
+H68  opls_140  0.060  2
+H69  opls_140  0.060  1
+H70  opls_140  0.060  1
+H71  opls_140  0.060  1
+H72  opls_140  0.060  3
+H73  opls_140  0.060  3
+H74  opls_140  0.060  3
+MG   MGCLR  0.940     9 
+
+[ bonds ]
+ CAA  CBA 
+ CAC  CBC 
+  C1   C2 
+  C2   C3 
+  C3   C4 
+  C3   C5 
+  C5   C6 
+  C6   C7 
+  C7   C8 
+  C8   C9 
+  C8  C10 
+ C10  C11 
+ C11  C12 
+ C12  C13 
+ C13  C14 
+ C13  C15 
+ C15  C16 
+ C16  C17 
+ C17  C18 
+ C18  C19 
+ C18  C20 
+ CAA  C2A 
+ CAC  C3C 
+ CMA  C3A 
+ CMB  C2B 
+ CMC  C2C 
+ CMD  C2D 
+ CAA  H44 
+ CAA  H45 
+ CAC  H46 
+ CAC  H47 
+ CBA  H48 
+ CBA  H49 
+ CBB  H50 
+ CBB  H51 
+ CBB  H52 
+ CBC  H53 
+ CBC  H54 
+ CBC  H55 
+ CBD  H56 
+ CED  H57 
+ CED  H58 
+ CED  H59 
+ CMA  H63 
+ CMA  H64 
+ CMA  H65 
+ CMB  H66 
+ CMB  H67 
+ CMB  H68 
+ CMC  H69 
+ CMC  H70 
+ CMC  H71 
+ CMD  H72 
+ CMD  H73 
+ CMD  H74 
+  C1   H1 
+  C1   H2 
+  C2  H23 
+  C4  H31 
+  C4  H32 
+  C4  H33 
+  C5  H34 
+  C5  H35 
+  C6  H36 
+  C6  H37 
+  C7  H38 
+  C7  H39 
+  C8  H40 
+  C9  H41 
+  C9  H42 
+  C9  H43 
+ C10   H3 
+ C10   H4 
+ C11   H5 
+ C11   H6 
+ C12   H7 
+ C12   H8 
+ C13   H9 
+ C14  H10 
+ C14  H11 
+ C14  H12 
+ C15  H13 
+ C15  H14 
+ C16  H15 
+ C16  H16 
+ C17  H17 
+ C17  H18 
+ C18  H19 
+ C19  H20 
+ C19  H21 
+ C19  H22 
+ C20  H24 
+ C20  H25 
+ C20  H26 
+ CAB  CBB 
+ CBA  CGA 
+ CAB  OBB 
+ CAD  OBD 
+ CGA  O1A 
+ CGD  O1D 
+ CAB  C3B 
+ CAD  C3D 
+ CAD  CBD 
+ CBD  CGD 
+  NA  C1A 
+  NA  C4A 
+  NB  C1B 
+  NB  C4B 
+  ND  C1D 
+  ND  C4D 
+ C1C   NC 
+ C4C   NC 
+ CBD  CHA 
+  NB   MG 
+  ND   MG 
+ CGA  O2A 
+ CGD  O2D 
+ CED  O2D 
+  C1  O2A 
+ CHA  C1A 
+ CHA  C4D 
+ CHB  C1B 
+ CHB  C4A 
+ CHC  C1C 
+ CHC  C4B 
+ CHD  C1D 
+ CHD  C4C 
+ C1A  C2A 
+ C1B  C2B 
+ C1C  C2C 
+ C1D  C2D 
+ C3A  C4A 
+ C3B  C4B 
+ C3C  C4C 
+ C3D  C4D 
+ CHB  H60 
+ CHC  H61 
+ CHD  H62 
+ C2A  C3A 
+ C2B  C3B 
+ C2C  C3C 
+ C2D  C3D 
+ C2A  H27 
+ C2C  H28 
+ C3A  H29 
+ C3C  H30 
+
+[ angles ]
+ CBD  CAD  C3D dhTPP_CL1_C_2_CS 
+ C1B   NB   MG dhTPP_CW_NA_MG 
+ C4B   NB   MG dhTPP_CW_NA_MG 
+ C1D   ND   MG dhTPP_CW_NA_MG 
+ C4D   ND   MG dhTPP_CW_NA_MG 
+  NB   MG   ND dhTPP_NA_MG_NA 
+
+[ dihedrals ]
+ OBD  CAD  CBD  CGD dhTPP_O_2_C_2_CL1_C_2 
+ OBD  CAD  CBD  H56 dhTPP_O_2_C_2_CL1_HC 
+ C3D  CAD  CBD  CGD dhTPP_CS_C_2_CL1_C_2 
+ C3D  CAD  CBD  CHA dhTPP_CS_C_2_CL1_CA 
+ C3D  CAD  CBD  H56 dhTPP_CS_C_2_CL1_HC 
+ CBD  CAD  C3D  C2D dhTPP_CL1_C_2_CS_CS 
+ CBD  CAD  C3D  C4D dhTPP_CL1_C_2_CS_CW 
+ CAD  CBD  CGD  O1D dhTPP_C_2_CL1_C_2_O_2 
+ H56  CBD  CGD  O1D dhTPP_HC_CL1_C_2_O_2 
+ H56  CBD  CHA  C1A dhTPP_HC_CL1_CA_CW 
+ H56  CBD  CHA  C4D dhTPP_HC_CL1_CA_CW 
+ C1B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C4B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C1D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+ C4D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+  C2   C1  O2A  CGA 0 0 0 0 0 0
+
+
+
+[  BPH ]
+
+[ atoms ]
+CAA  opls_136 -0.120  4
+CAB  opls_280  0.470  2
+CAC  opls_136 -0.120  1
+CAD  opls_280  0.470  3
+NA   pyrRN -0.740     4
+CBA  opls_274 -0.220  4
+CBB  opls_135 -0.180  2
+CBC  opls_135 -0.180  1
+CBD  oplsCHL1 -0.085  3
+NB   hpyrRN -0.740     2
+OBB  opls_281 -0.470  2
+OBD  opls_281 -0.470  3
+CGA  opls_465  0.510  4
+CGD  opls_465  0.510  3
+ND   hpyrRN -0.740     3
+CED  opls_181  0.110  3
+CHA  opls_145 -0.115  3
+CHB  opls_145 -0.115  2
+CHC  opls_145 -0.115  1
+CHD  opls_145 -0.115  1
+CMA  opls_135 -0.180  4
+CMB  opls_135 -0.180  2
+CMC  opls_135 -0.180  1
+CMD  opls_135 -0.180  3
+C1   opls_182  0.140  5
+C1A  pyrRC2  0.220    4
+C1B  pyrRC2  0.220    2
+C1C  pyrRC2  0.220    1
+C1D  pyrRC2  0.220    3
+O1A  opls_466 -0.430  4
+O1D  opls_466 -0.430  3
+C2   opls_142 -0.120  5
+C2A  pyrRC3H  0.050   4
+C2B  pyrRC3H  0.050   2
+C2C  pyrRC3H  0.050   1
+C2D  pyrRC3H  0.050   3
+O2A  opls_467 -0.330  4
+O2D  opls_467 -0.330  3
+C3   opls_141 -0.060  5
+C3A  pyrRC3H  0.050   4
+C3B  pyrRC3H  0.050   2
+C3C  pyrRC3H  0.050   1
+C3D  pyrRC3H  0.050   3
+C4   opls_135 -0.180  5
+C4A  pyrRC2  0.220    4
+C4B  pyrRC2  0.220    2
+C4C  pyrRC2  0.220    1
+C4D  pyrRC2  0.220    3
+C5   opls_136 -0.120  5
+C6   opls_136 -0.120  6
+C7   opls_136 -0.120  6
+C8   opls_137 -0.060  6
+C9   opls_135 -0.180  6
+C10  opls_136 -0.120  6
+C11  opls_136 -0.120  7
+C12  opls_136 -0.120  7
+C13  opls_137 -0.060  7
+C14  opls_135 -0.180  7
+C15  opls_136 -0.120  7
+C16  opls_136 -0.120  8
+C17  opls_136 -0.120  8
+C18  opls_137 -0.060  8
+C19  opls_135 -0.180  8
+C20  opls_135 -0.180  8
+NC   pyrRN -0.740     1
+H1   opls_185  0.030  5
+H2   opls_185  0.030  5
+H3   opls_140  0.060  6
+H4   opls_140  0.060  6
+H5   opls_140  0.060  7
+H6   opls_140  0.060  7
+H7   opls_140  0.060  7
+H8   opls_140  0.060  7
+H9   opls_140  0.060  7
+H10  opls_140  0.060  7
+H11  opls_140  0.060  7
+H12  opls_140  0.060  7
+H13  opls_140  0.060  7
+H14  opls_140  0.060  7
+H15  opls_140  0.060  8
+H16  opls_140  0.060  8
+H17  opls_140  0.060  8
+H18  opls_140  0.060  8
+H19  opls_140  0.060  8
+H20  opls_140  0.060  8
+H21  opls_140  0.060  8
+H22  opls_140  0.060  8
+H23  opls_144  0.060  5
+H24  opls_140  0.060  8
+H25  opls_140  0.060  8
+H26  opls_140  0.060  8
+H27  opls_144  0.115  4
+H28  opls_144  0.115  1
+H29  opls_144  0.115  4
+H30  opls_144  0.115  1
+H31  opls_140  0.060  5
+H32  opls_140  0.060  5
+H33  opls_140  0.060  5
+H34  opls_140  0.060  5
+H35  opls_140  0.060  5
+H36  opls_140  0.060  6
+H37  opls_140  0.060  6
+H38  opls_140  0.060  6
+H39  opls_140  0.060  6
+H40  opls_140  0.060  6
+H41  opls_140  0.060  6
+H42  opls_140  0.060  6
+H43  opls_140  0.060  6
+H44  opls_140  0.060  4
+H45  opls_140  0.060  4
+H46  opls_140  0.060  1
+H47  opls_140  0.060  1
+H48  opls_282  0.060  4
+H49  opls_282  0.060  4
+H50  opls_282  0.060  2
+H51  opls_282  0.060  2
+H52  opls_282  0.060  2
+H53  opls_140  0.060  1
+H54  opls_140  0.060  1
+H55  opls_140  0.060  1
+H56  opls_282  0.060  3
+H57  opls_185  0.030  3
+H58  opls_185  0.030  3
+H59  opls_185  0.030  3
+H60  opls_146  0.115  2
+H61  opls_146  0.115  1
+H62  opls_146  0.115  1
+H63  opls_140  0.060  4
+H64  opls_140  0.060  4
+H65  opls_140  0.060  4
+H66  opls_140  0.060  2
+H67  opls_140  0.060  2
+H68  opls_140  0.060  2
+H69  opls_140  0.060  1
+H70  opls_140  0.060  1
+H71  opls_140  0.060  1
+H72  opls_140  0.060  3
+H73  opls_140  0.060  3
+H74  opls_140  0.060  3
+H75  hpyrRH  0.400  2
+H76  hpyrRH  0.400  3
+
+[ bonds ]
+ CAA  CBA 
+ CAC  CBC 
+  C1   C2 
+  C2   C3 
+  C3   C4 
+  C3   C5 
+  C5   C6 
+  C6   C7 
+  C7   C8 
+  C8   C9 
+  C8  C10 
+ C10  C11 
+ C11  C12 
+ C12  C13 
+ C13  C14 
+ C13  C15 
+ C15  C16 
+ C16  C17 
+ C17  C18 
+ C18  C19 
+ C18  C20 
+ CAA  C2A 
+ CAC  C3C 
+ CMA  C3A 
+ CMB  C2B 
+ CMC  C2C 
+ CMD  C2D 
+ CAA  H44 
+ CAA  H45 
+ CAC  H46 
+ CAC  H47 
+ CBA  H48 
+ CBA  H49 
+ CBB  H50 
+ CBB  H51 
+ CBB  H52 
+ CBC  H53 
+ CBC  H54 
+ CBC  H55 
+ CBD  H56 
+ CED  H57 
+ CED  H58 
+ CED  H59 
+ CMA  H63 
+ CMA  H64 
+ CMA  H65 
+ CMB  H66 
+ CMB  H67 
+ CMB  H68 
+ CMC  H69 
+ CMC  H70 
+ CMC  H71 
+ CMD  H72 
+ CMD  H73 
+ CMD  H74 
+  C1   H1 
+  C1   H2 
+  C2  H23 
+  C4  H31 
+  C4  H32 
+  C4  H33 
+  C5  H34 
+  C5  H35 
+  C6  H36 
+  C6  H37 
+  C7  H38 
+  C7  H39 
+  C8  H40 
+  C9  H41 
+  C9  H42 
+  C9  H43 
+ C10   H3 
+ C10   H4 
+ C11   H5 
+ C11   H6 
+ C12   H7 
+ C12   H8 
+ C13   H9 
+ C14  H10 
+ C14  H11 
+ C14  H12 
+ C15  H13 
+ C15  H14 
+ C16  H15 
+ C16  H16 
+ C17  H17 
+ C17  H18 
+ C18  H19 
+ C19  H20 
+ C19  H21 
+ C19  H22 
+ C20  H24 
+ C20  H25 
+ C20  H26 
+ CAB  CBB 
+ CBA  CGA 
+ CAB  OBB 
+ CAD  OBD 
+ CGA  O1A 
+ CGD  O1D 
+ CAB  C3B 
+ CAD  C3D 
+ CAD  CBD 
+ CBD  CGD 
+  NA  C1A 
+  NA  C4A 
+  NB  C1B 
+  NB  C4B 
+  ND  C1D 
+  ND  C4D 
+ C1C   NC 
+ C4C   NC 
+ CBD  CHA 
+  NB  H75
+  ND  H76
+ CGA  O2A 
+ CGD  O2D 
+ CED  O2D 
+  C1  O2A 
+ CHA  C1A 
+ CHA  C4D 
+ CHB  C1B 
+ CHB  C4A 
+ CHC  C1C 
+ CHC  C4B 
+ CHD  C1D 
+ CHD  C4C 
+ C1A  C2A 
+ C1B  C2B 
+ C1C  C2C 
+ C1D  C2D 
+ C3A  C4A 
+ C3B  C4B 
+ C3C  C4C 
+ C3D  C4D 
+ CHB  H60 
+ CHC  H61 
+ CHD  H62 
+ C2A  C3A 
+ C2B  C3B 
+ C2C  C3C 
+ C2D  C3D 
+ C2A  H27 
+ C2C  H28 
+ C3A  H29 
+ C3C  H30 
+
+
+[ angles ]
+ CBD  CAD  C3D dhTPP_CL1_C_2_CS 
+
+[ dihedrals ]
+ OBD  CAD  CBD  CGD dhTPP_O_2_C_2_CL1_C_2 
+ OBD  CAD  CBD  H56 dhTPP_O_2_C_2_CL1_HC 
+ C3D  CAD  CBD  CGD dhTPP_CS_C_2_CL1_C_2 
+ C3D  CAD  CBD  CHA dhTPP_CS_C_2_CL1_CA 
+ C3D  CAD  CBD  H56 dhTPP_CS_C_2_CL1_HC 
+ CBD  CAD  C3D  C2D dhTPP_CL1_C_2_CS_CS 
+ CBD  CAD  C3D  C4D dhTPP_CL1_C_2_CS_CW 
+ CAD  CBD  CGD  O1D dhTPP_C_2_CL1_C_2_O_2 
+ H56  CBD  CGD  O1D dhTPP_HC_CL1_C_2_O_2 
+ H56  CBD  CHA  C1A dhTPP_HC_CL1_CA_CW 
+ H56  CBD  CHA  C4D dhTPP_HC_CL1_CA_CW 
+ C1B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C4B   NB   MG   ND dhTPP_CW_NA_MG_NA 
+ C1D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+ C4D   ND   MG   NB dhTPP_CW_NA_MG_NA 
+  C2   C1  O2A  CGA 0 0 0 0 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ PBC ]   ; PhycoCyanoBiline connected to CYS!
+;
+; This residue type is still here but will not be used in further!!!!
+;
+[ atoms ]
+
+     N    opls_238    -0.500    1    ;  N: secondary amide, peptide bond (see #279 for formyl H)
+     H    opls_241     0.300    1    ;  H on N: secondary amide
+    CA    opls_224B    0.140    2    ;  Calpha in most AA (except Gly,Pro,Aib)
+    HA    opls_140     0.060    2    ;  alkane H
+    CB    opls_210     0.048    3    ;  all-atom C: CH2, sulfides
+   HB1    opls_140     0.060    3    ;  alkane H
+   HB2    opls_140     0.060    3    ;  alkane H
+    SG    opls_202    -0.335    4    ;  all-atom S: disulfides C=S
+     C    opls_235     0.500    5    ;  C=O in amide, dmf, peptide bond
+     O    opls_236    -0.500    5    ;  O: C=O in amide.   Acyl R on C in amide is neutral
+   CHA    opls_142    -0.115    6    ;  alkene C (RH-C=)
+   HHA    opls_144     0.115    6    ;  alkene H (H-C=)
+    NA    opls_542    -0.142    7    ;  N in pyrrole, opls entry - charge corrected from -0.239
+   C1A    opls_543     0.042    8    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   C2A    opls_544    -0.089    9    ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+   C3A    opls_544    -0.089   10    ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+   C4A    opls_543     0.042   11    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   CMA    opls_135    -0.062   12    ;  Alkane CH3 carbon with reduced charge as opls_678
+  HMA1    opls_140     0.060   12    ;  alkane H.
+  HMA2    opls_140     0.060   12    ;  alkane H.
+  HMA3    opls_140     0.060   12    ;  alkane H.
+   CAA    opls_136    -0.002   13    ;  Alkane CH2 carbon with reduced charge as opls_679
+  HAA1    opls_140     0.060   13    ;  alkane H.
+  HAA2    opls_140     0.060   13    ;  alkane H.
+   CBA    opls_274    -0.220   14    ;  C: CH2, carboxylate ion
+  HBA1    opls_140     0.060   14    ;  alkane H.
+  HBA2    opls_140     0.060   14    ;  alkane H.
+   CGA    opls_271     0.700   15    ;  C in COO- carboxylate
+   O1A    opls_272    -0.800   15    ;  O: O in COO- carboxylate,peptide terminus
+   O2A    opls_272    -0.800   15    ;  O: O in COO- carboxylate,peptide terminus
+   CHB    opls_142    -0.115   16    ;  alkene C (RH-C=)
+   HHB    opls_144     0.115   16    ;  alkene H (H-C=)
+    NB    opls_319    -0.600   17    ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HB    opls_325     0.410   17    ;  Uracil & Thymine H-N1
+   C1B    opls_324     0.090   18    ;  Uracil & Thymine C6 - charge cprrected from +0.080
+   C2B    opls_323     0.000   19    ;  Uracil & Thymine C5 - charge corrected from -0.070
+   C3B    opls_141     0.000   20    ;  alkene C (R2-C=)
+   C4B    opls_320     0.500   21    ;  Uracil & Thymine C2
+   CMB    opls_135    -0.180   22    ;  alkane CH3
+  HMB1    opls_140     0.060   22    ;  alkane H.
+  HMB2    opls_140     0.060   22    ;  alkane H.
+  HMB3    opls_140     0.060   22    ;  alkane H.
+   CAB    opls_136    -0.120   23    ;  alkane CH2
+  HAB1    opls_140     0.060   23    ;  alkane H.
+  HAB2    opls_140     0.060   23    ;  alkane H.
+   CBB    opls_135    -0.180   24    ;  alkane CH3
+  HBB1    opls_140     0.060   24    ;  alkane H.
+  HBB2    opls_140     0.060   24    ;  alkane H.
+  HBB3    opls_140     0.060   24    ;  alkane H.
+    OB    opls_326    -0.400   25    ;  Uracil O-C2
+    NC    opls_319    -0.600   26    ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HC    opls_325     0.410   26    ;  Uracil & Thymine H-N1
+   C1C    opls_320     0.500   27    ;  Uracil & Thymine C2
+   C2C    opls_137    -0.060   28    ;  alkane CH
+   H2C    opls_140     0.060   28    ;  alkane H.
+   C3C    opls_137    -0.060   29    ;  alkane CH
+   H3C    opls_140     0.060   29    ;  alkane H.
+   C4C    opls_324     0.090   30    ;  Uracil & Thymine C6 - charge corrected from +0.080
+   CMC    opls_135    -0.180   31    ;  alkane CH3
+  HMC1    opls_140     0.060   31    ;  alkane H.
+  HMC2    opls_140     0.060   31    ;  alkane H.
+  HMC3    opls_140     0.060   31    ;  alkane H.
+   CAC    opls_211     0.107   32    ;  all-atom C: CH, sulfides
+   HAC    opls_140     0.060   32    ;  alkane H.
+   CBC    opls_135    -0.180   33    ;  alkane CH3
+  HBC1    opls_140     0.060   33    ;  alkane H.
+  HBC2    opls_140     0.060   33    ;  alkane H.
+  HBC3    opls_140     0.060   33    ;  alkane H.
+    OC    opls_326    -0.400   34    ;  Uracil O-C2
+   CHD    opls_323    -0.115   35    ;  alkene C (RH-C=)
+   HHD    opls_329     0.115   35    ;  alkene H (H-C=)
+    ND    opls_542    -0.239   36    ;  N in pyrrole, opls entry
+    HD    opls_545     0.317   36    ;  H1  in pyrrole, opls entry
+   C1D    opls_543    -0.008   37    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   C2D    opls_544    -0.149   38    ;  C3  in pyrrole, opls entry
+   C3D    opls_544    -0.149   39    ;  C3  in pyrrole, opls entry
+   C4D    opls_543    -0.008   40    ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+   CMD    opls_135    -0.062   41    ;  Alkane CH3 carbon with reduced charge as opls_678
+  HMD1    opls_140     0.060   41    ;  alkane H.
+  HMD2    opls_140     0.060   41    ;  alkane H.
+  HMD3    opls_140     0.060   41    ;  alkane H.
+   CAD    opls_136    -0.002   42    ;  Alkane CH2 carbon with reduced charge as opls_679
+  HAD1    opls_140     0.060   42    ;  alkane H.
+  HAD2    opls_140     0.060   42    ;  alkane H.
+   CBD    opls_274    -0.220   43    ;  C: CH2, carboxylate ion
+  HBD1    opls_140     0.060   43    ;  alkane H.
+  HBD2    opls_140     0.060   43    ;  alkane H.
+   CGD    opls_271     0.700   44    ;  C in COO- carboxylate
+   O1D    opls_272    -0.800   44    ;  O: O in COO- carboxylate,peptide terminus
+   O2D    opls_272    -0.800   44    ;  O: O in COO- carboxylate,peptide terminus
+
+[ bonds ]
+HMC1  CMC
+HMC2  CMC
+HMC3  CMC
+HBC3  CBC
+HBC2  CBC
+ H2C  C2C
+ CBC HBC1
+ H3C  C3C
+ CAC  HAC
+HMB3  CMB
+  CB  HB1
+  CB  HB2
+HMD1  CMD
+HMB1  CMB
+ CMB HMB2
+  HA   CA
+HMD2  CMD
+HAB1  CAB
+ CMD HMD3
+HAB2  CAB
+HBD2  CBD
+HBD1  CBD
+HBB1  CBB
+ CBB HBB2
+ CBB HBB3
+ CAD HAD1
+ CAD HAD2
+HMA2  CMA
+HAA2  CAA
+ CMA HMA3
+ CMA HMA1
+ CAA HAA1
+HBA2  CBA
+ CBA HBA1
+ CMC  C2C
+ C2C  C3C
+ CBC  CAC
+ C3C  CAC
+  CB   CA
+ CAB  CBB
+ CBD  CAD
+ CAA  CBA
+ C2C  C1C
+ CBD  CGD
+ CBA  CGA
+  OC  C1C
+ C4B   OB
+ C1C   NC
+ C4B   NB
+ C3C  C4C
+ CMB  C2B
+   C   CA
+ CAB  C3B
+ CAC   SG
+  SG   CB
+  NC  C4C
+ C1B   NB
+  NC   HC
+  HD   ND
+   N    H
+  NB   HB
+ C4C  CHD
+ C2B  C3B
+ C2B  C1B
+ CHB  C1B
+ CHD  HHD
+ HHB  CHB
+ CHA  HHA
+ CHD  C1D
+ C4D  CHA
+ CHB  C4A
+ CHA  C1A
+   O    C
+ C1D   ND
+  ND  C4D
+  NA  C4A
+  NA  C1A
+ C1D  C2D
+ C4D  C3D
+ C4A  C3A
+ C1A  C2A
+  CA    N
+ CMD  C2D
+ C3D  CAD
+ C3A  CMA
+ C2A  CAA
+ C2D  C3D
+ C3A  C2A
+ C3B  C4B
+ O1D  CGD
+ CGD  O2D
+ O2A  CGA
+ CGA  O1A
+  -C    N
+
+[ dihedrals ]
+    N     CA    CB    SG    dih_CYS_chi1_N_C_C_S
+    C     CA    CB    SG    dih_CYS_chi1_CO_C_C_S
+
+[ impropers ]
+    -C    CA     N     H    improper_Z_N_X_Y
+    CA    +N     C     O    improper_O_C_X_Y
+
+
+; Protonated, e.g. neutral. PhycoCyanoBiline connected to CYS!
+;
+; This is also the old residue. I dont think it is necessary, but I still keep it just in case!!!
+;
+[ PBCH ]
+[ atoms ]
+     N     opls_238    -0.500      1  ;  N: secondary amide, peptide bond (see #279 for formyl H)
+     H     opls_241     0.300      1  ;  H on N: secondary amide
+    CA     opls_224B    0.140      2  ;  Calpha in most AA (except Gly,Pro,Aib)
+    HA     opls_140     0.060      2  ;  alkane H
+    CB     opls_210     0.048      3  ;  all-atom C: CH2, sulfides
+   HB1     opls_140     0.060      3  ;  alkane H
+   HB2     opls_140     0.060      3  ;  alkane H
+    SG     opls_202    -0.335      4  ;  all-atom S: disulfides
+    C      opls_235     0.500      5  ;  C=O in amide, dmf, peptide bond
+    O      opls_236    -0.500      5  ;  O: C=O in amide.   Acyl R on C in amide is neutral
+    CHA    opls_142    -0.115      6  ;  alkene C (RH-C=)
+    HHA    opls_144     0.115      6  ;  alkene H (H-C=)
+    NA     opls_542    -0.142      7  ;  N in pyrrole, opls entry - charge corrected from -0.239
+    C1A    opls_543     0.042      8  ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+    C2A    opls_544    -0.089      9  ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+    C3A    opls_544    -0.089     10  ;  C3  in pyrrole, opls entry - charge corrected from -0.149
+    C4A    opls_543     0.042     11  ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+    CMA    opls_135    -0.062     12  ;  Alkane CH3 carbon with reduced charge as opls_678
+    HMA1   opls_140     0.060     12  ;  alkane H.
+    HMA2   opls_140     0.060     12  ;  alkane H.
+    HMA3   opls_140     0.060     12  ;  alkane H.
+    CAA    opls_136    -0.002     13  ;  Alkane CH2 carbon with reduced charge as opls_679
+    HAA1   opls_140     0.060     13  ;  alkane H.
+    HAA2   opls_140     0.060     13  ;  alkane H.
+    CBA    opls_136    -0.120     14  ;  alkane CH2
+    HBA1   opls_140     0.060     14  ;  alkane H.
+    HBA2   opls_140     0.060     14  ;  alkane H.
+    CGA    opls_267     0.520     15  ;  Co in CCOOH carboxylic acid
+    O1A    opls_269    -0.440     15  ;  Oc in CCOOH neutral; use #135-#140
+    O2A    opls_268    -0.530     15  ;  Oh in CCOOH R in RCOOH is
+    H2A    opls_270     0.450     15  ;  H  in CCOOH
+    CHB    opls_142    -0.115     16  ;  alkene C (RH-C=)
+    HHB    opls_144     0.115     16  ;  alkene H (H-C=)
+    NB     opls_319    -0.600     17  ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HB     opls_325     0.410     17  ;  Uracil & Thymine H-N1
+    C1B    opls_324     0.090     18  ;  Uracil & Thymine C6 - charge cprrected from +0.080
+    C2B    opls_323     0.000     19  ;  Uracil & Thymine C5 - charge corrected from -0.070
+    C3B    opls_141     0.000     20  ;  alkene C (R2-C=)
+    C4B    opls_320     0.500     21  ;  Uracil & Thymine C2
+    CMB    opls_135    -0.180     22  ;  alkane CH3
+    HMB1   opls_140     0.060     22  ;  alkane H.
+    HMB2   opls_140     0.060     22  ;  alkane H.
+    HMB3   opls_140     0.060     22  ;  alkane H.
+    CAB    opls_136    -0.120     23  ;  alkane CH2
+    HAB1   opls_140     0.060     23  ;  alkane H.
+    HAB2   opls_140     0.060     23  ;  alkane H.
+    CBB    opls_135    -0.180     24  ;  alkane CH3
+    HBB1   opls_140     0.060     24  ;  alkane H.
+    HBB2   opls_140     0.060     24  ;  alkane H.
+    HBB3   opls_140     0.060     24  ;  alkane H.
+    OB     opls_326    -0.400     25  ;  Uracil O-C2
+    NC     opls_319    -0.600     26  ;  Uracil & Thymine N1 - use #319B for nucleoside
+    HC     opls_325     0.410     26  ;  Uracil & Thymine H-N1
+    C1C    opls_320     0.500     27  ;  Uracil & Thymine C2
+    C2C    opls_137    -0.060     28  ;  alkane CH
+    H2C    opls_140     0.060     28  ;  alkane H.
+    C3C    opls_137    -0.060     29  ;  alkane CH
+    H3C    opls_140     0.060     29  ;  alkane H.
+    C4C    opls_324     0.090     30  ;  Uracil & Thymine C6 - charge corrected from +0.080
+    CMC    opls_135    -0.180     31  ;  alkane CH3
+    HMC1   opls_140     0.060     31  ;  alkane H.
+    HMC2   opls_140     0.060     31  ;  alkane H.
+    HMC3   opls_140     0.060     31  ;  alkane H.
+    CAC    opls_211     0.107     32  ;  all-atom C: CH, sulfides
+    HAC    opls_140     0.060     32  ;  alkane H.
+    CBC    opls_135    -0.180     33  ;  alkane CH3
+    HBC1   opls_140     0.060     33  ;  alkane H.
+    HBC2   opls_140     0.060     33  ;  alkane H.
+    HBC3   opls_140     0.060     33  ;  alkane H.
+    OC     opls_326    -0.400     34  ;  Uracil O-C2
+    CHD    opls_323    -0.115     35  ;  alkene C (RH-C=)
+    HHD    opls_329     0.115     35  ;  alkene H (H-C=)
+    ND     opls_542    -0.239     36  ;  N in pyrrole, opls entry
+    HD     opls_545     0.317     36  ;  H1  in pyrrole, opls entry
+    C1D    opls_543    -0.008     37  ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+    C2D    opls_544    -0.149     38  ;  C3  in pyrrole, opls entry
+    C3D    opls_544    -0.149     39  ;  C3  in pyrrole, opls entry
+    C4D    opls_543    -0.008     40  ;  C2  in pyrrole, opls entry - charge corrected from -0.163
+    CMD    opls_135    -0.062     41  ;  Alkane CH3 carbon with reduced charge as opls_678
+    HMD1   opls_140     0.060     41  ;  alkane H.
+    HMD2   opls_140     0.060     41  ;  alkane H.
+    HMD3   opls_140     0.060     41  ;  alkane H.
+    CAD    opls_136    -0.002     42  ;  Alkane CH2 carbon with reduced charge as opls_679
+    HAD1   opls_140     0.060     42  ;  alkane H.
+    HAD2   opls_140     0.060     42  ;  alkane H.
+    CBD    opls_136    -0.120     43  ;  alkane CH2
+    HBD1   opls_140     0.060     43  ;  alkane H.
+    HBD2   opls_140     0.060     43  ;  alkane H.
+    CGD    opls_267     0.520     44  ;  Co in CCOOH carboxylic acid
+    O1D    opls_269    -0.440     44  ;  Oc in CCOOH neutral; use #135-#140
+    O2D    opls_268    -0.530     44  ;  Oh in CCOOH R in RCOOH is
+    H2D    opls_270     0.450     44  ;  H  in CCOOH
+
+[ bonds ]
+1HMC  CMC
+2HMC  CMC
+3HMC  CMC
+3HBC  CBC
+2HBC  CBC
+ H2C  C2C
+ CBC 1HBC
+ H3C  C3C
+ CAC  HAC
+3HMB  CMB
+  CB  HB1
+  CB  HB2
+1HMD  CMD
+1HMB  CMB
+ CMB 2HMB
+  HA   CA
+2HMD  CMD
+1HAB  CAB
+ CMD 3HMD
+2HAB  CAB
+2HBD  CBD
+1HBD  CBD
+1HBB  CBB
+ CBB 2HBB
+ CBB 3HBB
+ CAD 1HAD
+ CAD 2HAD
+2HMA  CMA
+2HAA  CAA
+ CMA 3HMA
+ CMA 1HMA
+ CAA 1HAA
+2HBA  CBA
+ CBA 1HBA
+ CMC  C2C
+ C2C  C3C
+ CBC  CAC
+ C3C  CAC
+  CB   CA
+ CAB  CBB
+ CBD  CAD
+ CAA  CBA
+ C2C  C1C
+ CBD  CGD
+ CBA  CGA
+  OC  C1C
+ O1D  CGD
+ C4B   OB
+ CGA  O1A
+ C1C   NC
+ C4B   NB
+ C3C  C4C
+ CMB  C2B
+   C   CA
+ CAB  C3B
+ CAC   SG
+  SG   CB
+  NC  C4C
+ C1B   NB
+  NC   HC
+  HD   ND
+   N    H
+  NB   HB
+ C4C  CHD
+ C2B  C3B
+ C2B  C1B
+ CHB  C1B
+ CHD  HHD
+ HHB  CHB
+ CHA  HHA
+ CHD  C1D
+ C4D  CHA
+ CHB  C4A
+ CHA  C1A
+   O    C
+ C1D   ND
+  ND  C4D
+  NA  C4A
+  NA  C1A
+ C1D  C2D
+ C4D  C3D
+ C4A  C3A
+ C1A  C2A
+  CA    N
+ CMD  C2D
+ C3D  CAD
+ C3A  CMA
+ C2A  CAA
+ C2D  C3D
+ C3A  C2A
+ C3B  C4B
+ CGD  O2D
+ O2A  CGA
+ O2D  H2D
+ O2A  H2A
+  -C    N
+[ angles ]
+   N   CA    C dhTPP_NT_CT_CM
+  CA    C    O dhTPP_CT_CM_O_2
+
+[ dihedrals ]
+  SG   CB   CA    N dhTPP_S_CT_CT_NT
+   O    C   CA   CB dhTPP_O_2_CM_CT_CT
+   O    C   CA   HA dhTPP_O_2_CM_CT_HC
+   O    C   CA    N dhTPP_O_2_CM_CT_NT
+   C   CA    N    H dhTPP_CM_CT_NT_H
+
+
+
+
+

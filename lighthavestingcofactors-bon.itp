@@ -1,0 +1,103 @@
+[ bondtypes ]
+OXR   OXR   1   0.1443    269580    ; Biophys J. doi:10.1529/biophysj.107.112565
+OXR    CT   1   0.1418    225670    ; Biophys J. doi:10.1529/biophysj.107.112565
+ ST    OY1  1   0.149     362000
+ ST    OS   1   0.149     362000
+ CS    HC   1   0.108     284512    ; copy from CM-CS
+ CS   CL0   1   0.142     392459
+ CW   CL0   1   0.140     456892
+C_2   CL0   1   0.149     334720
+C_2   CL1   1   0.152     265265
+ CA   CL1   1   0.152     334720
+ HC   CL1   1   0.109     284512
+ NA    MG   1   0.206     500000    ; light bond for stabilization
+
+
+[ angletypes ]
+ CT    CT   OXR   1   109.5   418.4   ;  Biophys J. doi:10.1529/biophysj.107.112565
+ CT   OXR   OXR   1   105.9   598.4   ;  Biophys J. doi:10.1529/biophysj.107.112565
+ ST    OS    CT   1   115.0  1313.0
+ OS    ST   OY1   1   109.1   996.5
+OY1    ST   OY1   1   109.1   996.5
+ CT   C_2    CS   1   117.0   527.2   ;copy from CT C_2 CA
+ CS    CS   C_2   1   130.0   711.0   ;copy from C_2 CA CA and modified angle
+ CS    CS    CT   1   130.0   585.8   ;k copy from CA CA CT
+;CW    CS    CT   1   130.0   585.8   ;k copy from CA CA CT
+ CS    CA    CS   1   130.0   527.2   ;k copy from CA CA CA
+ HC    CS    CT   1   110.7   313.8
+ HC    CS    CS   1   110.7   313.8
+;CS    CW    CA   1   124.0   527.2
+ CW    CA    CW   1   130.0   527.2
+ CT    CS   CL0   1   130.0   585.8
+ CW    CS   CL0   1   107.3   585.8
+ NA    CW   CL0   1   107.3   585.8
+CL0    CW    CA   1   116.2   585.8
+ CS   CL0    CW   1   107.3   585.8
+ CS   CL0   C_2   1   155.9   585.8
+ CW   CL0   C_2   1   103.8   585.8
+CL0   C_2   O_2   1   124.0   669.4
+CL0   C_2   CL1   1   112.5   585.8
+CL1   C_2   O_2   1   124.0   669.4
+C_2   CL1    CA   1   109.0   585.8
+C_2   CL1    HC   1   115.0   314.0
+ CA   CL1    HC   1   112.0   314.0
+ CW    CA   CL1   1   105.0   585.8
+C_2   CL1   C_2   1   111.0   527.0
+CL1   C_2    OS   1   111.4   677.9
+O_2     C    OS   1   123.4   694.5   ; for some special shit ;_)
+;
+CM   C_2  CT    1   116.0   585.76   ; full copy of C= C_2 CT alpha-ene ketone?
+C_2  CM   C=    1   120.7   711.28   ; copy of C_2-CM-CM
+C=   CT   CT    1   111.1   527.184  ; identical with CM-CT-CT, for carotenoides
+C=   C=   C=    1   124.0   585.76   ; identical with CM-C=-C=, for carotenoides
+CM   CM   C=    1   124.0   585.76   ; identical with CM-C=-C=, dienes-like
+CM   C=   CM    1   124.0   585.76   ; identical with CM-C=-C=, dienes-like
+NA   CM   C=    1   124.0   585.76   ; identical with CM-C=-C=, dienes-like
+C    CM   C=    1   120.7   711.28   ; copy of C_2-CM-CM
+CT   C    NA    1   116.6   585.76   ; copy of CT-C-N, amides
+CW   CM   HC    1   109.5   292.88   ; copy of CA-CT-HC, arylalkanes
+CW   CM   CM    1   117.0   711.28   ; copy of CA-CM-CM, a la styroll 
+CS   CW   CM    1   124.0   585.76   ; copy of CA-CA-CM, a la styroll 
+NA   CW   CM    1   124.0   585.76   ; copy of CA-CA-CM, a la styroll 
+CW   CM   CW    1   124.0   585.76   ; copy of CA-CA-CM, a la styroll 
+CM   CM   CM    1   124.0   585.76   ; copy of CA-CA-CM, a la styroll
+
+[ dihedraltypes ]
+  X    CS   CL0    X   3   31.0     0.0   -31.0      0.0   0.0   0.0
+  X    CW   CL0    X   3   31.0     0.0     0.0    -31.0   0.0   0.0
+ CT    OS   C_2  CL1   3   31.2    -9.76  -21.43     0.0   0.0   0.0
+  X   CL0   C_2    X   3   31.0     0.0   -31.0      0.0   0.0   0.0
+ CW    CS   C_2  O_2   3    8.78    0.0    -8.78     0.0   0.0   0.0
+ CS    CS   C_2  O_2   3    8.78    0.0    -8.78     0.0   0.0   0.0
+ CS    CS   C_2   CT   3    0.84    0.0    -0.84     0.0   0.0   0.0
+ CW    CS   C_2   CT   3    0.84    0.0    -0.84     0.0   0.0   0.0
+ HC    CT   C_2   CS   3    0.00    0.0     0.0      0.0   0.0   0.0
+CL0   C_2   CL1   CA   3   31.0     0.0   -31.0      0.0   0.0   0.0
+ OS   C_2   CL1    X   3    8.78    0.0    -8.78     0.0   0.0   0.0
+O_2   C_2   CL1   CA   3   31.0     0.0   -31.0      0.0   0.0   0.0
+C_2   CL1    CA    X   3   31.0     0.0   -31.0      0.0   0.0   0.0
+ CS    CT    CT  C_2   3   -5.0     6.3     1.3     -2.6   0.0   0.0
+
+;U10
+#define  dhTPP_CA_CT_CM_CM   0.0  0.0  0.0  0.0  0.0  0.0
+#define  dhTPP_CA_CT_CM_HC   0.0  0.0  0.0  0.0  0.0  0.0
+#define  dhTPP_CM_CT_CT_CM   0.0  0.0  0.0  0.0  0.0  0.0
+#define  dhTPP_CT_CT_CM_HC   0.0  0.0  0.0  0.0  0.0  0.0
+#define  dhTPP_HC_CM_CT_CT   0.0  0.0  0.0  0.0  0.0  0.0
+;BCL, BPH
+#define dhTPP_CL1_C_2_CS    0   0
+#define dhTPP_CW_NA_MG    120   0
+#define dhTPP_NA_MG_NA    180 500
+
+#define dhTPP_CL1_C_2_CS_CS     0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_CL1_C_2_CS_CW     0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_CS_C_2_CL1_CA     0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_CS_C_2_CL1_C_2    0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_CS_C_2_CL1_HC     0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_CW_NA_MG_NA       0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_C_2_CL1_C_2_O_2   0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_HC_CL1_CA_CW      0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_HC_CL1_C_2_O_2    0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_O_2_C_2_CL1_C_2   0.0   0.0   0.0   0.0   0.0   0.0
+#define dhTPP_O_2_C_2_CL1_HC    0.0   0.0   0.0   0.0   0.0   0.0
+                                                                               

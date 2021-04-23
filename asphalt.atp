@@ -1,0 +1,12 @@
+; **
+; Thiophene and Dibenzotiophene for asphaltenes
+; **
+
+UNDER CONSTRUCTION - THIOPHENE SULFUR !!
+
+
+opls_t566   32.06000  ; S   in thiophene
+opls_t567   12.01100  ; C2  in thiophene
+opls_t568   12.01100  ; C3  in thiophene
+opls_t569    1.00800  ; H2  in thiophene
+opls_t570    1.00800  ; H3  in thiophene
